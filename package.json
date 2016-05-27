@@ -1,6 +1,6 @@
 {
   "name": "ag-grid-ng2-example",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "description": "ag-Grid Angular 2 Example",
   "scripts": {
     "tsc": "tsc",
@@ -19,9 +19,9 @@
   },
   "homepage": "http://www.ag-grid.com/",
   "dependencies": {
-    "ag-grid": "4.1.x",
-    "ag-grid-enterprise": "4.1.x",
-    "ag-grid-ng2": "4.1.x",
+    "ag-grid": "4.2.x",
+    "ag-grid-enterprise": "4.2.x",
+    "ag-grid-ng2": "4.2.x",
 
     "@angular/common":  "2.0.0-rc.1",
     "@angular/compiler":  "2.0.0-rc.1",
