@@ -130,7 +130,8 @@ export class AppComponent {
     }
 
     private onRowSelected($event) {
-        console.log('onRowSelected: ' + $event.node.data.name);
+        // taking out, as when we 'select all', it prints to much to the console!!
+        // console.log('onRowSelected: ' + $event.node.data.name);
     }
 
     private onSelectionChanged() {
