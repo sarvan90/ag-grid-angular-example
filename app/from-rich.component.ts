@@ -1,7 +1,7 @@
 import {Component,ViewContainerRef} from '@angular/core';
 import {AgGridNg2} from 'ag-grid-ng2/main';
-import {AgGridCellRendererFactory} from 'ag-grid-ng2/main';
-import {AgGridAware} from 'ag-grid-ng2/main';
+import {AgComponentFactory} from 'ag-grid-ng2/main';
+import {AgAware} from 'ag-grid-ng2/main';
 import {GridOptions} from 'ag-grid/main';
 import {RatioComponent} from "./ratio.component";
 import {ClickableComponent} from "./clickable.component";
@@ -25,10 +25,10 @@ import {ClickableComponent} from "./clickable.component";
     `],
     directives: [RatioComponent]
 })
-class RatioParentComponent implements AgGridAware {
+class RatioParentComponent implements AgAware {
     private params:any;
 
-    setGridParameters(params:any):void {
+    agInit(params:any):void {
         this.params = params;
     }
 }
@@ -42,11 +42,11 @@ class RatioParentComponent implements AgGridAware {
     `,
     directives: [ClickableComponent]
 })
-class ClickableParentComponent implements AgGridAware {
+class ClickableParentComponent implements AgAware {
     private params:any;
     private cell:any;
 
-    setGridParameters(params:any):void {
+    agInit(params:any):void {
         this.params = params;
         this.cell = {row: params.value, col: params.colDef.headerName};
     }
@@ -60,7 +60,7 @@ class ClickableParentComponent implements AgGridAware {
     selector: 'ag-from-rich-component',
     templateUrl: 'app/from-rich.component.html',
     directives: [AgGridNg2],
-    providers: [AgGridCellRendererFactory]
+    providers: [AgComponentFactory]
 })
 export class FromRichComponent {
     private gridOptions:GridOptions;
@@ -68,7 +68,7 @@ export class FromRichComponent {
     // shouldn't be necessary to inject ViewContainerRef here, but if we don't the child AgGridCellRendererFactory
     // doesn't get it injected either (and an error is thrown)
     constructor(private _viewContainerRef:ViewContainerRef,
-                private agGridCellRendererFactory:AgGridCellRendererFactory) {
+                private agComponentFactory:AgComponentFactory) {
 
         this.gridOptions = <GridOptions>{};
         this.gridOptions.rowData = this.createRowData();
@@ -81,13 +81,13 @@ export class FromRichComponent {
             {
                 headerName: "Ratio Component",
                 field: "ratios",
-                cellRenderer: this.agGridCellRendererFactory.createCellRendererFromComponent(RatioParentComponent),
+                cellRenderer: this.agComponentFactory.createCellRendererFromComponent(RatioParentComponent),
                 width: 200
             },
             {
                 headerName: "Clickable Component",
                 field: "name",
-                cellRenderer: this.agGridCellRendererFactory.createCellRendererFromComponent(ClickableParentComponent),
+                cellRenderer: this.agComponentFactory.createCellRendererFromComponent(ClickableParentComponent),
                 width: 200
             }
         ];

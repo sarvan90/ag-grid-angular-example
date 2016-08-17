@@ -1,17 +1,17 @@
 import {Component,ViewContainerRef,OnDestroy} from '@angular/core';
 import {AgGridNg2} from 'ag-grid-ng2/main';
-import {AgGridCellRendererFactory} from 'ag-grid-ng2/main';
-import {AgGridAware} from 'ag-grid-ng2/main';
+import {AgComponentFactory} from 'ag-grid-ng2/main';
+import {AgAware} from 'ag-grid-ng2/main';
 import {GridOptions} from 'ag-grid/main';
 
 @Component({
     selector: 'square-cell',
     template: `{{valueSquared()}}`
 })
-class SquareComponent implements AgGridAware, OnDestroy {
+class SquareComponent implements AgAware, OnDestroy {
     private params:any;
 
-    setGridParameters(params:any):void {
+    agInit(params:any):void {
         this.params = params;
     }
 
@@ -28,10 +28,10 @@ class SquareComponent implements AgGridAware, OnDestroy {
     selector: 'cube-cell',
     template: `{{valueCubed()}}`
 })
-class CubeComponent implements AgGridAware {
+class CubeComponent implements AgAware {
     private params:any;
 
-    setGridParameters(params:any):void {
+    agInit(params:any):void {
         this.params = params;
     }
 
@@ -44,10 +44,10 @@ class CubeComponent implements AgGridAware {
     selector: 'params-cell',
     template: `Field: {{params.colDef.field}}, Value: {{params.value}}`
 })
-class ParamsComponent implements AgGridAware {
+class ParamsComponent implements AgAware {
     private params:any;
 
-    setGridParameters(params:any):void {
+    agInit(params:any):void {
         this.params = params;
     }
 }
@@ -56,7 +56,7 @@ class ParamsComponent implements AgGridAware {
     selector: 'ag-from-component',
     templateUrl: 'app/from-component.component.html',
     directives: [AgGridNg2],
-    providers: [AgGridCellRendererFactory]
+    providers: [AgComponentFactory]
 })
 export class FromComponentComponent {
     private gridOptions:GridOptions;
@@ -64,7 +64,7 @@ export class FromComponentComponent {
     // shouldn't be necessary to inject ViewContainerRef here, but if we don't the child AgGridCellRendererFactory
     // doesn't get it injected either (and an error is thrown)
     constructor(private _viewContainerRef:ViewContainerRef,
-                private agGridCellRendererFactory:AgGridCellRendererFactory) {
+                private agComponentFactory:AgComponentFactory) {
 
         this.gridOptions = <GridOptions>{};
         this.gridOptions.rowData = this.createRowData();
@@ -77,19 +77,19 @@ export class FromComponentComponent {
             {
                 headerName: "Square Component",
                 field: "index",
-                cellRenderer: this.agGridCellRendererFactory.createCellRendererFromComponent(SquareComponent),
+                cellRenderer: this.agComponentFactory.createCellRendererFromComponent(SquareComponent),
                 width: 200
             },
             {
                 headerName: "Cube Component",
                 field: "index",
-                cellRenderer: this.agGridCellRendererFactory.createCellRendererFromComponent(CubeComponent),
+                cellRenderer: this.agComponentFactory.createCellRendererFromComponent(CubeComponent),
                 width: 200
             },
             {
                 headerName: "Name Params Component",
                 field: "name",
-                cellRenderer: this.agGridCellRendererFactory.createCellRendererFromComponent(ParamsComponent),
+                cellRenderer: this.agComponentFactory.createCellRendererFromComponent(ParamsComponent),
                 width: 250
             }
         ];
