@@ -1,4 +1,4 @@
-import {Component,ViewContainerRef,Input} from '@angular/core';
+import {Component,ViewContainerRef} from '@angular/core';
 import {AgGridNg2} from 'ag-grid-ng2/main';
 import {AgGridCellRendererFactory} from 'ag-grid-ng2/main';
 import {AgGridAware} from 'ag-grid-ng2/main';
@@ -14,7 +14,7 @@ import {ClickableComponent} from "./clickable.component";
     <ag-ratio style="height:20px" [topRatio]="params?.value?.top" [bottomRatio]="params?.value?.bottom">
     </ag-ratio>
     `,
-    styles:[`
+    styles: [`
         ag-ratio {
           display: block;
           overflow:hidden;
@@ -51,7 +51,7 @@ class ClickableParentComponent implements AgGridAware {
         this.cell = {row: params.value, col: params.colDef.headerName};
     }
 
-    clicked(cell:any) : void {
+    clicked(cell:any):void {
         console.log("Child Cell Clicked: " + JSON.stringify(cell));
     }
 }
