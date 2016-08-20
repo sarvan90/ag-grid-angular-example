@@ -11,7 +11,7 @@
     "outDir": "lib"
   },
   "files": [
-    "typings/es6-shim/es6-shim.d.ts",
+    "typings/index.d.ts",
     "app/boot.ts"
   ]
 }
