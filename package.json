@@ -1,6 +1,6 @@
 {
   "name": "ag-grid-ng2-example",
-  "version": "5.3.1",
+  "version": "5.3.2",
   "description": "ag-Grid Angular 2 Example",
   "scripts": {
     "postinstall": "./node_modules/.bin/typings install",
@@ -22,7 +22,7 @@
   "dependencies": {
     "ag-grid": "~5.3.0",
     "ag-grid-enterprise": "~5.3.0",
-    "ag-grid-ng2": "~5.3.1",
+    "ag-grid-ng2": "~5.3.2",
 
     "@angular/common": "2.0.0-rc.6",
     "@angular/compiler": "2.0.0-rc.6",
