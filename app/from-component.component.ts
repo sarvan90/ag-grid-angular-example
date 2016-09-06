@@ -30,13 +30,22 @@ class SquareComponent implements AgAware, OnDestroy {
 })
 class CubeComponent implements AgAware {
     private params:any;
+    private cubed:number;
 
+    // called on init
     agInit(params:any):void {
         this.params = params;
+        this.cubed = this.params.data.index * this.params.data.index * this.params.data.index;
+    }
+
+    // called when the cell is refreshed
+    refresh(params:any):void {
+        this.params = params;
+        this.cubed = this.params.data.index * this.params.data.index * this.params.data.index;
     }
 
     private valueCubed():number {
-        return this.params.value * this.params.value * this.params.value;
+        return this.cubed;
     }
 }
 
@@ -67,6 +76,10 @@ export class FromComponentComponent {
         this.gridOptions.columnDefs = this.createColumnDefs();
     }
 
+    private onCellValueChanged($event) {
+        this.gridOptions.api.refreshCells([$event.node],["cube"]);
+    }
+
     private createColumnDefs() {
         return [
             {headerName: "Name", field: "name", width: 200},
@@ -74,12 +87,15 @@ export class FromComponentComponent {
                 headerName: "Square Component",
                 field: "index",
                 cellRenderer: this._agComponentFactory.createCellRendererFromComponent(SquareComponent, this._viewContainerRef),
+                editable:true,
+                colId: "square",
                 width: 200
             },
             {
                 headerName: "Cube Component",
                 field: "index",
                 cellRenderer: this._agComponentFactory.createCellRendererFromComponent(CubeComponent, this._viewContainerRef),
+                colId: "cube",
                 width: 200
             },
             {

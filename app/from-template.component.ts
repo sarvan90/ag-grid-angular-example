@@ -11,8 +11,6 @@ import {GridOptions} from 'ag-grid/main';
 export class FromTemplateComponent {
     private gridOptions:GridOptions;
 
-    // shouldn't be necessary to inject ViewContainerRef here, but if we don't the child AgGridCellRendererFactory
-    // doesn't get it injected either (and an error is thrown)
     constructor(private _viewContainerRef:ViewContainerRef,
                 private _agComponentFactory:AgComponentFactory) {
         this.gridOptions = <GridOptions>{};
