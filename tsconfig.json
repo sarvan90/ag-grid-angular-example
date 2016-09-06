@@ -12,6 +12,21 @@
   },
   "files": [
     "typings/index.d.ts",
-    "app/boot.ts"
+    "app/boot.ts",
+    "app/app.module.ts",
+    "app/app.component.ts",
+    "app/clickable.component.ts",
+    "app/clickable.parent.component.ts",
+    "app/from-component.component.ts",
+    "app/from-rich.component.ts",
+    "app/from-template.component.ts",
+    "app/proficiencyFilter.ts",
+    "app/ratio.component.ts",
+    "app/ratio.module.ts",
+    "app/clickable.module.ts",
+    "app/ratio.parent.component.ts",
+    "app/refData.ts",
+    "app/rich-grid.component.ts",
+    "app/skillFilter.ts"
   ]
 }

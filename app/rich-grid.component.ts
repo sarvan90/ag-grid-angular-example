@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
-import {AgGridNg2} from 'ag-grid-ng2/main';
+
 import {GridOptions} from 'ag-grid/main';
+
 import ProficiencyFilter from './proficiencyFilter';
 import SkillFilter from './skillFilter';
 import RefData from './refData';
@@ -11,16 +12,15 @@ import 'ag-grid-enterprise/main';
 @Component({
     selector: 'rich-grid',
     templateUrl: 'app/rich-grid.component.html',
-    directives: [AgGridNg2],
     styles: ['.toolbar button {margin: 2px; padding: 0px;}'],
 })
 export class RichGridComponent {
 
-    private gridOptions: GridOptions;
-    private showGrid: boolean;
-    private rowData: any[];
-    private columnDefs: any[];
-    private rowCount: string;
+    private gridOptions:GridOptions;
+    private showGrid:boolean;
+    private rowData:any[];
+    private columnDefs:any[];
+    private rowCount:string;
 
     constructor() {
         // we pass an empty gridOptions in, so we can grab the api out
@@ -31,7 +31,7 @@ export class RichGridComponent {
     }
 
     private createRowData() {
-        var rowData: any[] = [];
+        var rowData:any[] = [];
 
         for (var i = 0; i < 10000; i++) {
             var countryData = RefData.countries[i % RefData.countries.length];
@@ -60,23 +60,41 @@ export class RichGridComponent {
 
     private createColumnDefs() {
         this.columnDefs = [
-            {headerName: '#', width: 30, checkboxSelection: true, suppressSorting: true,
-                suppressMenu: true, pinned: true},
+            {
+                headerName: '#', width: 30, checkboxSelection: true, suppressSorting: true,
+                suppressMenu: true, pinned: true
+            },
             {
                 headerName: 'Employee',
                 children: [
-                    {headerName: "Name", field: "name",
-                        width: 150, pinned: true},
-                    {headerName: "Country", field: "country", width: 150,
+                    {
+                        headerName: "Name", field: "name",
+                        width: 150, pinned: true
+                    },
+                    {
+                        headerName: "Country", field: "country", width: 150,
                         cellRenderer: countryCellRenderer, pinned: true,
-                        filterParams: {cellRenderer: countryCellRenderer, cellHeight: 20}},
+                        filterParams: {cellRenderer: countryCellRenderer, cellHeight: 20}
+                    },
                 ]
             },
             {
                 headerName: 'IT Skills',
                 children: [
-                    {headerName: "Skills", width: 125, suppressSorting: true, cellRenderer: skillsCellRenderer, filter: SkillFilter},
-                    {headerName: "Proficiency", field: "proficiency", width: 120, cellRenderer: percentCellRenderer, filter: ProficiencyFilter},
+                    {
+                        headerName: "Skills",
+                        width: 125,
+                        suppressSorting: true,
+                        cellRenderer: skillsCellRenderer,
+                        filter: SkillFilter
+                    },
+                    {
+                        headerName: "Proficiency",
+                        field: "proficiency",
+                        width: 120,
+                        cellRenderer: percentCellRenderer,
+                        filter: ProficiencyFilter
+                    },
                 ]
             },
             {

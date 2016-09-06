@@ -1,5 +1,5 @@
 import {Component,ViewContainerRef,OnDestroy} from '@angular/core';
-import {AgGridNg2} from 'ag-grid-ng2/main';
+
 import {AgComponentFactory} from 'ag-grid-ng2/main';
 import {AgAware} from 'ag-grid-ng2/main';
 import {GridOptions} from 'ag-grid/main';
@@ -54,17 +54,13 @@ class ParamsComponent implements AgAware {
 
 @Component({
     selector: 'ag-from-component',
-    templateUrl: 'app/from-component.component.html',
-    directives: [AgGridNg2],
-    providers: [AgComponentFactory]
+    templateUrl: 'app/from-component.component.html'
 })
 export class FromComponentComponent {
     private gridOptions:GridOptions;
 
-    // shouldn't be necessary to inject ViewContainerRef here, but if we don't the child AgGridCellRendererFactory
-    // doesn't get it injected either (and an error is thrown)
     constructor(private _viewContainerRef:ViewContainerRef,
-                private agComponentFactory:AgComponentFactory) {
+                private _agComponentFactory:AgComponentFactory) {
 
         this.gridOptions = <GridOptions>{};
         this.gridOptions.rowData = this.createRowData();
@@ -77,19 +73,19 @@ export class FromComponentComponent {
             {
                 headerName: "Square Component",
                 field: "index",
-                cellRenderer: this.agComponentFactory.createCellRendererFromComponent(SquareComponent),
+                cellRenderer: this._agComponentFactory.createCellRendererFromComponent(SquareComponent, this._viewContainerRef),
                 width: 200
             },
             {
                 headerName: "Cube Component",
                 field: "index",
-                cellRenderer: this.agComponentFactory.createCellRendererFromComponent(CubeComponent),
+                cellRenderer: this._agComponentFactory.createCellRendererFromComponent(CubeComponent, this._viewContainerRef),
                 width: 200
             },
             {
                 headerName: "Name Params Component",
                 field: "name",
-                cellRenderer: this.agComponentFactory.createCellRendererFromComponent(ParamsComponent),
+                cellRenderer: this._agComponentFactory.createCellRendererFromComponent(ParamsComponent, this._viewContainerRef),
                 width: 250
             }
         ];
