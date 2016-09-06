@@ -26,19 +26,19 @@ export class FromTemplateComponent {
             {
                 headerName: "Square Template",
                 field: "index",
-                cellRenderer: this._agComponentFactory.createCellRendererFromTemplate(this._viewContainerRef, '{{params.value * params.value}}'),
+                cellRenderer: this._agComponentFactory.createCellRendererFromTemplate('{{params.value * params.value}}', this._viewContainerRef),
                 width: 200
             },
             {
                 headerName: "Cube Template",
                 field: "index",
-                cellRenderer: this._agComponentFactory.createCellRendererFromTemplate(this._viewContainerRef, '{{params.value * params.value * params.value}}'),
+                cellRenderer: this._agComponentFactory.createCellRendererFromTemplate('{{params.value * params.value * params.value}}', this._viewContainerRef),
                 width: 200
             },
             {
                 headerName: "Name Params Template",
                 field: "name",
-                cellRenderer: this._agComponentFactory.createCellRendererFromTemplate(this._viewContainerRef, 'Field: {{params.colDef.field}}, Value: {{params.value}}'),
+                cellRenderer: this._agComponentFactory.createCellRendererFromTemplate('Field: {{params.colDef.field}}, Value: {{params.value}}', this._viewContainerRef),
                 width: 250
             }
         ];
