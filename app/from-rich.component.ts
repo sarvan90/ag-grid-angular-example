@@ -29,10 +29,6 @@ export class FromRichComponent {
             {
                 headerName: "Ratio Component",
                 field: "ratios",
-                //cellRendererComponent: {
-                //    component: RatioParentComponent,
-                //    dependencies: [RatioComponent]
-                //},
                 cellRenderer: this.agComponentFactory.createCellRendererFromComponent(RatioParentComponent,
                     this._viewContainerRef,
                     [RatioComponent]
@@ -42,10 +38,6 @@ export class FromRichComponent {
             {
                 headerName: "Clickable Component",
                 field: "name",
-                //cellRendererComponent: {
-                //    component: ClickableParentComponent,
-                //    dependencies: [ClickableComponent]
-                //},
                 cellRenderer: this.agComponentFactory.createCellRendererFromComponent(ClickableParentComponent,
                     this._viewContainerRef,
                     [ClickableComponent]),
