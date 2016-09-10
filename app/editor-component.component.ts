@@ -1,4 +1,6 @@
 import {Component,ViewContainerRef,ViewChild,AfterViewInit,OnDestroy} from '@angular/core';
+import {CommonModule} from "@angular/common"
+
 import {DomSanitizer,SafeStyle} from '@angular/platform-browser';
 
 import {AgComponentFactory} from 'ag-grid-ng2/main';
@@ -10,8 +12,8 @@ import {GridOptions} from 'ag-grid/main';
     selector: 'editor-cell',
     template: `
         <div #container class="mood" tabindex="0" (keydown)="onKeyDown($event)">
-            <img src="../images/smiley.png" (click)="happyClicked()" [style]="happyStyle">
-            <img src="../images/smiley-sad.png" (click)="sadClicked()" [style]="sadStyle">
+            <img src="../images/smiley.png" (click)="setHappy(true)" [ngClass]="{'selected' : happy, 'default' : !happy}">
+            <img src="../images/smiley-sad.png" (click)="setHappy(false)" [ngClass]="{'selected' : !happy, 'default' : happy}">
         </div>
     `,
     styles: [`
@@ -24,24 +26,27 @@ import {GridOptions} from 'ag-grid/main';
             display:inline-block;
             outline:none
         }
+
+        .default {
+            padding-left:10px;
+            padding-right:10px;
+            border: 1px solid transparent;
+            padding: 4px;
+        }
+
+        .selected {
+            padding-left:10px;
+            padding-right:10px;
+            border: 1px solid lightgreen;
+            padding: 4px;
+        }
     `]
 })
 class MoodEditorComponent implements AgEditorAware, AfterViewInit {
     private params:any;
 
     @ViewChild('container', {read: ViewContainerRef}) container;
-
-    private defaultImgStyle:SafeStyle;
-    private selectedImgStyle:SafeStyle;
-
-    private happyStyle:SafeStyle;
-    private sadStyle:SafeStyle;
-    private mood:string;
-
-    constructor(private sanitizer:DomSanitizer) {
-        this.defaultImgStyle = sanitizer.bypassSecurityTrustStyle('padding-left:10px; padding-right:10px;  border: 1px solid transparent; padding: 4px;');
-        this.selectedImgStyle = sanitizer.bypassSecurityTrustStyle('padding-left:10px; padding-right:10px; border: 1px solid lightgreen; padding: 4px;');
-    }
+    private happy:boolean = false;
 
     // dont use afterGuiAttached for post gui events - hook into ngAfterViewInit instead for this
     ngAfterViewInit() {
@@ -50,36 +55,23 @@ class MoodEditorComponent implements AgEditorAware, AfterViewInit {
 
     agInit(params:any):void {
         this.params = params;
-        this.selectMood(params.value);
+        this.setHappy(params.value === "Happy");
     }
 
     getValue():any {
-        return this.mood;
+        return this.happy ? "Happy" : "Sad";
     }
 
     isPopup():boolean {
         return true;
     }
 
-    selectMood(mood):void {
-        this.mood = mood;
-        this.happyStyle = (this.mood === 'Happy') ? this.selectedImgStyle : this.defaultImgStyle;
-        this.sadStyle = (this.mood === 'Sad') ? this.selectedImgStyle : this.defaultImgStyle;
-    };
-
-    happyClicked():void {
-        this.selectMood("Happy");
-        this.params.stopEditing();
-    }
-
-    sadClicked():void {
-        this.selectMood("Sad");
-        this.params.stopEditing();
+    setHappy(happy:boolean):void {
+        this.happy = happy;
     }
 
     toggleMood():void {
-        this.selectMood(this.mood === 'Happy' ? 'Sad' : 'Happy');
-        console.log(this.mood)
+        this.setHappy(!this.happy);
     }
 
     onKeyDown(event):void {
@@ -140,7 +132,11 @@ export class EditorComponent {
                 headerName: "Mood",
                 field: "mood",
                 cellRenderer: this._agComponentFactory.createCellRendererFromComponent(MoodRendererComponent, this._viewContainerRef),
-                cellEditor: this._agComponentFactory.createCellEditorFromComponent(MoodEditorComponent, this._viewContainerRef),
+                cellEditor: this._agComponentFactory.createCellEditorFromComponent(MoodEditorComponent,
+                    this._viewContainerRef,
+                    [],
+                    [CommonModule]
+                ),
                 editable: true,
                 width: 198
             }
@@ -149,9 +145,9 @@ export class EditorComponent {
 
     private createRowData() {
         return [
-            {name: "Bob", mood: "Happy"},
-            {name: "Harry", mood: "Sad"},
-            {name: "Sally", mood: "Happy"},
+            {name: "Bob", happy: "Happy"},
+            {name: "Harry", happy: "Sad"},
+            {name: "Sally", happy: "Happy"},
             {name: "Mary", mood: "Sad"},
             {name: "John", mood: "Happy"},
         ];
