@@ -27,6 +27,7 @@
     "app/ratio.parent.component.ts",
     "app/refData.ts",
     "app/rich-grid.component.ts",
-    "app/skillFilter.ts"
+    "app/skillFilter.ts",
+    "app/editor-component.component.ts"
   ]
 }
