@@ -127,7 +127,7 @@ export class EditorComponent {
 
     private createColumnDefs() {
         return [
-            {headerName: "Name", field: "name", width: 200},
+            {headerName: "Name", field: "name", width: 300},
             {
                 headerName: "Mood",
                 field: "mood",
