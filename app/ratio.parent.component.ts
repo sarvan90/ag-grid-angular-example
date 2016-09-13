@@ -1,6 +1,6 @@
-import {Component,ViewContainerRef} from '@angular/core';
+import {Component} from '@angular/core';
 
-import {AgAware} from 'ag-grid-ng2/main';
+import {AgRendererComponent} from 'ag-grid-ng2/main';
 
 // both this and the parent component could be folded into one component as they're both simple, but it illustrates how
 // a fuller example could work
@@ -20,7 +20,7 @@ import {AgAware} from 'ag-grid-ng2/main';
         }
     `]
 })
-export class RatioParentComponent implements AgAware {
+export class RatioParentComponent implements AgRendererComponent {
     private params:any = {
         value: {top: 0.25, bottom: 0.75}
     };

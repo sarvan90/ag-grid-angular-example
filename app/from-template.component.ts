@@ -1,7 +1,5 @@
 import {Component,ViewContainerRef,Input} from '@angular/core';
 
-import {AgGridNg2} from 'ag-grid-ng2/main';
-import {AgComponentFactory} from 'ag-grid-ng2/main';
 import {GridOptions} from 'ag-grid/main';
 
 @Component({
@@ -11,8 +9,7 @@ import {GridOptions} from 'ag-grid/main';
 export class FromTemplateComponent {
     private gridOptions:GridOptions;
 
-    constructor(private _viewContainerRef:ViewContainerRef,
-                private _agComponentFactory:AgComponentFactory) {
+    constructor() {
         this.gridOptions = <GridOptions>{};
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
@@ -24,19 +21,25 @@ export class FromTemplateComponent {
             {
                 headerName: "Square Template",
                 field: "index",
-                cellRenderer: this._agComponentFactory.createCellRendererFromTemplate('{{params.value * params.value}}', this._viewContainerRef),
+                cellRendererFramework: {
+                    template: '{{params.value * params.value}}'
+                },
                 width: 200
             },
             {
                 headerName: "Cube Template",
                 field: "index",
-                cellRenderer: this._agComponentFactory.createCellRendererFromTemplate('{{params.value * params.value * params.value}}', this._viewContainerRef),
+                cellRendererFramework: {
+                    template: '{{params.value * params.value * params.value}}'
+                },
                 width: 200
             },
             {
                 headerName: "Name Params Template",
                 field: "name",
-                cellRenderer: this._agComponentFactory.createCellRendererFromTemplate('Field: {{params.colDef.field}}, Value: {{params.value}}', this._viewContainerRef),
+                cellRendererFramework: {
+                    template: 'Field: {{params.colDef.field}}, Value: {{params.value}}'
+                },
                 width: 250
             }
         ];

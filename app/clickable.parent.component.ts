@@ -1,6 +1,6 @@
-import {Component,ViewContainerRef} from '@angular/core';
+import {Component} from '@angular/core';
 
-import {AgAware} from 'ag-grid-ng2/main';
+import {AgRendererComponent} from 'ag-grid-ng2/main';
 
 // both this and the parent component could be folded into one component as they're both simple, but it illustrates how
 // a fuller example could work
@@ -10,7 +10,7 @@ import {AgAware} from 'ag-grid-ng2/main';
     <ag-clickable (onClicked)="clicked($event)" [cell]="cell"></ag-clickable>
     `
 })
-export class ClickableParentComponent implements AgAware {
+export class ClickableParentComponent implements AgRendererComponent {
     private params:any;
     private cell:any;
 

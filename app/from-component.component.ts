@@ -1,14 +1,13 @@
-import {Component,ViewContainerRef,OnDestroy} from '@angular/core';
+import {Component,OnDestroy} from '@angular/core';
 
-import {AgComponentFactory} from 'ag-grid-ng2/main';
-import {AgAware} from 'ag-grid-ng2/main';
+import {AgRendererComponent} from 'ag-grid-ng2/main';
 import {GridOptions} from 'ag-grid/main';
 
 @Component({
     selector: 'square-cell',
     template: `{{valueSquared()}}`
 })
-class SquareComponent implements AgAware, OnDestroy {
+class SquareComponent implements AgRendererComponent, OnDestroy {
     private params:any;
 
     agInit(params:any):void {
@@ -28,7 +27,7 @@ class SquareComponent implements AgAware, OnDestroy {
     selector: 'cube-cell',
     template: `{{valueCubed()}}`
 })
-class CubeComponent implements AgAware {
+class CubeComponent implements AgRendererComponent {
     private params:any;
     private cubed:number;
 
@@ -53,7 +52,7 @@ class CubeComponent implements AgAware {
     selector: 'params-cell',
     template: `Field: {{params.colDef.field}}, Value: {{params.value}}`
 })
-class ParamsComponent implements AgAware {
+class ParamsComponent implements AgRendererComponent {
     private params:any;
 
     agInit(params:any):void {
@@ -68,9 +67,7 @@ class ParamsComponent implements AgAware {
 export class FromComponentComponent {
     private gridOptions:GridOptions;
 
-    constructor(private _viewContainerRef:ViewContainerRef,
-                private _agComponentFactory:AgComponentFactory) {
-
+    constructor() {
         this.gridOptions = <GridOptions>{};
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
@@ -86,7 +83,9 @@ export class FromComponentComponent {
             {
                 headerName: "Square Component",
                 field: "index",
-                cellRenderer: this._agComponentFactory.createCellRendererFromComponent(SquareComponent, this._viewContainerRef),
+                cellRendererFramework: {
+                    component: SquareComponent
+                },
                 editable:true,
                 colId: "square",
                 width: 200
@@ -94,14 +93,18 @@ export class FromComponentComponent {
             {
                 headerName: "Cube Component",
                 field: "index",
-                cellRenderer: this._agComponentFactory.createCellRendererFromComponent(CubeComponent, this._viewContainerRef),
+                cellRendererFramework: {
+                    component: CubeComponent
+                },
                 colId: "cube",
                 width: 200
             },
             {
                 headerName: "Name Params Component",
                 field: "name",
-                cellRenderer: this._agComponentFactory.createCellRendererFromComponent(ParamsComponent, this._viewContainerRef),
+                cellRendererFramework: {
+                    component: ParamsComponent
+                },
                 width: 250
             }
         ];

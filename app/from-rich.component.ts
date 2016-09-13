@@ -1,6 +1,5 @@
-import {Component,ViewContainerRef} from '@angular/core';
+import {Component} from '@angular/core';
 
-import {AgComponentFactory} from 'ag-grid-ng2/main';
 import {GridOptions} from 'ag-grid/main';
 
 import {RatioComponent} from "./ratio.component";
@@ -15,9 +14,7 @@ import {ClickableParentComponent} from "./clickable.parent.component";
 export class FromRichComponent {
     private gridOptions:GridOptions;
 
-    constructor(private _viewContainerRef:ViewContainerRef,
-                private agComponentFactory:AgComponentFactory) {
-
+    constructor() {
         this.gridOptions = <GridOptions>{};
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
@@ -29,26 +26,19 @@ export class FromRichComponent {
             {
                 headerName: "Ratio Component",
                 field: "ratios",
-                //cellRendererComponent: {
-                //    component: RatioParentComponent,
-                //    dependencies: [RatioComponent]
-                //},
-                cellRenderer: this.agComponentFactory.createCellRendererFromComponent(RatioParentComponent,
-                    this._viewContainerRef,
-                    [RatioComponent]
-                ),
+                cellRendererFramework: {
+                    component: RatioParentComponent,
+                    dependencies: [RatioComponent]
+                },
                 width: 200
             },
             {
                 headerName: "Clickable Component",
                 field: "name",
-                //cellRendererComponent: {
-                //    component: ClickableParentComponent,
-                //    dependencies: [ClickableComponent]
-                //},
-                cellRenderer: this.agComponentFactory.createCellRendererFromComponent(ClickableParentComponent,
-                    this._viewContainerRef,
-                    [ClickableComponent]),
+                cellRendererFramework: {
+                    component: ClickableParentComponent,
+                    dependencies: [ClickableComponent]
+                },
                 width: 200
             }
         ];
