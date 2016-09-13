@@ -19,10 +19,10 @@ class StyledFloatingRowComponent implements AgRendererComponent {
 }
 
 @Component({
-    selector: 'floating-row-renderer-component',
+    selector: 'ag-floating-row-renderer-component',
     templateUrl: 'app/floating-row-renderer.component.html'
 })
-export class FloatingRowComponent {
+export class WithFloatingRowComponent {
     private gridOptions:GridOptions;
 
     constructor() {
@@ -54,7 +54,7 @@ export class FloatingRowComponent {
             {
                 headerName: "Number",
                 field: "number",
-                width: 200,
+                width: 180,
                 floatingCellRendererFramework: {
                     component: StyledFloatingRowComponent,
                     moduleImports: [CommonModule]

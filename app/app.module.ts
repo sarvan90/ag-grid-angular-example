@@ -11,7 +11,8 @@ import {FromRichComponent} from "./from-rich.component";
 import {RatioModule} from "./ratio.module";
 import {ClickableModule} from "./clickable.module";
 import {EditorComponent} from "./editor-component.component";
-import {FloatingRowComponent} from "./floating-row-renderer.component";
+import {WithFloatingRowComponent} from "./floating-row-renderer.component";
+import {WithFullWidthComponent} from "./full-width-renderer.component";
 
 @NgModule({
     imports: [
@@ -27,7 +28,8 @@ import {FloatingRowComponent} from "./floating-row-renderer.component";
         FromTemplateComponent,
         FromRichComponent,
         EditorComponent,
-        FloatingRowComponent
+        WithFloatingRowComponent,
+        WithFullWidthComponent
     ],
     bootstrap: [AppComponent]
 })
