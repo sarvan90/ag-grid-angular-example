@@ -30,6 +30,7 @@
     "app/skillFilter.ts",
     "app/editor-component.component.ts",
     "app/floating-row-renderer.component.ts",
-    "app/full-width-renderer.component.ts"
+    "app/full-width-renderer.component.ts",
+    "app/group-row-renderer.component.ts"
   ]
 }

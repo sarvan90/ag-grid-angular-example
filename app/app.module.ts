@@ -13,6 +13,7 @@ import {ClickableModule} from "./clickable.module";
 import {EditorComponent} from "./editor-component.component";
 import {WithFloatingRowComponent} from "./floating-row-renderer.component";
 import {WithFullWidthComponent} from "./full-width-renderer.component";
+import {WithGroupRowComponent} from "./group-row-renderer.component";
 
 @NgModule({
     imports: [
@@ -29,7 +30,8 @@ import {WithFullWidthComponent} from "./full-width-renderer.component";
         FromRichComponent,
         EditorComponent,
         WithFloatingRowComponent,
-        WithFullWidthComponent
+        WithFullWidthComponent,
+        WithGroupRowComponent
     ],
     bootstrap: [AppComponent]
 })
