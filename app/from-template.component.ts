@@ -1,4 +1,6 @@
 import {Component,ViewContainerRef,Input} from '@angular/core';
+import {CommonModule} from "@angular/common"
+import {FormsModule} from "@angular/forms"
 
 import {GridOptions} from 'ag-grid/main';
 
@@ -17,26 +19,27 @@ export class FromTemplateComponent {
 
     private createColumnDefs() {
         return [
-            {headerName: "Name", field: "name", width: 200},
+            {headerName: "Row", field: "row", width: 200},
             {
                 headerName: "Square Template",
-                field: "index",
+                field: "value",
                 cellRendererFramework: {
                     template: '{{params.value * params.value}}'
                 },
                 width: 200
             },
             {
-                headerName: "Cube Template",
-                field: "index",
+                headerName: "Currency Pipe Template",
+                field: "value",
                 cellRendererFramework: {
-                    template: '{{params.value * params.value * params.value}}'
+                    template: '{{params.value | currency}}',
+                    moduleImports: [CommonModule]
                 },
                 width: 200
             },
             {
-                headerName: "Name Params Template",
-                field: "name",
+                headerName: "Row Params Template",
+                field: "row",
                 cellRendererFramework: {
                     template: 'Field: {{params.colDef.field}}, Value: {{params.value}}'
                 },
@@ -50,10 +53,8 @@ export class FromTemplateComponent {
 
         for (var i = 0; i < 15; i++) {
             rowData.push({
-                name: "Name " + i,
-                index: i,
-                years: Math.round(Math.random() * 100),
-                proficiency: Math.round(Math.random() * 100)
+                row: "Row " + i,
+                value: i
             });
         }
 

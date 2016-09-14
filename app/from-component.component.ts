@@ -34,13 +34,13 @@ class CubeComponent implements AgRendererComponent {
     // called on init
     agInit(params:any):void {
         this.params = params;
-        this.cubed = this.params.data.index * this.params.data.index * this.params.data.index;
+        this.cubed = this.params.data.value * this.params.data.value * this.params.data.value;
     }
 
     // called when the cell is refreshed
     refresh(params:any):void {
         this.params = params;
-        this.cubed = this.params.data.index * this.params.data.index * this.params.data.index;
+        this.cubed = this.params.data.value * this.params.data.value * this.params.data.value;
     }
 
     private valueCubed():number {
@@ -79,10 +79,10 @@ export class FromComponentComponent {
 
     private createColumnDefs() {
         return [
-            {headerName: "Name", field: "name", width: 200},
+            {headerName: "Row", field: "row", width: 200},
             {
                 headerName: "Square Component",
-                field: "index",
+                field: "value",
                 cellRendererFramework: {
                     component: SquareComponent
                 },
@@ -92,7 +92,7 @@ export class FromComponentComponent {
             },
             {
                 headerName: "Cube Component",
-                field: "index",
+                field: "value",
                 cellRendererFramework: {
                     component: CubeComponent
                 },
@@ -100,8 +100,8 @@ export class FromComponentComponent {
                 width: 200
             },
             {
-                headerName: "Name Params Component",
-                field: "name",
+                headerName: "Row Params Component",
+                field: "row",
                 cellRendererFramework: {
                     component: ParamsComponent
                 },
@@ -115,10 +115,8 @@ export class FromComponentComponent {
 
         for (var i = 0; i < 15; i++) {
             rowData.push({
-                name: "Name " + i,
-                index: i,
-                years: Math.round(Math.random() * 100),
-                proficiency: Math.round(Math.random() * 100)
+                row: "Row " + i,
+                value: i
             });
         }
 

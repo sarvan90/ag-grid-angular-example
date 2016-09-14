@@ -30,18 +30,18 @@ export class WithFloatingRowComponent {
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
         this.gridOptions.floatingTopRowData = [
-            {name: "Top Name", number: "Top Number"}
+            {row: "Top Row", number: "Top Number"}
         ];
         this.gridOptions.floatingBottomRowData = [
-            {name: "Bottom Name", number: "Bottom Number"}
+            {row: "Bottom Row", number: "Bottom Number"}
         ];
     }
 
     private createColumnDefs() {
         return [
             {
-                headerName: "Name",
-                field: "name",
+                headerName: "Row",
+                field: "row",
                 width: 200,
                 floatingCellRendererFramework: {
                     component: StyledFloatingRowComponent,
@@ -71,7 +71,7 @@ export class WithFloatingRowComponent {
 
         for (var i = 0; i < 15; i++) {
             rowData.push({
-                name: "Name " + i,
+                row: "Row " + i,
                 number: Math.round(Math.random() * 100)
             });
         }
