@@ -3,6 +3,8 @@ import {CommonModule} from "@angular/common"
 import {FormsModule} from "@angular/forms"
 
 import {AgRendererComponent} from 'ag-grid-ng2/main';
+import {AgEditorComponent} from 'ag-grid-ng2/main';
+
 import {GridOptions} from 'ag-grid/main';
 
 @Component({
@@ -39,7 +41,7 @@ import {GridOptions} from 'ag-grid/main';
         }
     `]
 })
-class MoodEditorComponent implements AgRendererComponent, AfterViewInit {
+class MoodEditorComponent implements AgEditorComponent, AfterViewInit {
     private params:any;
 
     @ViewChild('container', {read: ViewContainerRef}) container;
@@ -110,7 +112,7 @@ class MoodRendererComponent implements AgRendererComponent {
     selector: 'numeric-cell',
     template: `<input #input (keydown)="onKeyDown($event)" [(ngModel)]="value">`
 })
-class NumericEditorComponent implements AgRendererComponent, AfterViewInit {
+class NumericEditorComponent implements AgEditorComponent, AfterViewInit {
     private params:any;
     private value:number;
     private cancelBeforeStart:boolean = false;
