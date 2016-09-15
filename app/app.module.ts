@@ -18,7 +18,7 @@ import {WithGroupRowComponent} from "./group-row-renderer.component";
 @NgModule({
     imports: [
         BrowserModule,
-        AgGridModule,
+        AgGridModule.forRoot(),
         RatioModule,
         ClickableModule
     ],
