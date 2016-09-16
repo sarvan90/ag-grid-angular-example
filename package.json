@@ -22,7 +22,7 @@
   "dependencies": {
     "ag-grid": "~6.0.1",
     "ag-grid-enterprise": "~6.0.1",
-    "ag-grid-ng2": "~6.0.2",
+    "ag-grid-ng2": "~6.0.3",
 
     "@angular/common": "2.0.0",
     "@angular/compiler": "2.0.0",
