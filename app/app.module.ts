@@ -14,6 +14,7 @@ import {EditorComponent} from "./editor-component.component";
 import {WithFloatingRowComponent} from "./floating-row-renderer.component";
 import {WithFullWidthComponent} from "./full-width-renderer.component";
 import {WithGroupRowComponent} from "./group-row-renderer.component";
+import {FilterComponentComponent} from "./filter-component.component";
 
 @NgModule({
     imports: [
@@ -31,7 +32,8 @@ import {WithGroupRowComponent} from "./group-row-renderer.component";
         EditorComponent,
         WithFloatingRowComponent,
         WithFullWidthComponent,
-        WithGroupRowComponent
+        WithGroupRowComponent,
+        FilterComponentComponent
     ],
     bootstrap: [AppComponent]
 })

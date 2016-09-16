@@ -44,7 +44,7 @@ import {GridOptions} from 'ag-grid/main';
 class MoodEditorComponent implements AgEditorComponent, AfterViewInit {
     private params:any;
 
-    @ViewChild('container', {read: ViewContainerRef}) container;
+    @ViewChild('container', {read: ViewContainerRef}) private container;
     private happy:boolean = false;
 
     // dont use afterGuiAttached for post gui events - hook into ngAfterViewInit instead for this
@@ -117,7 +117,7 @@ class NumericEditorComponent implements AgEditorComponent, AfterViewInit {
     private value:number;
     private cancelBeforeStart:boolean = false;
 
-    @ViewChild('input', {read: ViewContainerRef}) input;
+    @ViewChild('input', {read: ViewContainerRef}) private input;
 
 
     agInit(params:any):void {
