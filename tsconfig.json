@@ -8,10 +8,15 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "outDir": "lib"
+    "outDir": "lib",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "core-js"
+    ]
   },
   "files": [
-    "typings/index.d.ts",
     "app/boot.ts",
     "app/app.module.ts",
     "app/app.component.ts",
