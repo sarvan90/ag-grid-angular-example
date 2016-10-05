@@ -1,6 +1,6 @@
 {
   "name": "ag-grid-ng2-example",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "description": "ag-Grid Angular 2 Example",
   "scripts": {
     "tsc": "tsc",

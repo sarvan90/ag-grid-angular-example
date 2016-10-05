@@ -19,7 +19,7 @@ import {FilterComponentComponent} from "./filter-component.component";
 @NgModule({
     imports: [
         BrowserModule,
-        AgGridModule.forRoot(),
+        AgGridModule.withNg2ComponentSupport(),
         RatioModule,
         ClickableModule
     ],
