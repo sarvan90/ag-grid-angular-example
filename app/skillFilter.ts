@@ -1,4 +1,5 @@
 import RefData from './refData';
+import {IFilter,IFilterParams} from "ag-grid/main";
 
 var SKILL_TEMPLATE =
     '<label style="border: 1px solid lightgrey; margin: 4px; padding: 4px; display: inline-block;">' +
@@ -16,12 +17,11 @@ var FILTER_TITLE =
     '<b>TITLE_NAME</b>' +
     '</div>';
 
-export default class SkillFilter {
+export default class SkillFilter implements IFilter {
+    private filterChangedCallback:Function;
+    private model:any;
 
-    private filterChangedCallback: Function;
-    private model: any;
-
-    private init(params) {
+    public init(params: IFilterParams) : void {
         this.filterChangedCallback = params.filterChangedCallback;
         this.model = {
             android: false,
@@ -32,7 +32,7 @@ export default class SkillFilter {
         };
     };
 
-    private getGui() {
+    public getGui() {
         var eGui = document.createElement('div');
         eGui.style.width = '380px';
         var eInstructions = document.createElement('div');
@@ -59,7 +59,7 @@ export default class SkillFilter {
         return eGui;
     };
 
-    private doesFilterPass(params) {
+    public doesFilterPass(params) {
 
         var rowSkills = params.data.skills;
         var model = this.model;
@@ -76,12 +76,17 @@ export default class SkillFilter {
         return passed;
     };
 
-    private isFilterActive() {
+    public isFilterActive() {
         var model = this.model;
         var somethingSelected = model.android || model.css || model.html5 || model.mac || model.windows;
         return somethingSelected;
     };
 
+    public getModel():any {
+        return undefined;
+    }
 
+    public setModel(model:any):void {
+    }
 }
 

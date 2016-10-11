@@ -15,6 +15,7 @@ import {WithFloatingRowComponent} from "./floating-row-renderer.component";
 import {WithFullWidthComponent} from "./full-width-renderer.component";
 import {WithGroupRowComponent} from "./group-row-renderer.component";
 import {FilterComponentComponent} from "./filter-component.component";
+import {RichGridDeclarativeComponent} from "./rich-grid-declarative.component";
 
 @NgModule({
     imports: [
@@ -33,7 +34,8 @@ import {FilterComponentComponent} from "./filter-component.component";
         WithFloatingRowComponent,
         WithFullWidthComponent,
         WithGroupRowComponent,
-        FilterComponentComponent
+        FilterComponentComponent,
+        RichGridDeclarativeComponent
     ],
     bootstrap: [AppComponent]
 })

@@ -37,6 +37,7 @@
     "app/floating-row-renderer.component.ts",
     "app/full-width-renderer.component.ts",
     "app/group-row-renderer.component.ts",
-    "app/filter-component.component.ts"
+    "app/filter-component.component.ts",
+    "app/rich-grid-declarative.component.ts"
   ]
 }
