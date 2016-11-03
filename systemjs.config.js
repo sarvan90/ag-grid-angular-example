@@ -13,7 +13,7 @@
                 '@angular/forms': 'node_modules/@angular/forms/bundles/forms.umd.js',
                 // other libraries
                 'rxjs': 'node_modules/rxjs',
-                'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
+                'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
                 // ag libraries
                 'ag-grid-ng2' : 'node_modules/ag-grid-ng2',
                 'ag-grid' : 'node_modules/ag-grid',
@@ -25,10 +25,6 @@
                     defaultExtension: 'js'
                 },
                 rxjs: {
-                    defaultExtension: 'js'
-                },
-                'angular2-in-memory-web-api': {
-                    main: './index.js',
                     defaultExtension: 'js'
                 },
                 'ag-grid-ng2': {
