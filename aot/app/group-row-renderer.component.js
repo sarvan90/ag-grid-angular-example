@@ -57,6 +57,7 @@ export var WithGroupRowComponent = (function () {
     };
     WithGroupRowComponent.decorators = [
         { type: Component, args: [{
+                    moduleId: module.id,
                     selector: 'ag-group-row-renderer-component',
                     templateUrl: 'group-row-renderer.component.html'
                 },] },

@@ -8,6 +8,7 @@ import {RatioParentComponent} from "./ratio.parent.component";
 import {ClickableParentComponent} from "./clickable.parent.component";
 
 @Component({
+    moduleId: module.id,
     selector: 'ag-from-rich-component',
     templateUrl: 'from-rich.component.html'
 })

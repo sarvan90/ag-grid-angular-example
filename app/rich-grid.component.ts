@@ -10,6 +10,7 @@ import RefData from './refData';
 import 'ag-grid-enterprise/main';
 
 @Component({
+    moduleId: module.id,
     selector: 'rich-grid',
     templateUrl: 'rich-grid.component.html',
     styles: ['.toolbar button {margin: 2px; padding: 0px;}'],

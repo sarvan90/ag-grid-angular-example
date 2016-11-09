@@ -115,6 +115,7 @@ export var RichGridDeclarativeComponent = (function () {
     };
     RichGridDeclarativeComponent.decorators = [
         { type: Component, args: [{
+                    moduleId: module.id,
                     selector: 'ag-rich-grid-declarative',
                     templateUrl: 'rich-grid-declarative.component.html',
                     styles: ['.toolbar button {margin: 2px; padding: 0px;}'],

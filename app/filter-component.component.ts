@@ -5,6 +5,7 @@ import {GridOptions} from 'ag-grid/main';
 import {PartialMatchFilterComponent} from "./partial-match-filter.component";
 
 @Component({
+    moduleId: module.id,
     selector: 'ag-filter-component',
     templateUrl: 'filter-component.component.html'
 })

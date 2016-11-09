@@ -6,6 +6,7 @@ import {ParamsComponent} from "./params.component";
 import {CubeComponent} from "./cube.component";
 
 @Component({
+    moduleId: module.id,
     selector: 'ag-from-component',
     templateUrl: 'from-component.component.html'
 })

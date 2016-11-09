@@ -156,6 +156,7 @@ export var RichGridComponent = (function () {
     };
     RichGridComponent.decorators = [
         { type: Component, args: [{
+                    moduleId: module.id,
                     selector: 'rich-grid',
                     templateUrl: 'rich-grid.component.html',
                     styles: ['.toolbar button {margin: 2px; padding: 0px;}'],

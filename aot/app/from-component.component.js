@@ -55,6 +55,7 @@ export var FromComponentComponent = (function () {
     };
     FromComponentComponent.decorators = [
         { type: Component, args: [{
+                    moduleId: module.id,
                     selector: 'ag-from-component',
                     templateUrl: 'from-component.component.html'
                 },] },

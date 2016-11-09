@@ -9,6 +9,7 @@ import {MoodRendererComponent} from "./mood-renderer.component";
 import {MoodEditorComponent} from "./mood-editor.component";
 
 @Component({
+    moduleId: module.id,
     selector: 'ag-editor-component',
     templateUrl: 'editor-component.component.html'
 })

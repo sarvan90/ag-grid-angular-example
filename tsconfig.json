@@ -8,21 +8,15 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "outDir": "lib",
     "typeRoots": [
       "node_modules/@types"
-    ],
-    "types": [
-      "core-js"
     ]
   },
-  "files": [
-    "app/boot.ts",
-    "app/app.module.ts",
-    "app/app.component.ts",
-    "app/refData.ts",
-    "app/rich-grid.component.ts",
-    "app/skillFilter.ts",
-    "app/from-component.component.ts"
+  "compileOnSave": true,
+  "exclude": [
+    "node_modules/@types/core-js/index.d.ts",
+    "node_modules/*",
+    "aot/*",
+    "**/*-aot.ts"
   ]
 }

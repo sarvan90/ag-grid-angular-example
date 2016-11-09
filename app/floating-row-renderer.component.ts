@@ -5,6 +5,7 @@ import {GridOptions} from 'ag-grid/main';
 import {StyledComponent} from "./styled-renderer.component";
 
 @Component({
+    moduleId: module.id,
     selector: 'ag-floating-row-renderer-component',
     templateUrl: 'floating-row-renderer.component.html'
 })

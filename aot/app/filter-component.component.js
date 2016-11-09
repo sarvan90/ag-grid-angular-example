@@ -41,6 +41,7 @@ export var FilterComponentComponent = (function () {
     };
     FilterComponentComponent.decorators = [
         { type: Component, args: [{
+                    moduleId: module.id,
                     selector: 'ag-filter-component',
                     templateUrl: 'filter-component.component.html'
                 },] },

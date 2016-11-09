@@ -45,6 +45,7 @@ export var EditorComponent = (function () {
     };
     EditorComponent.decorators = [
         { type: Component, args: [{
+                    moduleId: module.id,
                     selector: 'ag-editor-component',
                     templateUrl: 'editor-component.component.html'
                 },] },

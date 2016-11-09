@@ -50,6 +50,7 @@ export var WithFloatingRowComponent = (function () {
     };
     WithFloatingRowComponent.decorators = [
         { type: Component, args: [{
+                    moduleId: module.id,
                     selector: 'ag-floating-row-renderer-component',
                     templateUrl: 'floating-row-renderer.component.html'
                 },] },

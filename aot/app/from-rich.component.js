@@ -42,6 +42,7 @@ export var FromRichComponent = (function () {
     };
     FromRichComponent.decorators = [
         { type: Component, args: [{
+                    moduleId: module.id,
                     selector: 'ag-from-rich-component',
                     templateUrl: 'from-rich.component.html'
                 },] },

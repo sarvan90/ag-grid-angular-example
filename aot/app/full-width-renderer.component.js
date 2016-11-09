@@ -37,6 +37,7 @@ export var WithFullWidthComponent = (function () {
     };
     WithFullWidthComponent.decorators = [
         { type: Component, args: [{
+                    moduleId: module.id,
                     selector: 'ag-full-width-renderer-component',
                     templateUrl: 'full-width-renderer.component.html'
                 },] },
