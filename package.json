@@ -1,13 +1,14 @@
 {
   "name": "ag-grid-ng2-example",
-  "version": "6.2.0",
+  "version": "7.0.0",
   "description": "ag-Grid Angular 2 Example",
   "scripts": {
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "build:aot": "ngc -p tsconfig-aot.json"
+    "build:aot": "ngc -p tsconfig-aot.json && gulp aot-bundle",
+    "lite:aot": "lite-server -c aot/bs-config.json"
   },
   "repository": {
     "type": "git",
