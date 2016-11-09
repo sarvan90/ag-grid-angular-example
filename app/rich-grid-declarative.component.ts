@@ -11,16 +11,16 @@ import 'ag-grid-enterprise/main';
 
 @Component({
     selector: 'ag-rich-grid-declarative',
-    templateUrl: 'app/rich-grid-declarative.component.html',
+    templateUrl: 'rich-grid-declarative.component.html',
     styles: ['.toolbar button {margin: 2px; padding: 0px;}'],
 })
 export class RichGridDeclarativeComponent {
 
-    private gridOptions:GridOptions;
-    private showGrid:boolean;
+    public gridOptions:GridOptions;
+    public showGrid:boolean;
     private rowData:any[];
     private columnDefs:any[];
-    private rowCount:string;
+    public rowCount:string;
 
     constructor() {
         // we pass an empty gridOptions in, so we can grab the api out
@@ -76,7 +76,7 @@ export class RichGridDeclarativeComponent {
         this.calculateRowCount();
     }
 
-    private onQuickFilterChanged($event) {
+    public onQuickFilterChanged($event) {
         this.gridOptions.api.setQuickFilter($event.target.value);
     }
 

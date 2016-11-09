@@ -9,10 +9,10 @@ import {ClickableParentComponent} from "./clickable.parent.component";
 
 @Component({
     selector: 'ag-from-rich-component',
-    templateUrl: 'app/from-rich.component.html'
+    templateUrl: 'from-rich.component.html'
 })
 export class FromRichComponent {
-    private gridOptions:GridOptions;
+    public gridOptions:GridOptions;
 
     constructor() {
         this.gridOptions = <GridOptions>{};

@@ -1,35 +1,15 @@
-import {Component,OnDestroy} from '@angular/core';
-import {CommonModule} from "@angular/common"
+import {Component} from '@angular/core';
 
-import {AgRendererComponent} from 'ag-grid-ng2/main';
-import {GridOptions,RowNode} from 'ag-grid/main';
+import {GridOptions} from 'ag-grid/main';
 
-@Component({
-    selector: 'group-row-cell',
-    template: `{{country}} Gold: {{gold}}, Silver: {{silver}}, Bronze: {{bronze}}`
-})
-class GroupInnerRowComponent implements AgRendererComponent {
-    private params:any;
-    private country:string;
-    private gold:string;
-    private silver:string;
-    private bronze:string;
-
-    agInit(params:any):void {
-        this.params = params;
-        this.country = params.node.key;
-        this.gold = params.data.gold;
-        this.silver = params.data.silver;
-        this.bronze = params.data.bronze;
-    }
-}
+import {MedalRendererComponent} from "./medal-renderer.component";
 
 @Component({
     selector: 'ag-group-row-renderer-component',
-    templateUrl: 'app/group-row-renderer.component.html'
+    templateUrl: 'group-row-renderer.component.html'
 })
 export class WithGroupRowComponent {
-    private gridOptions:GridOptions;
+    public gridOptions: GridOptions;
 
     constructor() {
         this.gridOptions = <GridOptions>{};
@@ -37,7 +17,7 @@ export class WithGroupRowComponent {
         this.gridOptions.columnDefs = this.createColumnDefs();
         this.gridOptions.groupUseEntireRow = true;
         this.gridOptions.groupRowInnerRendererFramework = {
-            component: GroupInnerRowComponent
+            component: MedalRendererComponent
         }
     }
 

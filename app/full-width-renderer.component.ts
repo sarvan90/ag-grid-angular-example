@@ -1,29 +1,15 @@
-import {Component,OnDestroy} from '@angular/core';
-import {CommonModule} from "@angular/common"
+import {Component} from '@angular/core';
 
-import {AgRendererComponent} from 'ag-grid-ng2/main';
 import {GridOptions,RowNode} from 'ag-grid/main';
 
-@Component({
-    selector: 'full-width-cell',
-    template: `<span>Full Width Column! {{ values }}</span>`
-})
-class FullWidthComponent implements AgRendererComponent {
-    private params:any;
-    private values:string;
-
-    agInit(params:any):void {
-        this.params = params;
-        this.values = `Name: ${params.data.name}, Age: ${params.data.age}`
-    }
-}
+import {NameAndAgeRendererComponent} from "./name-age-renderer.component";
 
 @Component({
     selector: 'ag-full-width-renderer-component',
-    templateUrl: 'app/full-width-renderer.component.html'
+    templateUrl: 'full-width-renderer.component.html'
 })
 export class WithFullWidthComponent {
-    private gridOptions:GridOptions;
+    public gridOptions:GridOptions;
 
     constructor() {
         this.gridOptions = <GridOptions>{};
@@ -33,7 +19,7 @@ export class WithFullWidthComponent {
             return (rowNode.id === "0") || (parseInt(rowNode.id) % 2 === 0);
         };
         this.gridOptions.fullWidthCellRendererFramework = {
-            component: FullWidthComponent
+            component: NameAndAgeRendererComponent
         }
     }
 

@@ -1,16 +1,16 @@
 (function (global) {
     System.config({
+            defaultJSExtensions: true,
             map: {
-                lib: 'lib',
                 // angular bundles
-                '@angular/core': 'node_modules/@angular/core/bundles/core.umd.js',
-                '@angular/common': 'node_modules/@angular/common/bundles/common.umd.js',
-                '@angular/compiler': 'node_modules/@angular/compiler/bundles/compiler.umd.js',
-                '@angular/platform-browser': 'node_modules/@angular/platform-browser/bundles/platform-browser.umd.js',
-                '@angular/platform-browser-dynamic': 'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
-                '@angular/http': 'node_modules/@angular/http/bundles/http.umd.js',
-                '@angular/router': 'node_modules/@angular/router/bundles/router.umd.js',
-                '@angular/forms': 'node_modules/@angular/forms/bundles/forms.umd.js',
+                '@angular/core': 'node_modules/@angular/core',
+                '@angular/common': 'node_modules/@angular/common',
+                '@angular/compiler': 'node_modules/@angular/compiler/index.js',
+                '@angular/platform-browser': 'node_modules/@angular/platform-browser',
+                // '@angular/platform-browser-dynamic': 'node_modules/@angular/platform-browser-dynamic/index.js',
+                // '@angular/http': 'node_modules/@angular/http/bundles/http.umd.js',
+                // '@angular/router': 'node_modules/@angular/router/bundles/router.umd.js',
+                '@angular/forms': 'node_modules/@angular/forms',
                 // other libraries
                 'rxjs': 'node_modules/rxjs',
                 'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
@@ -20,21 +20,17 @@
                 'ag-grid-enterprise' : 'node_modules/ag-grid-enterprise'
             },
             packages: {
-                lib: {
-                    main: './boot.js',
-                    defaultExtension: 'js'
+                '@angular/core': {
+                    main: 'index.js',
                 },
-                rxjs: {
-                    defaultExtension: 'js'
+                '@angular/common': {
+                    main: 'index.js',
                 },
-                'ag-grid-ng2': {
-                    defaultExtension: "js"
+                '@angular/platform-browser': {
+                    main: 'index.js',
                 },
-                'ag-grid': {
-                    defaultExtension: "js"
-                },
-                'ag-grid-enterprise': {
-                    defaultExtension: "js"
+                '@angular/forms': {
+                    main: 'index.js',
                 }
             }
         }

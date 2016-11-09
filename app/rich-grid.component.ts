@@ -11,16 +11,16 @@ import 'ag-grid-enterprise/main';
 
 @Component({
     selector: 'rich-grid',
-    templateUrl: 'app/rich-grid.component.html',
+    templateUrl: 'rich-grid.component.html',
     styles: ['.toolbar button {margin: 2px; padding: 0px;}'],
 })
 export class RichGridComponent {
 
     private gridOptions:GridOptions;
-    private showGrid:boolean;
-    private rowData:any[];
+    public showGrid:boolean;
+    public rowData:any[];
     private columnDefs:any[];
-    private rowCount:string;
+    public rowCount:string;
 
     constructor() {
         // we pass an empty gridOptions in, so we can grab the api out
@@ -186,7 +186,7 @@ export class RichGridComponent {
         console.log('onRowClicked: ' + $event.node.data.name);
     }
 
-    private onQuickFilterChanged($event) {
+    public onQuickFilterChanged($event) {
         this.gridOptions.api.setQuickFilter($event.target.value);
     }
 

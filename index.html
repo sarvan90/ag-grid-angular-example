@@ -21,10 +21,10 @@
     <link href="node_modules/ag-grid/dist/styles/theme-fresh.css" rel="stylesheet" />
 
     <!-- 2. Configure SystemJS -->
-    <script src="systemjs.config.js"></script>
-    <script>
-        System.import('lib').catch(function(err){ console.error(err);  });
-    </script>
+    <!--<script src="systemjs.config.js"></script>-->
+    <!--<script>-->
+        <!--System.import('lib/app/boot').catch(function(err){ console.error(err);  });-->
+<!--//    </script>-->
 
 </head>
 
@@ -32,5 +32,6 @@
 <body>
 <my-app>Loading...</my-app>
 </body>
+<script src="./bundle.js"></script>
 
 </html>

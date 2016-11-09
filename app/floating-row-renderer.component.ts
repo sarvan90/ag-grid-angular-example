@@ -1,29 +1,15 @@
-import {Component,OnDestroy} from '@angular/core';
+import {Component} from '@angular/core';
 import {CommonModule} from "@angular/common"
 
-import {AgRendererComponent} from 'ag-grid-ng2/main';
 import {GridOptions} from 'ag-grid/main';
-
-@Component({
-    selector: 'floating-cell',
-    template: `<span [ngStyle]="style">{{params.value}}</span>`
-})
-class StyledFloatingRowComponent implements AgRendererComponent {
-    private params:any;
-    private style:string;
-
-    agInit(params:any):void {
-        this.params = params;
-        this.style = this.params.style;
-    }
-}
+import {StyledComponent} from "./styled-renderer.component";
 
 @Component({
     selector: 'ag-floating-row-renderer-component',
-    templateUrl: 'app/floating-row-renderer.component.html'
+    templateUrl: 'floating-row-renderer.component.html'
 })
 export class WithFloatingRowComponent {
-    private gridOptions:GridOptions;
+    public gridOptions: GridOptions;
 
     constructor() {
         this.gridOptions = <GridOptions>{};
@@ -44,11 +30,10 @@ export class WithFloatingRowComponent {
                 field: "row",
                 width: 200,
                 floatingCellRendererFramework: {
-                    component: StyledFloatingRowComponent,
-                    moduleImports: [CommonModule]
+                    component: StyledComponent
                 },
                 floatingCellRendererParams: {
-                    style: {'font-weight':  'bold'}
+                    style: {'font-weight': 'bold'}
                 }
             },
             {
@@ -56,18 +41,17 @@ export class WithFloatingRowComponent {
                 field: "number",
                 width: 180,
                 floatingCellRendererFramework: {
-                    component: StyledFloatingRowComponent,
-                    moduleImports: [CommonModule]
+                    component: StyledComponent
                 },
                 floatingCellRendererParams: {
-                    style: {'font-style':  'italic'}
+                    style: {'font-style': 'italic'}
                 }
             },
         ];
     }
 
     private createRowData() {
-        let rowData:any[] = [];
+        let rowData: any[] = [];
 
         for (var i = 0; i < 15; i++) {
             rowData.push({
