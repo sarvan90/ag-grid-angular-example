@@ -28,8 +28,6 @@ var clickable_module_1 = require("./clickable.module");
 var ratio_module_1 = require("./ratio.module");
 var ratio_parent_component_1 = require("./ratio.parent.component");
 var clickable_parent_component_1 = require("./clickable.parent.component");
-// from template
-// import {FromTemplateComponent} from "./from-template.component";
 // editor
 var editor_component_component_1 = require("./editor-component.component");
 var numeric_editor_component_1 = require("./numeric-editor.component");
@@ -60,7 +58,6 @@ var AppModule = (function () {
                     params_component_1.ParamsComponent,
                     ratio_parent_component_1.RatioParentComponent,
                     clickable_parent_component_1.ClickableParentComponent,
-                    // FromTemplateComponent,
                     numeric_editor_component_1.NumericEditorComponent,
                     mood_editor_component_1.MoodEditorComponent,
                     mood_renderer_component_1.MoodRendererComponent,
@@ -82,7 +79,6 @@ var AppModule = (function () {
                 cube_component_1.CubeComponent,
                 params_component_1.ParamsComponent,
                 from_rich_component_1.FromRichComponent,
-                // FromTemplateComponent
                 editor_component_component_1.EditorComponent,
                 numeric_editor_component_1.NumericEditorComponent,
                 mood_editor_component_1.MoodEditorComponent,

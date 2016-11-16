@@ -25,9 +25,6 @@ import {RatioModule} from "./ratio.module";
 import {RatioParentComponent} from "./ratio.parent.component";
 import {ClickableParentComponent} from "./clickable.parent.component";
 
-// from template
-// import {FromTemplateComponent} from "./from-template.component";
-
 // editor
 import {EditorComponent} from "./editor-component.component";
 import {NumericEditorComponent} from "./numeric-editor.component";
@@ -60,7 +57,6 @@ import {PartialMatchFilterComponent} from "./partial-match-filter.component";
                 ParamsComponent,
                 RatioParentComponent,
                 ClickableParentComponent,
-                // FromTemplateComponent,
                 NumericEditorComponent,
                 MoodEditorComponent,
                 MoodRendererComponent,
@@ -82,7 +78,6 @@ import {PartialMatchFilterComponent} from "./partial-match-filter.component";
         CubeComponent,
         ParamsComponent,
         FromRichComponent,
-        // FromTemplateComponent
         EditorComponent,
         NumericEditorComponent,
         MoodEditorComponent,

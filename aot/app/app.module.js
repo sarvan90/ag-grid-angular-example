@@ -39,7 +39,6 @@ export var AppModule = (function () {
                             ParamsComponent,
                             RatioParentComponent,
                             ClickableParentComponent,
-                            // FromTemplateComponent,
                             NumericEditorComponent,
                             MoodEditorComponent,
                             MoodRendererComponent,
@@ -61,7 +60,6 @@ export var AppModule = (function () {
                         CubeComponent,
                         ParamsComponent,
                         FromRichComponent,
-                        // FromTemplateComponent
                         EditorComponent,
                         NumericEditorComponent,
                         MoodEditorComponent,
