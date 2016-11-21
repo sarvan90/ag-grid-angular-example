@@ -18,9 +18,7 @@ var WithFullWidthComponent = (function () {
         this.gridOptions.isFullWidthCell = function (rowNode) {
             return (rowNode.id === "0") || (parseInt(rowNode.id) % 2 === 0);
         };
-        this.gridOptions.fullWidthCellRendererFramework = {
-            component: name_age_renderer_component_1.NameAndAgeRendererComponent
-        };
+        this.gridOptions.fullWidthCellRendererFramework = name_age_renderer_component_1.NameAndAgeRendererComponent;
     }
     WithFullWidthComponent.prototype.createColumnDefs = function () {
         return [

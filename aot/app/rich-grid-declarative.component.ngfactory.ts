@@ -83,7 +83,7 @@ class View_RichGridDeclarativeComponent_Host0 extends import1.AppView<any> {
   }
 }
 export const RichGridDeclarativeComponentNgFactory:import7.ComponentFactory<import0.RichGridDeclarativeComponent> = new import7.ComponentFactory<import0.RichGridDeclarativeComponent>('ag-rich-grid-declarative',View_RichGridDeclarativeComponent_Host0,import0.RichGridDeclarativeComponent);
-const styles_RichGridDeclarativeComponent:any[] = ['.toolbar[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {margin: 2px; padding: 0px;}'];
+const styles_RichGridDeclarativeComponent:any[] = ['.toolbar[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {margin: 2px; padding: 0;}'];
 var renderType_RichGridDeclarativeComponent:import2.RenderComponentType = import3.createRenderComponentType('',0,import4.ViewEncapsulation.Emulated,styles_RichGridDeclarativeComponent,{});
 export class View_RichGridDeclarativeComponent0 extends import1.AppView<import0.RichGridDeclarativeComponent> {
   _el_0:any;

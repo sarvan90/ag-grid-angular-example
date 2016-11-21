@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { RatioComponent } from "./ratio.component";
-import { ClickableComponent } from "./clickable.component";
 import { RatioParentComponent } from "./ratio.parent.component";
 import { ClickableParentComponent } from "./clickable.parent.component";
 export var FromRichComponent = (function () {
@@ -15,19 +13,13 @@ export var FromRichComponent = (function () {
             {
                 headerName: "Ratio Component",
                 field: "ratios",
-                cellRendererFramework: {
-                    component: RatioParentComponent,
-                    dependencies: [RatioComponent]
-                },
+                cellRendererFramework: RatioParentComponent,
                 width: 200
             },
             {
                 headerName: "Clickable Component",
                 field: "name",
-                cellRendererFramework: {
-                    component: ClickableParentComponent,
-                    dependencies: [ClickableComponent]
-                },
+                cellRendererFramework: ClickableParentComponent,
                 width: 200
             }
         ];

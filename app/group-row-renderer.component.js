@@ -16,9 +16,7 @@ var WithGroupRowComponent = (function () {
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
         this.gridOptions.groupUseEntireRow = true;
-        this.gridOptions.groupRowInnerRendererFramework = {
-            component: medal_renderer_component_1.MedalRendererComponent
-        };
+        this.gridOptions.groupRowInnerRendererFramework = medal_renderer_component_1.MedalRendererComponent;
     }
     WithGroupRowComponent.prototype.createColumnDefs = function () {
         return [

@@ -18,9 +18,7 @@ export var WithFloatingRowComponent = (function () {
                 headerName: "Row",
                 field: "row",
                 width: 200,
-                floatingCellRendererFramework: {
-                    component: StyledComponent
-                },
+                floatingCellRendererFramework: StyledComponent,
                 floatingCellRendererParams: {
                     style: { 'font-weight': 'bold' }
                 }
@@ -29,9 +27,7 @@ export var WithFloatingRowComponent = (function () {
                 headerName: "Number",
                 field: "number",
                 width: 180,
-                floatingCellRendererFramework: {
-                    component: StyledComponent
-                },
+                floatingCellRendererFramework: StyledComponent,
                 floatingCellRendererParams: {
                     style: { 'font-style': 'italic' }
                 }

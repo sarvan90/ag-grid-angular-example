@@ -27,9 +27,7 @@ var FromComponentComponent = (function () {
             {
                 headerName: "Square Component",
                 field: "value",
-                cellRendererFramework: {
-                    component: square_component_1.SquareComponent
-                },
+                cellRendererFramework: square_component_1.SquareComponent,
                 editable: true,
                 colId: "square",
                 width: 200
@@ -37,18 +35,14 @@ var FromComponentComponent = (function () {
             {
                 headerName: "Cube Component",
                 field: "value",
-                cellRendererFramework: {
-                    component: cube_component_1.CubeComponent
-                },
+                cellRendererFramework: cube_component_1.CubeComponent,
                 colId: "cube",
                 width: 200
             },
             {
                 headerName: "Row Params Component",
                 field: "row",
-                cellRendererFramework: {
-                    component: params_component_1.ParamsComponent
-                },
+                cellRendererFramework: params_component_1.ParamsComponent,
                 width: 250
             }
         ];

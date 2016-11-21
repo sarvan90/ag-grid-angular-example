@@ -17,9 +17,7 @@ export var FromComponentComponent = (function () {
             {
                 headerName: "Square Component",
                 field: "value",
-                cellRendererFramework: {
-                    component: SquareComponent
-                },
+                cellRendererFramework: SquareComponent,
                 editable: true,
                 colId: "square",
                 width: 200
@@ -27,18 +25,14 @@ export var FromComponentComponent = (function () {
             {
                 headerName: "Cube Component",
                 field: "value",
-                cellRendererFramework: {
-                    component: CubeComponent
-                },
+                cellRendererFramework: CubeComponent,
                 colId: "cube",
                 width: 200
             },
             {
                 headerName: "Row Params Component",
                 field: "row",
-                cellRendererFramework: {
-                    component: ParamsComponent
-                },
+                cellRendererFramework: ParamsComponent,
                 width: 250
             }
         ];

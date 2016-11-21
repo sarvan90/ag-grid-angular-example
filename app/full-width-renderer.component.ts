@@ -19,9 +19,7 @@ export class WithFullWidthComponent {
         this.gridOptions.isFullWidthCell = (rowNode:RowNode)=> {
             return (rowNode.id === "0") || (parseInt(rowNode.id) % 2 === 0);
         };
-        this.gridOptions.fullWidthCellRendererFramework = {
-            component: NameAndAgeRendererComponent
-        }
+        this.gridOptions.fullWidthCellRendererFramework = NameAndAgeRendererComponent;
     }
 
     private createColumnDefs() {

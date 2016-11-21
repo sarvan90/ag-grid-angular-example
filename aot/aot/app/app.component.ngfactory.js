@@ -122,49 +122,46 @@ export var View_AppComponent0 = (function (_super) {
         this._text_9 = this.renderer.createText(parentRenderNode, '\n', null);
         this._el_10 = import3.createRenderElement(this.renderer, parentRenderNode, 'hr', import3.EMPTY_INLINE_ARRAY, null);
         this._text_11 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._text_12 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._el_13 = import3.createRenderElement(this.renderer, parentRenderNode, 'hr', import3.EMPTY_INLINE_ARRAY, null);
-        this._text_14 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._el_15 = import3.createRenderElement(this.renderer, parentRenderNode, 'ag-from-rich-component', import3.EMPTY_INLINE_ARRAY, null);
-        this.compView_15 = new import15.View_FromRichComponent0(this.viewUtils, this, 15, this._el_15);
-        this._FromRichComponent_15_3 = new import15.Wrapper_FromRichComponent();
-        this.compView_15.create(this._FromRichComponent_15_3.context);
-        this._text_16 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._el_17 = import3.createRenderElement(this.renderer, parentRenderNode, 'hr', import3.EMPTY_INLINE_ARRAY, null);
-        this._text_18 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._el_19 = import3.createRenderElement(this.renderer, parentRenderNode, 'ag-editor-component', import3.EMPTY_INLINE_ARRAY, null);
-        this.compView_19 = new import17.View_EditorComponent0(this.viewUtils, this, 19, this._el_19);
-        this._EditorComponent_19_3 = new import17.Wrapper_EditorComponent();
-        this.compView_19.create(this._EditorComponent_19_3.context);
-        this._text_20 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._el_21 = import3.createRenderElement(this.renderer, parentRenderNode, 'hr', import3.EMPTY_INLINE_ARRAY, null);
-        this._text_22 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._el_23 = import3.createRenderElement(this.renderer, parentRenderNode, 'ag-floating-row-renderer-component', import3.EMPTY_INLINE_ARRAY, null);
-        this.compView_23 = new import19.View_WithFloatingRowComponent0(this.viewUtils, this, 23, this._el_23);
-        this._WithFloatingRowComponent_23_3 = new import19.Wrapper_WithFloatingRowComponent();
-        this.compView_23.create(this._WithFloatingRowComponent_23_3.context);
-        this._text_24 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._el_25 = import3.createRenderElement(this.renderer, parentRenderNode, 'hr', import3.EMPTY_INLINE_ARRAY, null);
-        this._text_26 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._el_27 = import3.createRenderElement(this.renderer, parentRenderNode, 'ag-full-width-renderer-component', import3.EMPTY_INLINE_ARRAY, null);
-        this.compView_27 = new import21.View_WithFullWidthComponent0(this.viewUtils, this, 27, this._el_27);
-        this._WithFullWidthComponent_27_3 = new import21.Wrapper_WithFullWidthComponent();
-        this.compView_27.create(this._WithFullWidthComponent_27_3.context);
-        this._text_28 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._el_29 = import3.createRenderElement(this.renderer, parentRenderNode, 'hr', import3.EMPTY_INLINE_ARRAY, null);
-        this._text_30 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._el_31 = import3.createRenderElement(this.renderer, parentRenderNode, 'ag-group-row-renderer-component', import3.EMPTY_INLINE_ARRAY, null);
-        this.compView_31 = new import23.View_WithGroupRowComponent0(this.viewUtils, this, 31, this._el_31);
-        this._WithGroupRowComponent_31_3 = new import23.Wrapper_WithGroupRowComponent();
-        this.compView_31.create(this._WithGroupRowComponent_31_3.context);
-        this._text_32 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._el_33 = import3.createRenderElement(this.renderer, parentRenderNode, 'hr', import3.EMPTY_INLINE_ARRAY, null);
-        this._text_34 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._el_35 = import3.createRenderElement(this.renderer, parentRenderNode, 'ag-filter-component', import3.EMPTY_INLINE_ARRAY, null);
-        this.compView_35 = new import25.View_FilterComponentComponent0(this.viewUtils, this, 35, this._el_35);
-        this._FilterComponentComponent_35_3 = new import25.Wrapper_FilterComponentComponent();
-        this.compView_35.create(this._FilterComponentComponent_35_3.context);
-        this._text_36 = this.renderer.createText(parentRenderNode, '\n', null);
+        this._el_12 = import3.createRenderElement(this.renderer, parentRenderNode, 'ag-from-rich-component', import3.EMPTY_INLINE_ARRAY, null);
+        this.compView_12 = new import15.View_FromRichComponent0(this.viewUtils, this, 12, this._el_12);
+        this._FromRichComponent_12_3 = new import15.Wrapper_FromRichComponent();
+        this.compView_12.create(this._FromRichComponent_12_3.context);
+        this._text_13 = this.renderer.createText(parentRenderNode, '\n', null);
+        this._el_14 = import3.createRenderElement(this.renderer, parentRenderNode, 'hr', import3.EMPTY_INLINE_ARRAY, null);
+        this._text_15 = this.renderer.createText(parentRenderNode, '\n', null);
+        this._el_16 = import3.createRenderElement(this.renderer, parentRenderNode, 'ag-editor-component', import3.EMPTY_INLINE_ARRAY, null);
+        this.compView_16 = new import17.View_EditorComponent0(this.viewUtils, this, 16, this._el_16);
+        this._EditorComponent_16_3 = new import17.Wrapper_EditorComponent();
+        this.compView_16.create(this._EditorComponent_16_3.context);
+        this._text_17 = this.renderer.createText(parentRenderNode, '\n', null);
+        this._el_18 = import3.createRenderElement(this.renderer, parentRenderNode, 'hr', import3.EMPTY_INLINE_ARRAY, null);
+        this._text_19 = this.renderer.createText(parentRenderNode, '\n', null);
+        this._el_20 = import3.createRenderElement(this.renderer, parentRenderNode, 'ag-floating-row-renderer-component', import3.EMPTY_INLINE_ARRAY, null);
+        this.compView_20 = new import19.View_WithFloatingRowComponent0(this.viewUtils, this, 20, this._el_20);
+        this._WithFloatingRowComponent_20_3 = new import19.Wrapper_WithFloatingRowComponent();
+        this.compView_20.create(this._WithFloatingRowComponent_20_3.context);
+        this._text_21 = this.renderer.createText(parentRenderNode, '\n', null);
+        this._el_22 = import3.createRenderElement(this.renderer, parentRenderNode, 'hr', import3.EMPTY_INLINE_ARRAY, null);
+        this._text_23 = this.renderer.createText(parentRenderNode, '\n', null);
+        this._el_24 = import3.createRenderElement(this.renderer, parentRenderNode, 'ag-full-width-renderer-component', import3.EMPTY_INLINE_ARRAY, null);
+        this.compView_24 = new import21.View_WithFullWidthComponent0(this.viewUtils, this, 24, this._el_24);
+        this._WithFullWidthComponent_24_3 = new import21.Wrapper_WithFullWidthComponent();
+        this.compView_24.create(this._WithFullWidthComponent_24_3.context);
+        this._text_25 = this.renderer.createText(parentRenderNode, '\n', null);
+        this._el_26 = import3.createRenderElement(this.renderer, parentRenderNode, 'hr', import3.EMPTY_INLINE_ARRAY, null);
+        this._text_27 = this.renderer.createText(parentRenderNode, '\n', null);
+        this._el_28 = import3.createRenderElement(this.renderer, parentRenderNode, 'ag-group-row-renderer-component', import3.EMPTY_INLINE_ARRAY, null);
+        this.compView_28 = new import23.View_WithGroupRowComponent0(this.viewUtils, this, 28, this._el_28);
+        this._WithGroupRowComponent_28_3 = new import23.Wrapper_WithGroupRowComponent();
+        this.compView_28.create(this._WithGroupRowComponent_28_3.context);
+        this._text_29 = this.renderer.createText(parentRenderNode, '\n', null);
+        this._el_30 = import3.createRenderElement(this.renderer, parentRenderNode, 'hr', import3.EMPTY_INLINE_ARRAY, null);
+        this._text_31 = this.renderer.createText(parentRenderNode, '\n', null);
+        this._el_32 = import3.createRenderElement(this.renderer, parentRenderNode, 'ag-filter-component', import3.EMPTY_INLINE_ARRAY, null);
+        this.compView_32 = new import25.View_FilterComponentComponent0(this.viewUtils, this, 32, this._el_32);
+        this._FilterComponentComponent_32_3 = new import25.Wrapper_FilterComponentComponent();
+        this.compView_32.create(this._FilterComponentComponent_32_3.context);
+        this._text_33 = this.renderer.createText(parentRenderNode, '\n', null);
         this.init(null, (this.renderer.directRenderer ? null : [
             this._el_0,
             this._text_1,
@@ -178,31 +175,28 @@ export var View_AppComponent0 = (function (_super) {
             this._text_9,
             this._el_10,
             this._text_11,
-            this._text_12,
-            this._el_13,
-            this._text_14,
-            this._el_15,
-            this._text_16,
-            this._el_17,
-            this._text_18,
-            this._el_19,
-            this._text_20,
-            this._el_21,
-            this._text_22,
-            this._el_23,
-            this._text_24,
-            this._el_25,
-            this._text_26,
-            this._el_27,
-            this._text_28,
-            this._el_29,
-            this._text_30,
-            this._el_31,
-            this._text_32,
-            this._el_33,
-            this._text_34,
-            this._el_35,
-            this._text_36
+            this._el_12,
+            this._text_13,
+            this._el_14,
+            this._text_15,
+            this._el_16,
+            this._text_17,
+            this._el_18,
+            this._text_19,
+            this._el_20,
+            this._text_21,
+            this._el_22,
+            this._text_23,
+            this._el_24,
+            this._text_25,
+            this._el_26,
+            this._text_27,
+            this._el_28,
+            this._text_29,
+            this._el_30,
+            this._text_31,
+            this._el_32,
+            this._text_33
         ]), null);
         return null;
     };
@@ -216,23 +210,23 @@ export var View_AppComponent0 = (function (_super) {
         if (((token === import12.FromComponentComponent) && (8 === requestNodeIndex))) {
             return this._FromComponentComponent_8_3.context;
         }
-        if (((token === import14.FromRichComponent) && (15 === requestNodeIndex))) {
-            return this._FromRichComponent_15_3.context;
+        if (((token === import14.FromRichComponent) && (12 === requestNodeIndex))) {
+            return this._FromRichComponent_12_3.context;
         }
-        if (((token === import16.EditorComponent) && (19 === requestNodeIndex))) {
-            return this._EditorComponent_19_3.context;
+        if (((token === import16.EditorComponent) && (16 === requestNodeIndex))) {
+            return this._EditorComponent_16_3.context;
         }
-        if (((token === import18.WithFloatingRowComponent) && (23 === requestNodeIndex))) {
-            return this._WithFloatingRowComponent_23_3.context;
+        if (((token === import18.WithFloatingRowComponent) && (20 === requestNodeIndex))) {
+            return this._WithFloatingRowComponent_20_3.context;
         }
-        if (((token === import20.WithFullWidthComponent) && (27 === requestNodeIndex))) {
-            return this._WithFullWidthComponent_27_3.context;
+        if (((token === import20.WithFullWidthComponent) && (24 === requestNodeIndex))) {
+            return this._WithFullWidthComponent_24_3.context;
         }
-        if (((token === import22.WithGroupRowComponent) && (31 === requestNodeIndex))) {
-            return this._WithGroupRowComponent_31_3.context;
+        if (((token === import22.WithGroupRowComponent) && (28 === requestNodeIndex))) {
+            return this._WithGroupRowComponent_28_3.context;
         }
-        if (((token === import24.FilterComponentComponent) && (35 === requestNodeIndex))) {
-            return this._FilterComponentComponent_35_3.context;
+        if (((token === import24.FilterComponentComponent) && (32 === requestNodeIndex))) {
+            return this._FilterComponentComponent_32_3.context;
         }
         return notFoundResult;
     };
@@ -240,32 +234,32 @@ export var View_AppComponent0 = (function (_super) {
         this._RichGridComponent_0_3.ngDoCheck(this, this._el_0, throwOnChange);
         this._RichGridDeclarativeComponent_4_3.ngDoCheck(this, this._el_4, throwOnChange);
         this._FromComponentComponent_8_3.ngDoCheck(this, this._el_8, throwOnChange);
-        this._FromRichComponent_15_3.ngDoCheck(this, this._el_15, throwOnChange);
-        this._EditorComponent_19_3.ngDoCheck(this, this._el_19, throwOnChange);
-        this._WithFloatingRowComponent_23_3.ngDoCheck(this, this._el_23, throwOnChange);
-        this._WithFullWidthComponent_27_3.ngDoCheck(this, this._el_27, throwOnChange);
-        this._WithGroupRowComponent_31_3.ngDoCheck(this, this._el_31, throwOnChange);
-        this._FilterComponentComponent_35_3.ngDoCheck(this, this._el_35, throwOnChange);
+        this._FromRichComponent_12_3.ngDoCheck(this, this._el_12, throwOnChange);
+        this._EditorComponent_16_3.ngDoCheck(this, this._el_16, throwOnChange);
+        this._WithFloatingRowComponent_20_3.ngDoCheck(this, this._el_20, throwOnChange);
+        this._WithFullWidthComponent_24_3.ngDoCheck(this, this._el_24, throwOnChange);
+        this._WithGroupRowComponent_28_3.ngDoCheck(this, this._el_28, throwOnChange);
+        this._FilterComponentComponent_32_3.ngDoCheck(this, this._el_32, throwOnChange);
         this.compView_0.detectChanges(throwOnChange);
         this.compView_4.detectChanges(throwOnChange);
         this.compView_8.detectChanges(throwOnChange);
-        this.compView_15.detectChanges(throwOnChange);
-        this.compView_19.detectChanges(throwOnChange);
-        this.compView_23.detectChanges(throwOnChange);
-        this.compView_27.detectChanges(throwOnChange);
-        this.compView_31.detectChanges(throwOnChange);
-        this.compView_35.detectChanges(throwOnChange);
+        this.compView_12.detectChanges(throwOnChange);
+        this.compView_16.detectChanges(throwOnChange);
+        this.compView_20.detectChanges(throwOnChange);
+        this.compView_24.detectChanges(throwOnChange);
+        this.compView_28.detectChanges(throwOnChange);
+        this.compView_32.detectChanges(throwOnChange);
     };
     View_AppComponent0.prototype.destroyInternal = function () {
         this.compView_0.destroy();
         this.compView_4.destroy();
         this.compView_8.destroy();
-        this.compView_15.destroy();
-        this.compView_19.destroy();
-        this.compView_23.destroy();
-        this.compView_27.destroy();
-        this.compView_31.destroy();
-        this.compView_35.destroy();
+        this.compView_12.destroy();
+        this.compView_16.destroy();
+        this.compView_20.destroy();
+        this.compView_24.destroy();
+        this.compView_28.destroy();
+        this.compView_32.destroy();
     };
     return View_AppComponent0;
 }(import1.AppView));

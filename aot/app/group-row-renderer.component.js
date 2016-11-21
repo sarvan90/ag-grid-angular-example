@@ -6,9 +6,7 @@ export var WithGroupRowComponent = (function () {
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
         this.gridOptions.groupUseEntireRow = true;
-        this.gridOptions.groupRowInnerRendererFramework = {
-            component: MedalRendererComponent
-        };
+        this.gridOptions.groupRowInnerRendererFramework = MedalRendererComponent;
     }
     WithGroupRowComponent.prototype.createColumnDefs = function () {
         return [

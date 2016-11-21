@@ -28,21 +28,15 @@ export class EditorComponent {
             {
                 headerName: "Mood",
                 field: "mood",
-                cellRendererFramework: {
-                    component: MoodRendererComponent
-                },
-                cellEditorFramework: {
-                    component: MoodEditorComponent
-                },
+                cellRendererFramework: MoodRendererComponent,
+                cellEditorFramework: MoodEditorComponent,
                 editable: true,
                 width: 150
             },
             {
                 headerName: "Numeric",
                 field: "number",
-                cellEditorFramework: {
-                    component: NumericEditorComponent
-                },
+                cellEditorFramework: NumericEditorComponent,
                 editable: true,
                 width: 150
             }

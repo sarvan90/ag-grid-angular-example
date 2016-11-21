@@ -9,8 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var ratio_component_1 = require("./ratio.component");
-var clickable_component_1 = require("./clickable.component");
 var ratio_parent_component_1 = require("./ratio.parent.component");
 var clickable_parent_component_1 = require("./clickable.parent.component");
 var FromRichComponent = (function () {
@@ -25,19 +23,13 @@ var FromRichComponent = (function () {
             {
                 headerName: "Ratio Component",
                 field: "ratios",
-                cellRendererFramework: {
-                    component: ratio_parent_component_1.RatioParentComponent,
-                    dependencies: [ratio_component_1.RatioComponent]
-                },
+                cellRendererFramework: ratio_parent_component_1.RatioParentComponent,
                 width: 200
             },
             {
                 headerName: "Clickable Component",
                 field: "name",
-                cellRendererFramework: {
-                    component: clickable_parent_component_1.ClickableParentComponent,
-                    dependencies: [clickable_component_1.ClickableComponent]
-                },
+                cellRendererFramework: clickable_parent_component_1.ClickableParentComponent,
                 width: 200
             }
         ];

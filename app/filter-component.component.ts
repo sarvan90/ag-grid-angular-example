@@ -31,9 +31,7 @@ export class FilterComponentComponent {
             {
                 headerName: "Filter Component",
                 field: "name",
-                filterFramework: {
-                    component: PartialMatchFilterComponent
-                },
+                filterFramework: PartialMatchFilterComponent,
                 width: 198
             }
         ];

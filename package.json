@@ -1,6 +1,6 @@
 {
   "name": "ag-grid-ng2-example",
-  "version": "7.0.0-beta.1",
+  "version": "7.0.0-beta.2",
   "description": "ag-Grid Angular 2 Example",
   "scripts": {
     "tsc": "tsc -p tsconfig.json",
@@ -23,7 +23,7 @@
   "dependencies": {
     "ag-grid": "6.4.x",
     "ag-grid-enterprise": "6.4.x",
-    "ag-grid-ng2": "~7.0.0-beta.1",
+    "ag-grid-ng2": "7.0.0-beta.2",
     "@angular/common": "~2.2.0",
     "@angular/compiler": "~2.2.0",
     "@angular/compiler-cli": "~2.2.0",

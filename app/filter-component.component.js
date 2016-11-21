@@ -28,9 +28,7 @@ var FilterComponentComponent = (function () {
             {
                 headerName: "Filter Component",
                 field: "name",
-                filterFramework: {
-                    component: partial_match_filter_component_1.PartialMatchFilterComponent
-                },
+                filterFramework: partial_match_filter_component_1.PartialMatchFilterComponent,
                 width: 198
             }
         ];

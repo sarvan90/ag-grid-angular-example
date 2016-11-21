@@ -27,19 +27,13 @@ export class FromRichComponent {
             {
                 headerName: "Ratio Component",
                 field: "ratios",
-                cellRendererFramework: {
-                    component: RatioParentComponent,
-                    dependencies: [RatioComponent]
-                },
+                cellRendererFramework: RatioParentComponent,
                 width: 200
             },
             {
                 headerName: "Clickable Component",
                 field: "name",
-                cellRendererFramework: {
-                    component: ClickableParentComponent,
-                    dependencies: [ClickableComponent]
-                },
+                cellRendererFramework: ClickableParentComponent,
                 width: 200
             }
         ];

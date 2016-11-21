@@ -69,6 +69,7 @@ var RichGridDeclarativeComponent = (function () {
         var flag = "<img border='0' width='15' height='10' style='margin-bottom: 2px' src='../images/flags/" + refData_1.default.COUNTRY_CODES[params.value] + ".png'>";
         return flag + " " + params.value;
     };
+    //noinspection JSUnusedLocalSymbols
     RichGridDeclarativeComponent.prototype.skillsCellRenderer = function (params) {
         var data = params.data;
         var skills = [];
@@ -79,6 +80,7 @@ var RichGridDeclarativeComponent = (function () {
         });
         return skills.join(' ');
     };
+    //noinspection JSUnusedLocalSymbols
     RichGridDeclarativeComponent.prototype.percentCellRenderer = function (params) {
         var value = params.value;
         var eDivPercentBar = document.createElement('div');
@@ -102,12 +104,15 @@ var RichGridDeclarativeComponent = (function () {
         eOuterDiv.appendChild(eDivPercentBar);
         return eOuterDiv;
     };
+    //noinspection JSUnusedLocalSymbols
     RichGridDeclarativeComponent.prototype.getSkillFilter = function () {
         return skillFilter_1.default;
     };
+    //noinspection JSUnusedLocalSymbols
     RichGridDeclarativeComponent.prototype.getProficiencyFilter = function () {
         return proficiencyFilter_1.default;
     };
+    //noinspection JSUnusedLocalSymbols
     RichGridDeclarativeComponent.prototype.getCountryFilterParams = function () {
         return {
             cellRenderer: this.countryCellRenderer,
@@ -129,7 +134,7 @@ var RichGridDeclarativeComponent = (function () {
             moduleId: module.id,
             selector: 'ag-rich-grid-declarative',
             templateUrl: 'rich-grid-declarative.component.html',
-            styles: ['.toolbar button {margin: 2px; padding: 0px;}'],
+            styles: ['.toolbar button {margin: 2px; padding: 0;}'],
         }), 
         __metadata('design:paramtypes', [])
     ], RichGridDeclarativeComponent);

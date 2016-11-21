@@ -24,21 +24,15 @@ var EditorComponent = (function () {
             {
                 headerName: "Mood",
                 field: "mood",
-                cellRendererFramework: {
-                    component: mood_renderer_component_1.MoodRendererComponent
-                },
-                cellEditorFramework: {
-                    component: mood_editor_component_1.MoodEditorComponent
-                },
+                cellRendererFramework: mood_renderer_component_1.MoodRendererComponent,
+                cellEditorFramework: mood_editor_component_1.MoodEditorComponent,
                 editable: true,
                 width: 150
             },
             {
                 headerName: "Numeric",
                 field: "number",
-                cellEditorFramework: {
-                    component: numeric_editor_component_1.NumericEditorComponent
-                },
+                cellEditorFramework: numeric_editor_component_1.NumericEditorComponent,
                 editable: true,
                 width: 150
             }

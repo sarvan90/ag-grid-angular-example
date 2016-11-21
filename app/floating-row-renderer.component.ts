@@ -30,9 +30,7 @@ export class WithFloatingRowComponent {
                 headerName: "Row",
                 field: "row",
                 width: 200,
-                floatingCellRendererFramework: {
-                    component: StyledComponent
-                },
+                floatingCellRendererFramework: StyledComponent,
                 floatingCellRendererParams: {
                     style: {'font-weight': 'bold'}
                 }
@@ -41,9 +39,7 @@ export class WithFloatingRowComponent {
                 headerName: "Number",
                 field: "number",
                 width: 180,
-                floatingCellRendererFramework: {
-                    component: StyledComponent
-                },
+                floatingCellRendererFramework: StyledComponent,
                 floatingCellRendererParams: {
                     style: {'font-style': 'italic'}
                 }

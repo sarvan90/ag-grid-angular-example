@@ -13,14 +13,13 @@ import 'ag-grid-enterprise/main';
     moduleId: module.id,
     selector: 'ag-rich-grid-declarative',
     templateUrl: 'rich-grid-declarative.component.html',
-    styles: ['.toolbar button {margin: 2px; padding: 0px;}'],
+    styles: ['.toolbar button {margin: 2px; padding: 0;}'],
 })
 export class RichGridDeclarativeComponent {
 
     public gridOptions:GridOptions;
     public showGrid:boolean;
     private rowData:any[];
-    private columnDefs:any[];
     public rowCount:string;
 
     constructor() {
@@ -86,6 +85,7 @@ export class RichGridDeclarativeComponent {
         return flag + " " + params.value;
     }
 
+    //noinspection JSUnusedLocalSymbols
     private skillsCellRenderer(params) {
         var data = params.data;
         var skills = [];
@@ -97,6 +97,7 @@ export class RichGridDeclarativeComponent {
         return skills.join(' ');
     }
 
+    //noinspection JSUnusedLocalSymbols
     private percentCellRenderer(params) {
         var value = params.value;
 
@@ -123,14 +124,17 @@ export class RichGridDeclarativeComponent {
         return eOuterDiv;
     }
 
+    //noinspection JSUnusedLocalSymbols
     private getSkillFilter():any {
         return SkillFilter;
     }
 
+    //noinspection JSUnusedLocalSymbols
     private getProficiencyFilter():any {
         return ProficiencyFilter;
     }
 
+    //noinspection JSUnusedLocalSymbols
     private getCountryFilterParams():any {
         return {
             cellRenderer: this.countryCellRenderer,

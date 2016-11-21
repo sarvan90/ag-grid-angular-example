@@ -85,7 +85,7 @@ var View_RichGridDeclarativeComponent_Host0 = (function (_super) {
     return View_RichGridDeclarativeComponent_Host0;
 }(import1.AppView));
 export var RichGridDeclarativeComponentNgFactory = new import7.ComponentFactory('ag-rich-grid-declarative', View_RichGridDeclarativeComponent_Host0, import0.RichGridDeclarativeComponent);
-var styles_RichGridDeclarativeComponent = ['.toolbar[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {margin: 2px; padding: 0px;}'];
+var styles_RichGridDeclarativeComponent = ['.toolbar[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {margin: 2px; padding: 0;}'];
 var renderType_RichGridDeclarativeComponent = import3.createRenderComponentType('', 0, import4.ViewEncapsulation.Emulated, styles_RichGridDeclarativeComponent, {});
 export var View_RichGridDeclarativeComponent0 = (function (_super) {
     __extends(View_RichGridDeclarativeComponent0, _super);
