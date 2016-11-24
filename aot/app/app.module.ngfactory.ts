@@ -150,7 +150,6 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
       import37.WithFullWidthComponentNgFactory,
       import38.WithGroupRowComponentNgFactory,
       import39.FilterComponentComponentNgFactory,
-      import32.RichGridComponentNgFactory,
       import40.SquareComponentNgFactory,
       import41.CubeComponentNgFactory,
       import42.ParamsComponentNgFactory,
@@ -332,8 +331,8 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
         ,
         {
           path: '',
-          component: import60.RichGridComponent,
-          data: {title: 'Rich Grid with Pure JavaScript'}
+          redirectTo: 'rich-grid',
+          pathMatch: 'full'
         }
 
       ]

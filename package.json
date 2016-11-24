@@ -1,14 +1,19 @@
 {
   "name": "ag-grid-ng2-example",
-  "version": "7.0.0-beta.2",
+  "version": "7.0.0-beta.4",
   "description": "ag-Grid Angular 2 Example",
   "scripts": {
     "tsc": "tsc -p tsconfig.json",
     "tsc:w": "tsc -p tsconfig.json -w",
     "lite": "lite-server",
+    "clean:jit": "rimraf app/*.js*",
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+
+    "clean:aot": "rimraf aot/aot/* && rimraf aot/app/* && rimraf aot/dist/* && rimraf aot/node_modules/* && rimraf app/*.js*",
     "build:aot": "ngc -p tsconfig-aot.json && gulp aot-bundle",
     "lite:aot": "lite-server -c aot/bs-config.json",
+    "clean-build:aot": "npm run clean:aot && npm run build:aot",
+
     "release": "copyfiles -f aot/index.html docs && ncp app/ docs/app/ && ncp images/ docs/images &&  ncp aot/dist docs/dist/"
   },
   "repository": {
@@ -24,7 +29,7 @@
   "dependencies": {
     "ag-grid": "6.4.x",
     "ag-grid-enterprise": "6.4.x",
-    "ag-grid-ng2": "file:../ag-grid-ng2",
+    "ag-grid-ng2": "7.0.0-beta.4",
 
     "@angular/common": "2.1.2",
     "@angular/compiler": "2.1.2",
@@ -66,6 +71,7 @@
     "systemjs-builder": "^0.15.33",
     "typescript": "2.0.x",
     "copyfiles": "^1.0.0",
-    "ncp": "^2.0.0"
+    "ncp": "^2.0.0",
+    "rimraf": "2.5.x"
   }
 }

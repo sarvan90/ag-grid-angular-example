@@ -29,14 +29,18 @@ import { FilterComponentComponent } from "./filter-component.component";
 import { PartialMatchFilterComponent } from "./partial-match-filter.component";
 var appRoutes = [
     { path: 'rich-grid', component: RichGridComponent, data: { title: "Rich Grid with Pure JavaScript" } },
-    { path: 'rich-grid-declarative', component: RichGridDeclarativeComponent, data: { title: "Rich Grid with Declarative Markup" } },
+    {
+        path: 'rich-grid-declarative',
+        component: RichGridDeclarativeComponent,
+        data: { title: "Rich Grid with Declarative Markup" }
+    },
     { path: 'from-component', component: FromComponentComponent, data: { title: "Using Dynamic Components" } },
     { path: 'editor-component', component: EditorComponent, data: { title: "Using Cell Editor Components" } },
     { path: 'floating-row', component: WithFloatingRowComponent, data: { title: "Using Floating Row Renderers" } },
     { path: 'full-width', component: WithFullWidthComponent, data: { title: "Using Full Width Renderers" } },
     { path: 'group-row', component: WithGroupRowComponent, data: { title: "Using Group Row Renderers" } },
     { path: 'filter', component: FilterComponentComponent, data: { title: "With Filters Components" } },
-    { path: '', component: RichGridComponent, data: { title: "Rich Grid with Pure JavaScript" } }
+    { path: '', redirectTo: 'rich-grid', pathMatch: 'full' }
 ];
 export var AppModule = (function () {
     function AppModule() {
