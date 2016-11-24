@@ -55,7 +55,7 @@ export var RichGridDeclarativeComponent = (function () {
         this.gridOptions.api.setQuickFilter($event.target.value);
     };
     RichGridDeclarativeComponent.prototype.countryCellRenderer = function (params) {
-        var flag = "<img border='0' width='15' height='10' style='margin-bottom: 2px' src='../images/flags/" + RefData.COUNTRY_CODES[params.value] + ".png'>";
+        var flag = "<img border='0' width='15' height='10' style='margin-bottom: 2px' src='images/flags/" + RefData.COUNTRY_CODES[params.value] + ".png'>";
         return flag + " " + params.value;
     };
     //noinspection JSUnusedLocalSymbols
@@ -64,7 +64,7 @@ export var RichGridDeclarativeComponent = (function () {
         var skills = [];
         RefData.IT_SKILLS.forEach(function (skill) {
             if (data && data.skills && data.skills[skill]) {
-                skills.push('<img src="/images/skills/' + skill + '.png" width="16px" title="' + skill + '" />');
+                skills.push('<img src="images/skills/' + skill + '.png" width="16px" title="' + skill + '" />');
             }
         });
         return skills.join(' ');

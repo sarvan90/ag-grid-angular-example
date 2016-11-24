@@ -35,6 +35,7 @@ var appRoutes = [
         data: { title: "Rich Grid with Declarative Markup" }
     },
     { path: 'from-component', component: FromComponentComponent, data: { title: "Using Dynamic Components" } },
+    { path: 'from-rich-component', component: FromRichComponent, data: { title: "Using Dynamic Components - Richer Example" } },
     { path: 'editor-component', component: EditorComponent, data: { title: "Using Cell Editor Components" } },
     { path: 'floating-row', component: WithFloatingRowComponent, data: { title: "Using Floating Row Renderers" } },
     { path: 'full-width', component: WithFullWidthComponent, data: { title: "Using Full Width Renderers" } },

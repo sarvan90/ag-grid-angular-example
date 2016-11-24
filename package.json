@@ -14,7 +14,7 @@
     "lite:aot": "lite-server -c aot/bs-config.json",
     "clean-build:aot": "npm run clean:aot && npm run build:aot",
 
-    "release": "copyfiles -f aot/index.html docs && ncp app/ docs/app/ && ncp images/ docs/images &&  ncp aot/dist docs/dist/"
+    "release": "copyfiles -f aot/index.html docs/ng2-example && ncp app/ docs/ng2-example/app/ && ncp images/ docs/ng2-example/images && ncp aot/dist docs/ng2-example/dist/"
   },
   "repository": {
     "type": "git",

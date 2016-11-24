@@ -20,14 +20,14 @@ export var FromComponentComponent = (function () {
                 cellRendererFramework: SquareComponent,
                 editable: true,
                 colId: "square",
-                width: 200
+                width: 175
             },
             {
                 headerName: "Cube Component",
                 field: "value",
                 cellRendererFramework: CubeComponent,
                 colId: "cube",
-                width: 200
+                width: 175
             },
             {
                 headerName: "Row Params Component",

@@ -34,7 +34,7 @@ export var MoodEditorComponent = (function () {
     MoodEditorComponent.decorators = [
         { type: Component, args: [{
                     selector: 'editor-cell',
-                    template: "\n        <div #container class=\"mood\" tabindex=\"0\" (keydown)=\"onKeyDown($event)\">\n            <img src=\"../images/smiley.png\" (click)=\"setHappy(true)\" [ngClass]=\"{'selected' : happy, 'default' : !happy}\">\n            <img src=\"../images/smiley-sad.png\" (click)=\"setHappy(false)\" [ngClass]=\"{'selected' : !happy, 'default' : happy}\">\n        </div>\n    ",
+                    template: "\n        <div #container class=\"mood\" tabindex=\"0\" (keydown)=\"onKeyDown($event)\">\n            <img src=\"images/smiley.png\" (click)=\"setHappy(true)\" [ngClass]=\"{'selected' : happy, 'default' : !happy}\">\n            <img src=\"images/smiley-sad.png\" (click)=\"setHappy(false)\" [ngClass]=\"{'selected' : !happy, 'default' : happy}\">\n        </div>\n    ",
                     styles: ["\n        .mood {\n            border-radius: 15px;\n            border: 1px solid grey;\n            background: #e6e6e6;\n            padding: 15px;\n            text-align:center;\n            display:inline-block;\n            outline:none\n        }\n\n        .default {\n            padding-left:10px;\n            padding-right:10px;\n            border: 1px solid transparent;\n            padding: 4px;\n        }\n\n        .selected {\n            padding-left:10px;\n            padding-right:10px;\n            border: 1px solid lightgreen;\n            padding: 4px;\n        }\n    "]
                 },] },
     ];

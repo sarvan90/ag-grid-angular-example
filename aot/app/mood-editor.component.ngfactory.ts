@@ -111,10 +111,10 @@ class _View_MoodEditorComponent0 extends import1.AppView<import0.MoodEditorCompo
     this._el_1 = import4.createRenderElement(this.renderer,parentRenderNode,'div',new import4.InlineArray4(4,'class','mood','tabindex','0'),(null as any));
     this._appEl_1 = new import3.AppElement(1,(null as any),this,this._el_1);
     this._text_2 = this.renderer.createText(this._el_1,'\n            ',(null as any));
-    this._el_3 = import4.createRenderElement(this.renderer,this._el_1,'img',new import4.InlineArray2(2,'src','../images/smiley.png'),(null as any));
+    this._el_3 = import4.createRenderElement(this.renderer,this._el_1,'img',new import4.InlineArray2(2,'src','images/smiley.png'),(null as any));
     this._NgClass_3_3 = new import11.Wrapper_NgClass(this.parentInjector.get(import12.IterableDiffers),this.parentInjector.get(import13.KeyValueDiffers),new import14.ElementRef(this._el_3),this.renderer);
     this._text_4 = this.renderer.createText(this._el_1,'\n            ',(null as any));
-    this._el_5 = import4.createRenderElement(this.renderer,this._el_1,'img',new import4.InlineArray2(2,'src','../images/smiley-sad.png'),(null as any));
+    this._el_5 = import4.createRenderElement(this.renderer,this._el_1,'img',new import4.InlineArray2(2,'src','images/smiley-sad.png'),(null as any));
     this._NgClass_5_3 = new import11.Wrapper_NgClass(this.parentInjector.get(import12.IterableDiffers),this.parentInjector.get(import13.KeyValueDiffers),new import14.ElementRef(this._el_5),this.renderer);
     this._text_6 = this.renderer.createText(this._el_1,'\n        ',(null as any));
     this._text_7 = this.renderer.createText(parentRenderNode,'\n    ',(null as any));

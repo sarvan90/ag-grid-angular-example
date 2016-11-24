@@ -87,12 +87,12 @@ class _View_FromRichComponent0 extends import1.AppView<import0.FromRichComponent
   }
   createInternal(rootSelector:string):import3.AppElement {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
-    this._el_0 = import4.createRenderElement(this.renderer,parentRenderNode,'div',new import4.InlineArray2(2,'style','width: 850px;'),(null as any));
+    this._el_0 = import4.createRenderElement(this.renderer,parentRenderNode,'div',new import4.InlineArray2(2,'style','width: 800px;'),(null as any));
     this._text_1 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_2 = import4.createRenderElement(this.renderer,this._el_0,'h1',import4.EMPTY_INLINE_ARRAY,(null as any));
     this._text_3 = this.renderer.createText(this._el_2,'Using Dynamic Components - Richer Example',(null as any));
     this._text_4 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._el_5 = import4.createRenderElement(this.renderer,this._el_0,'ag-grid-ng2',new import4.InlineArray4(4,'class','ag-fresh','style','width: 100%; height: 200px;'),(null as any));
+    this._el_5 = import4.createRenderElement(this.renderer,this._el_0,'ag-grid-ng2',new import4.InlineArray4(4,'class','ag-fresh','style','width: 100%; height: 350px;'),(null as any));
     this._appEl_5 = new import3.AppElement(5,0,this,this._el_5);
     var compView_5:any = import10.viewFactory_AgGridNg20(this.viewUtils,this.injector(5),this._appEl_5);
     this._AgGridNg2_5_5 = new import10.Wrapper_AgGridNg2(new import12.ElementRef(this._el_5),this._appEl_5.vcRef,this.parentInjector.get(import13.Ng2FrameworkFactory));

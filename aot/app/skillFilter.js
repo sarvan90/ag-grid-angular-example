@@ -4,7 +4,7 @@ var SKILL_TEMPLATE = '<label style="border: 1px solid lightgrey; margin: 4px; pa
     '    <div style="text-align: center;">SKILL_NAME</div>' +
     '    <div>' +
     '      <input type="checkbox"/>' +
-    '      <img src="/images/skills/SKILL.png" width="30px"/>' +
+    '      <img src="images/skills/SKILL.png" width="30px"/>' +
     '    </div>' +
     '  </span>' +
     '</label>';

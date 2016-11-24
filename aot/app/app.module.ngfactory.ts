@@ -39,53 +39,55 @@ import * as import31 from '@angular/core/src/di/injector';
 import * as import32 from './rich-grid.component.ngfactory';
 import * as import33 from './rich-grid-declarative.component.ngfactory';
 import * as import34 from './from-component.component.ngfactory';
-import * as import35 from './editor-component.component.ngfactory';
-import * as import36 from './floating-row-renderer.component.ngfactory';
-import * as import37 from './full-width-renderer.component.ngfactory';
-import * as import38 from './group-row-renderer.component.ngfactory';
-import * as import39 from './filter-component.component.ngfactory';
-import * as import40 from './square.component.ngfactory';
-import * as import41 from './cube.component.ngfactory';
-import * as import42 from './params.component.ngfactory';
-import * as import43 from './ratio.parent.component.ngfactory';
-import * as import44 from './clickable.parent.component.ngfactory';
-import * as import45 from './numeric-editor.component.ngfactory';
-import * as import46 from './mood-editor.component.ngfactory';
-import * as import47 from './mood-renderer.component.ngfactory';
-import * as import48 from './styled-renderer.component.ngfactory';
-import * as import49 from './name-age-renderer.component.ngfactory';
-import * as import50 from './medal-renderer.component.ngfactory';
-import * as import51 from './partial-match-filter.component.ngfactory';
-import * as import52 from './app.component.ngfactory';
-import * as import53 from '@angular/core/src/application_tokens';
-import * as import54 from '@angular/platform-browser/src/dom/events/dom_events';
-import * as import55 from '@angular/platform-browser/src/dom/events/key_events';
-import * as import56 from '@angular/core/src/zone/ng_zone';
-import * as import57 from '@angular/platform-browser/src/dom/debug/ng_probe';
-import * as import58 from '@angular/common/src/location/platform_location';
-import * as import59 from '@angular/common/src/location/location_strategy';
-import * as import60 from '../../app/rich-grid.component';
-import * as import61 from '../../app/rich-grid-declarative.component';
-import * as import62 from '../../app/from-component.component';
-import * as import63 from '../../app/editor-component.component';
-import * as import64 from '../../app/floating-row-renderer.component';
-import * as import65 from '../../app/full-width-renderer.component';
-import * as import66 from '../../app/group-row-renderer.component';
-import * as import67 from '../../app/filter-component.component';
-import * as import68 from '@angular/router/src/router';
-import * as import69 from '@angular/core/src/console';
-import * as import70 from '@angular/core/src/i18n/tokens';
-import * as import71 from '@angular/core/src/error_handler';
-import * as import72 from '@angular/platform-browser/src/dom/dom_tokens';
-import * as import73 from '@angular/platform-browser/src/dom/animation_driver';
-import * as import74 from '@angular/core/src/render/api';
-import * as import75 from '@angular/core/src/security';
-import * as import76 from '@angular/core/src/change_detection/differs/iterable_differs';
-import * as import77 from '@angular/core/src/change_detection/differs/keyvalue_differs';
-import * as import78 from '@angular/core/src/linker/ng_module_factory_loader';
-import * as import79 from '@angular/router/src/router_config_loader';
-import * as import80 from '@angular/router/src/router_state';
-import * as import81 from 'ag-grid-ng2/lib/baseComponentFactory';
+import * as import35 from './from-rich.component.ngfactory';
+import * as import36 from './editor-component.component.ngfactory';
+import * as import37 from './floating-row-renderer.component.ngfactory';
+import * as import38 from './full-width-renderer.component.ngfactory';
+import * as import39 from './group-row-renderer.component.ngfactory';
+import * as import40 from './filter-component.component.ngfactory';
+import * as import41 from './square.component.ngfactory';
+import * as import42 from './cube.component.ngfactory';
+import * as import43 from './params.component.ngfactory';
+import * as import44 from './ratio.parent.component.ngfactory';
+import * as import45 from './clickable.parent.component.ngfactory';
+import * as import46 from './numeric-editor.component.ngfactory';
+import * as import47 from './mood-editor.component.ngfactory';
+import * as import48 from './mood-renderer.component.ngfactory';
+import * as import49 from './styled-renderer.component.ngfactory';
+import * as import50 from './name-age-renderer.component.ngfactory';
+import * as import51 from './medal-renderer.component.ngfactory';
+import * as import52 from './partial-match-filter.component.ngfactory';
+import * as import53 from './app.component.ngfactory';
+import * as import54 from '@angular/core/src/application_tokens';
+import * as import55 from '@angular/platform-browser/src/dom/events/dom_events';
+import * as import56 from '@angular/platform-browser/src/dom/events/key_events';
+import * as import57 from '@angular/core/src/zone/ng_zone';
+import * as import58 from '@angular/platform-browser/src/dom/debug/ng_probe';
+import * as import59 from '@angular/common/src/location/platform_location';
+import * as import60 from '@angular/common/src/location/location_strategy';
+import * as import61 from '../../app/rich-grid.component';
+import * as import62 from '../../app/rich-grid-declarative.component';
+import * as import63 from '../../app/from-component.component';
+import * as import64 from '../../app/from-rich.component';
+import * as import65 from '../../app/editor-component.component';
+import * as import66 from '../../app/floating-row-renderer.component';
+import * as import67 from '../../app/full-width-renderer.component';
+import * as import68 from '../../app/group-row-renderer.component';
+import * as import69 from '../../app/filter-component.component';
+import * as import70 from '@angular/router/src/router';
+import * as import71 from '@angular/core/src/console';
+import * as import72 from '@angular/core/src/i18n/tokens';
+import * as import73 from '@angular/core/src/error_handler';
+import * as import74 from '@angular/platform-browser/src/dom/dom_tokens';
+import * as import75 from '@angular/platform-browser/src/dom/animation_driver';
+import * as import76 from '@angular/core/src/render/api';
+import * as import77 from '@angular/core/src/security';
+import * as import78 from '@angular/core/src/change_detection/differs/iterable_differs';
+import * as import79 from '@angular/core/src/change_detection/differs/keyvalue_differs';
+import * as import80 from '@angular/core/src/linker/ng_module_factory_loader';
+import * as import81 from '@angular/router/src/router_config_loader';
+import * as import82 from '@angular/router/src/router_state';
+import * as import83 from 'ag-grid-ng2/lib/baseComponentFactory';
 class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
   _CommonModule_0:import2.CommonModule;
   _ApplicationModule_1:import3.ApplicationModule;
@@ -145,26 +147,27 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
       import32.RichGridComponentNgFactory,
       import33.RichGridDeclarativeComponentNgFactory,
       import34.FromComponentComponentNgFactory,
-      import35.EditorComponentNgFactory,
-      import36.WithFloatingRowComponentNgFactory,
-      import37.WithFullWidthComponentNgFactory,
-      import38.WithGroupRowComponentNgFactory,
-      import39.FilterComponentComponentNgFactory,
-      import40.SquareComponentNgFactory,
-      import41.CubeComponentNgFactory,
-      import42.ParamsComponentNgFactory,
-      import43.RatioParentComponentNgFactory,
-      import44.ClickableParentComponentNgFactory,
-      import45.NumericEditorComponentNgFactory,
-      import46.MoodEditorComponentNgFactory,
-      import47.MoodRendererComponentNgFactory,
-      import48.StyledComponentNgFactory,
-      import49.NameAndAgeRendererComponentNgFactory,
-      import50.MedalRendererComponentNgFactory,
-      import51.PartialMatchFilterComponentNgFactory,
-      import52.AppComponentNgFactory
+      import35.FromRichComponentNgFactory,
+      import36.EditorComponentNgFactory,
+      import37.WithFloatingRowComponentNgFactory,
+      import38.WithFullWidthComponentNgFactory,
+      import39.WithGroupRowComponentNgFactory,
+      import40.FilterComponentComponentNgFactory,
+      import41.SquareComponentNgFactory,
+      import42.CubeComponentNgFactory,
+      import43.ParamsComponentNgFactory,
+      import44.RatioParentComponentNgFactory,
+      import45.ClickableParentComponentNgFactory,
+      import46.NumericEditorComponentNgFactory,
+      import47.MoodEditorComponentNgFactory,
+      import48.MoodRendererComponentNgFactory,
+      import49.StyledComponentNgFactory,
+      import50.NameAndAgeRendererComponentNgFactory,
+      import51.MedalRendererComponentNgFactory,
+      import52.PartialMatchFilterComponentNgFactory,
+      import53.AppComponentNgFactory
     ]
-    ,[import52.AppComponentNgFactory]);
+    ,[import53.AppComponentNgFactory]);
   }
   get _LOCALE_ID_11():any {
     if ((this.__LOCALE_ID_11 == (null as any))) { (this.__LOCALE_ID_11 = 'en-US'); }
@@ -183,7 +186,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     return this.__Compiler_18;
   }
   get _APP_ID_19():any {
-    if ((this.__APP_ID_19 == (null as any))) { (this.__APP_ID_19 = import53._appIdRandomProviderFactory()); }
+    if ((this.__APP_ID_19 == (null as any))) { (this.__APP_ID_19 = import54._appIdRandomProviderFactory()); }
     return this.__APP_ID_19;
   }
   get _DOCUMENT_20():any {
@@ -196,15 +199,15 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
   }
   get _EVENT_MANAGER_PLUGINS_22():any[] {
     if ((this.__EVENT_MANAGER_PLUGINS_22 == (null as any))) { (this.__EVENT_MANAGER_PLUGINS_22 = [
-      new import54.DomEventsPlugin(),
-      new import55.KeyEventsPlugin(),
+      new import55.DomEventsPlugin(),
+      new import56.KeyEventsPlugin(),
       new import16.HammerGesturesPlugin(this._HAMMER_GESTURE_CONFIG_21)
     ]
     ); }
     return this.__EVENT_MANAGER_PLUGINS_22;
   }
   get _EventManager_23():import17.EventManager {
-    if ((this.__EventManager_23 == (null as any))) { (this.__EventManager_23 = new import17.EventManager(this._EVENT_MANAGER_PLUGINS_22,this.parent.get(import56.NgZone))); }
+    if ((this.__EventManager_23 == (null as any))) { (this.__EventManager_23 = new import17.EventManager(this._EVENT_MANAGER_PLUGINS_22,this.parent.get(import57.NgZone))); }
     return this.__EventManager_23;
   }
   get _DomSharedStylesHost_24():import18.DomSharedStylesHost {
@@ -220,7 +223,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     return this.__DomRootRenderer_26;
   }
   get _RootRenderer_27():any {
-    if ((this.__RootRenderer_27 == (null as any))) { (this.__RootRenderer_27 = import57._createConditionalRootRenderer(this._DomRootRenderer_26,this.parent.get(import57.NgProbeToken,(null as any)))); }
+    if ((this.__RootRenderer_27 == (null as any))) { (this.__RootRenderer_27 = import58._createConditionalRootRenderer(this._DomRootRenderer_26,this.parent.get(import58.NgProbeToken,(null as any)))); }
     return this.__RootRenderer_27;
   }
   get _DomSanitizer_28():import20.DomSanitizerImpl {
@@ -260,7 +263,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     return this.__ROUTER_CONFIGURATION_36;
   }
   get _LocationStrategy_37():any {
-    if ((this.__LocationStrategy_37 == (null as any))) { (this.__LocationStrategy_37 = import7.provideLocationStrategy(this.parent.get(import58.PlatformLocation),this.parent.get(import59.APP_BASE_HREF,(null as any)),this._ROUTER_CONFIGURATION_36)); }
+    if ((this.__LocationStrategy_37 == (null as any))) { (this.__LocationStrategy_37 = import7.provideLocationStrategy(this.parent.get(import59.PlatformLocation),this.parent.get(import60.APP_BASE_HREF,(null as any)),this._ROUTER_CONFIGURATION_36)); }
     return this.__LocationStrategy_37;
   }
   get _Location_38():import24.Location {
@@ -283,49 +286,55 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
       if ((this.__ROUTES_42 == (null as any))) { (this.__ROUTES_42 = [[
         {
           path: 'rich-grid',
-          component: import60.RichGridComponent,
+          component: import61.RichGridComponent,
           data: {title: 'Rich Grid with Pure JavaScript'}
         }
         ,
         {
           path: 'rich-grid-declarative',
-          component: import61.RichGridDeclarativeComponent,
+          component: import62.RichGridDeclarativeComponent,
           data: {title: 'Rich Grid with Declarative Markup'}
         }
         ,
         {
           path: 'from-component',
-          component: import62.FromComponentComponent,
+          component: import63.FromComponentComponent,
           data: {title: 'Using Dynamic Components'}
         }
         ,
         {
+          path: 'from-rich-component',
+          component: import64.FromRichComponent,
+          data: {title: 'Using Dynamic Components - Richer Example'}
+        }
+        ,
+        {
           path: 'editor-component',
-          component: import63.EditorComponent,
+          component: import65.EditorComponent,
           data: {title: 'Using Cell Editor Components'}
         }
         ,
         {
           path: 'floating-row',
-          component: import64.WithFloatingRowComponent,
+          component: import66.WithFloatingRowComponent,
           data: {title: 'Using Floating Row Renderers'}
         }
         ,
         {
           path: 'full-width',
-          component: import65.WithFullWidthComponent,
+          component: import67.WithFullWidthComponent,
           data: {title: 'Using Full Width Renderers'}
         }
         ,
         {
           path: 'group-row',
-          component: import66.WithGroupRowComponent,
+          component: import68.WithGroupRowComponent,
           data: {title: 'Using Group Row Renderers'}
         }
         ,
         {
           path: 'filter',
-          component: import67.FilterComponentComponent,
+          component: import69.FilterComponentComponent,
           data: {title: 'With Filters Components'}
         }
         ,
@@ -373,7 +382,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     this._BrowserModule_2 = new import4.BrowserModule(this.parent.get(import4.BrowserModule,(null as any)));
     this._InternalFormsSharedModule_3 = new import5.InternalFormsSharedModule();
     this._FormsModule_4 = new import6.FormsModule();
-    this._ROUTER_FORROOT_GUARD_5 = import7.provideForRootGuard(this.parent.get(import68.Router,(null as any)));
+    this._ROUTER_FORROOT_GUARD_5 = import7.provideForRootGuard(this.parent.get(import70.Router,(null as any)));
     this._RouterModule_6 = new import7.RouterModule(this._ROUTER_FORROOT_GUARD_5);
     this._AgGridModule_7 = new import8.AgGridModule();
     this._RatioModule_8 = new import9.RatioModule();
@@ -381,8 +390,8 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     this._AppModule_10 = new import1.AppModule();
     this._ErrorHandler_13 = import4.errorHandler();
     this._ApplicationInitStatus_14 = new import12.ApplicationInitStatus(this.parent.get(import12.APP_INITIALIZER,(null as any)));
-    this._Testability_15 = new import13.Testability(this.parent.get(import56.NgZone));
-    this._ApplicationRef__16 = new import14.ApplicationRef_(this.parent.get(import56.NgZone),this.parent.get(import69.Console),this,this._ErrorHandler_13,this,this._ApplicationInitStatus_14,this.parent.get(import13.TestabilityRegistry,(null as any)),this._Testability_15);
+    this._Testability_15 = new import13.Testability(this.parent.get(import57.NgZone));
+    this._ApplicationRef__16 = new import14.ApplicationRef_(this.parent.get(import57.NgZone),this.parent.get(import71.Console),this,this._ErrorHandler_13,this,this._ApplicationInitStatus_14,this.parent.get(import13.TestabilityRegistry,(null as any)),this._Testability_15);
     this._NoPreloading_45 = new import28.NoPreloading();
     this._PreloadingStrategy_46 = this._NoPreloading_45;
     this._RouterPreloader_47 = new import28.RouterPreloader(this._Router_43,this._NgModuleFactoryLoader_41,this._Compiler_18,this,this._PreloadingStrategy_46);
@@ -400,47 +409,47 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     if ((token === import9.RatioModule)) { return this._RatioModule_8; }
     if ((token === import10.ClickableModule)) { return this._ClickableModule_9; }
     if ((token === import1.AppModule)) { return this._AppModule_10; }
-    if ((token === import70.LOCALE_ID)) { return this._LOCALE_ID_11; }
+    if ((token === import72.LOCALE_ID)) { return this._LOCALE_ID_11; }
     if ((token === import11.NgLocalization)) { return this._NgLocalization_12; }
-    if ((token === import71.ErrorHandler)) { return this._ErrorHandler_13; }
+    if ((token === import73.ErrorHandler)) { return this._ErrorHandler_13; }
     if ((token === import12.ApplicationInitStatus)) { return this._ApplicationInitStatus_14; }
     if ((token === import13.Testability)) { return this._Testability_15; }
     if ((token === import14.ApplicationRef_)) { return this._ApplicationRef__16; }
     if ((token === import14.ApplicationRef)) { return this._ApplicationRef_17; }
     if ((token === import15.Compiler)) { return this._Compiler_18; }
-    if ((token === import53.APP_ID)) { return this._APP_ID_19; }
-    if ((token === import72.DOCUMENT)) { return this._DOCUMENT_20; }
+    if ((token === import54.APP_ID)) { return this._APP_ID_19; }
+    if ((token === import74.DOCUMENT)) { return this._DOCUMENT_20; }
     if ((token === import16.HAMMER_GESTURE_CONFIG)) { return this._HAMMER_GESTURE_CONFIG_21; }
     if ((token === import17.EVENT_MANAGER_PLUGINS)) { return this._EVENT_MANAGER_PLUGINS_22; }
     if ((token === import17.EventManager)) { return this._EventManager_23; }
     if ((token === import18.DomSharedStylesHost)) { return this._DomSharedStylesHost_24; }
-    if ((token === import73.AnimationDriver)) { return this._AnimationDriver_25; }
+    if ((token === import75.AnimationDriver)) { return this._AnimationDriver_25; }
     if ((token === import19.DomRootRenderer)) { return this._DomRootRenderer_26; }
-    if ((token === import74.RootRenderer)) { return this._RootRenderer_27; }
+    if ((token === import76.RootRenderer)) { return this._RootRenderer_27; }
     if ((token === import20.DomSanitizer)) { return this._DomSanitizer_28; }
-    if ((token === import75.Sanitizer)) { return this._Sanitizer_29; }
+    if ((token === import77.Sanitizer)) { return this._Sanitizer_29; }
     if ((token === import21.ViewUtils)) { return this._ViewUtils_30; }
-    if ((token === import76.IterableDiffers)) { return this._IterableDiffers_31; }
-    if ((token === import77.KeyValueDiffers)) { return this._KeyValueDiffers_32; }
+    if ((token === import78.IterableDiffers)) { return this._IterableDiffers_31; }
+    if ((token === import79.KeyValueDiffers)) { return this._KeyValueDiffers_32; }
     if ((token === import18.SharedStylesHost)) { return this._SharedStylesHost_33; }
     if ((token === import22.Title)) { return this._Title_34; }
     if ((token === import23.RadioControlRegistry)) { return this._RadioControlRegistry_35; }
     if ((token === import7.ROUTER_CONFIGURATION)) { return this._ROUTER_CONFIGURATION_36; }
-    if ((token === import59.LocationStrategy)) { return this._LocationStrategy_37; }
+    if ((token === import60.LocationStrategy)) { return this._LocationStrategy_37; }
     if ((token === import24.Location)) { return this._Location_38; }
     if ((token === import25.UrlSerializer)) { return this._UrlSerializer_39; }
     if ((token === import26.RouterOutletMap)) { return this._RouterOutletMap_40; }
-    if ((token === import78.NgModuleFactoryLoader)) { return this._NgModuleFactoryLoader_41; }
-    if ((token === import79.ROUTES)) { return this._ROUTES_42; }
-    if ((token === import68.Router)) { return this._Router_43; }
-    if ((token === import80.ActivatedRoute)) { return this._ActivatedRoute_44; }
+    if ((token === import80.NgModuleFactoryLoader)) { return this._NgModuleFactoryLoader_41; }
+    if ((token === import81.ROUTES)) { return this._ROUTES_42; }
+    if ((token === import70.Router)) { return this._Router_43; }
+    if ((token === import82.ActivatedRoute)) { return this._ActivatedRoute_44; }
     if ((token === import28.NoPreloading)) { return this._NoPreloading_45; }
     if ((token === import28.PreloadingStrategy)) { return this._PreloadingStrategy_46; }
     if ((token === import28.RouterPreloader)) { return this._RouterPreloader_47; }
     if ((token === import28.PreloadAllModules)) { return this._PreloadAllModules_48; }
-    if ((token === import53.APP_BOOTSTRAP_LISTENER)) { return this._APP_BOOTSTRAP_LISTENER_49; }
+    if ((token === import54.APP_BOOTSTRAP_LISTENER)) { return this._APP_BOOTSTRAP_LISTENER_49; }
     if ((token === import29.Ng2ComponentFactory)) { return this._Ng2ComponentFactory_50; }
-    if ((token === import81.BaseComponentFactory)) { return this._BaseComponentFactory_51; }
+    if ((token === import83.BaseComponentFactory)) { return this._BaseComponentFactory_51; }
     if ((token === import30.Ng2FrameworkFactory)) { return this._Ng2FrameworkFactory_52; }
     return notFoundResult;
   }
