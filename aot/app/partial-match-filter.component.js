@@ -39,7 +39,7 @@ export var PartialMatchFilterComponent = (function () {
     PartialMatchFilterComponent.decorators = [
         { type: Component, args: [{
                     selector: 'filter-cell',
-                    template: "\n        Filter: <input style=\"height: 10px\" #input (ngModelChange)=\"onChange($event)\" [ngModel]=\"text\">\n    "
+                    template: "\n        Filter: <input style=\"height: 20px\" #input (ngModelChange)=\"onChange($event)\" [ngModel]=\"text\">\n    "
                 },] },
     ];
     /** @nocollapse */

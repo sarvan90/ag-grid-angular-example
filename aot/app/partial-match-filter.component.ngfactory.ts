@@ -93,7 +93,7 @@ class _View_PartialMatchFilterComponent0 extends import1.AppView<import0.Partial
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
     this._viewQuery_input_0 = new import10.QueryList<any>();
     this._text_0 = this.renderer.createText(parentRenderNode,'\n        Filter: ',(null as any));
-    this._el_1 = import4.createRenderElement(this.renderer,parentRenderNode,'input',new import4.InlineArray2(2,'style','height: 10px'),(null as any));
+    this._el_1 = import4.createRenderElement(this.renderer,parentRenderNode,'input',new import4.InlineArray2(2,'style','height: 20px'),(null as any));
     this._appEl_1 = new import3.AppElement(1,(null as any),this,this._el_1);
     this._DefaultValueAccessor_1_5 = new import11.Wrapper_DefaultValueAccessor(this.renderer,new import14.ElementRef(this._el_1));
     this._NG_VALUE_ACCESSOR_1_6 = [this._DefaultValueAccessor_1_5.context];

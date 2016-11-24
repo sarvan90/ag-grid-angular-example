@@ -6,7 +6,7 @@ import {AgFilterComponent} from 'ag-grid-ng2/main';
 @Component({
     selector: 'filter-cell',
     template: `
-        Filter: <input style="height: 10px" #input (ngModelChange)="onChange($event)" [ngModel]="text">
+        Filter: <input style="height: 20px" #input (ngModelChange)="onChange($event)" [ngModel]="text">
     `
 })
 export class PartialMatchFilterComponent implements AgFilterComponent {
