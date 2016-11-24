@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
-import { AgGridModule } from 'ag-grid-ng2/main';
+import { RouterModule } from "@angular/router";
+import { AgGridModule } from "ag-grid-ng2/main";
 import { AppComponent } from "./app.component";
 import { RichGridComponent } from "./rich-grid.component";
 import { RichGridDeclarativeComponent } from "./rich-grid-declarative.component";
@@ -26,6 +27,17 @@ import { MedalRendererComponent } from "./medal-renderer.component";
 import { WithGroupRowComponent } from "./group-row-renderer.component";
 import { FilterComponentComponent } from "./filter-component.component";
 import { PartialMatchFilterComponent } from "./partial-match-filter.component";
+var appRoutes = [
+    { path: 'rich-grid', component: RichGridComponent, data: { title: "Rich Grid with Pure JavaScript" } },
+    { path: 'rich-grid-declarative', component: RichGridDeclarativeComponent, data: { title: "Rich Grid with Declarative Markup" } },
+    { path: 'from-component', component: FromComponentComponent, data: { title: "Using Dynamic Components" } },
+    { path: 'editor-component', component: EditorComponent, data: { title: "Using Cell Editor Components" } },
+    { path: 'floating-row', component: WithFloatingRowComponent, data: { title: "Using Floating Row Renderers" } },
+    { path: 'full-width', component: WithFullWidthComponent, data: { title: "Using Full Width Renderers" } },
+    { path: 'group-row', component: WithGroupRowComponent, data: { title: "Using Group Row Renderers" } },
+    { path: 'filter', component: FilterComponentComponent, data: { title: "With Filters Components" } },
+    { path: '', component: RichGridComponent, data: { title: "Rich Grid with Pure JavaScript" } }
+];
 export var AppModule = (function () {
     function AppModule() {
     }
@@ -33,6 +45,8 @@ export var AppModule = (function () {
         { type: NgModule, args: [{
                     imports: [
                         BrowserModule,
+                        FormsModule,
+                        RouterModule.forRoot(appRoutes),
                         AgGridModule.withComponents([
                             SquareComponent,
                             CubeComponent,
@@ -48,8 +62,7 @@ export var AppModule = (function () {
                             PartialMatchFilterComponent
                         ]),
                         RatioModule,
-                        ClickableModule,
-                        FormsModule
+                        ClickableModule
                     ],
                     declarations: [
                         AppComponent,

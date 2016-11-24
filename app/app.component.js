@@ -8,17 +8,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+require("rxjs/add/operator/map");
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(router, route) {
+        this.router = router;
+        this.route = route;
+        this.showNav = true;
     }
+    AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route
+            .queryParams
+            .map(function (params) { return params['fromDocs'] !== undefined || false; })
+            .subscribe(function (fromDocs) {
+            _this.showNav = !fromDocs;
+        });
+    };
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'my-app',
             templateUrl: 'app.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router, router_1.ActivatedRoute])
     ], AppComponent);
     return AppComponent;
 }());

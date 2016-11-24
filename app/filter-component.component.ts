@@ -27,12 +27,12 @@ export class FilterComponentComponent {
 
     private createColumnDefs() {
         return [
-            {headerName: "Row", field: "row", width: 200},
+            {headerName: "Row", field: "row", width: 400},
             {
                 headerName: "Filter Component",
                 field: "name",
                 filterFramework: PartialMatchFilterComponent,
-                width: 198
+                width: 400
             }
         ];
     }
@@ -48,7 +48,11 @@ export class FilterComponentComponent {
             {"row": "Row 7", "name": "Allison Schmitt"},
             {"row": "Row 8", "name": "Natalie Coughlin"},
             {"row": "Row 9", "name": "Ian Thorpe"},
-            {"row": "Row 10", "name": "Dara Torres"}
+            {"row": "Row 10", "name": "Bob Mill"},
+            {"row": "Row 11", "name": "Willy Walsh"},
+            {"row": "Row 12", "name": "Sarah McCoy"},
+            {"row": "Row 13", "name": "Jane Jack"},
+            {"row": "Row 14", "name": "Tina Wills"}
         ];
     }
 }

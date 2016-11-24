@@ -23,16 +23,6 @@
             packages: {
                 app: {
                     main: './boot.js'
-                //     defaultExtension: 'js'
-                },
-                '@angular/common': {
-                    main: 'index.js'
-                },
-                '@angular/platform-browser': {
-                    main: 'index.js'
-                },
-                '@angular/forms': {
-                    main: 'index.js'
                 }
             }
         }

@@ -8,6 +8,7 @@
                 '@angular/compiler': 'node_modules/@angular/compiler/index.js',
                 '@angular/platform-browser': 'node_modules/@angular/platform-browser',
                 '@angular/forms': 'node_modules/@angular/forms',
+                '@angular/router': 'node_modules/@angular/router',
                 // other libraries
                 'rxjs': 'node_modules/rxjs',
                 // 'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
@@ -27,6 +28,9 @@
                     main: 'index.js'
                 },
                 '@angular/forms': {
+                    main: 'index.js'
+                },
+                '@angular/router': {
                     main: 'index.js'
                 }
             }

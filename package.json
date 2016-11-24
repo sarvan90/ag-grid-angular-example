@@ -8,7 +8,8 @@
     "lite": "lite-server",
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "build:aot": "ngc -p tsconfig-aot.json && gulp aot-bundle",
-    "lite:aot": "lite-server -c aot/bs-config.json"
+    "lite:aot": "lite-server -c aot/bs-config.json",
+    "release": "copyfiles -f aot/index.html docs && ncp app/ docs/app/ && ncp images/ docs/images &&  ncp aot/dist docs/dist/"
   },
   "repository": {
     "type": "git",
@@ -23,27 +24,30 @@
   "dependencies": {
     "ag-grid": "6.4.x",
     "ag-grid-enterprise": "6.4.x",
-    "ag-grid-ng2": "7.0.0-beta.2",
-    "@angular/common": "~2.2.1",
-    "@angular/compiler": "~2.2.1",
-    "@angular/compiler-cli": "^2.2.1",
-    "@angular/core": "~2.2.1",
-    "@angular/forms": "~2.2.1",
-    "@angular/http": "~2.2.1",
-    "@angular/platform-browser": "~2.2.1",
-    "@angular/platform-browser-dynamic": "~2.2.1",
-    "@angular/platform-server": "^2.2.1",
-    "@angular/router": "~3.2.1",
-    "@angular/upgrade": "~2.2.1",
+    "ag-grid-ng2": "file:../ag-grid-ng2",
+
+    "@angular/common": "2.1.2",
+    "@angular/compiler": "2.1.2",
+    "@angular/compiler-cli": "2.1.2",
+    "@angular/core": "2.1.2",
+    "@angular/forms": "2.1.2",
+    "@angular/http": "2.1.2",
+    "@angular/platform-browser": "2.1.2",
+    "@angular/platform-browser-dynamic": "2.1.2",
+    "@angular/platform-server": "2.1.2",
+    "@angular/router": "3.1.2",
+    "@angular/upgrade": "2.1.2",
+    "angular-in-memory-web-api": "0.1.13",
+
     "@types/core-js": "^0.9.34",
-    "angular-in-memory-web-api": "~0.1.15",
     "core-js": "^2.4.1",
     "reflect-metadata": "^0.1.3",
     "systemjs": "0.19.27",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "^0.6.23",
     "es6-shim": "^0.35.0",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "jquery": "^3.1.1"
   },
   "devDependencies": {
     "@types/angular": "^1.5.16",
@@ -60,6 +64,8 @@
     "gulp": "^3.9.1",
     "lite-server": "^2.2.2",
     "systemjs-builder": "^0.15.33",
-    "typescript": "2.0.x"
+    "typescript": "2.0.x",
+    "copyfiles": "^1.0.0",
+    "ncp": "^2.0.0"
   }
 }
