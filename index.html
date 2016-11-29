@@ -6,10 +6,6 @@
 
     <base href="/">
 
-    <!-- 1. Load libraries -->
-    <!-- Polyfill(s) for older browsers -->
-    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
-
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
@@ -24,7 +20,7 @@
 
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
 
-    <!-- 2. Configure SystemJS -->
+    <!-- Configure SystemJS -->
     <script src="systemjs.config.js"></script>
     <script>
         System.import('app').catch(function (err) {

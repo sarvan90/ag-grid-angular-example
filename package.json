@@ -1,6 +1,6 @@
 {
   "name": "ag-grid-ng2-example",
-  "version": "7.0.0-beta.4",
+  "version": "7.0.0-beta.5",
   "description": "ag-Grid Angular 2 Example",
   "scripts": {
     "tsc": "tsc -p tsconfig.json",
@@ -8,12 +8,10 @@
     "lite": "lite-server",
     "clean:jit": "rimraf app/*.js*",
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
-
     "clean:aot": "rimraf aot/aot/* && rimraf aot/app/* && rimraf aot/dist/* && rimraf aot/node_modules/* && rimraf app/*.js*",
     "build:aot": "ngc -p tsconfig-aot.json && gulp aot-bundle",
     "lite:aot": "lite-server -c aot/bs-config.json",
     "clean-build:aot": "npm run clean:aot && npm run build:aot",
-
     "release": "copyfiles -f aot/index.html docs/ng2-example && ncp app/ docs/ng2-example/app/ && ncp images/ docs/ng2-example/images && ncp aot/dist docs/ng2-example/dist/"
   },
   "repository": {
@@ -29,20 +27,19 @@
   "dependencies": {
     "ag-grid": "6.4.x",
     "ag-grid-enterprise": "6.4.x",
-    "ag-grid-ng2": "7.0.0-beta.4",
+    "ag-grid-ng2": "7.0.0-beta.5",
 
-    "@angular/common": "2.1.2",
-    "@angular/compiler": "2.1.2",
-    "@angular/compiler-cli": "2.1.2",
-    "@angular/core": "2.1.2",
-    "@angular/forms": "2.1.2",
-    "@angular/http": "2.1.2",
-    "@angular/platform-browser": "2.1.2",
-    "@angular/platform-browser-dynamic": "2.1.2",
-    "@angular/platform-server": "2.1.2",
-    "@angular/router": "3.1.2",
-    "@angular/upgrade": "2.1.2",
-    "angular-in-memory-web-api": "0.1.13",
+    "@angular/common": "~2.2.3 ",
+    "@angular/compiler": "~2.2.3 ",
+    "@angular/compiler-cli": "~2.2.3 ",
+    "@angular/core": "~2.2.3 ",
+    "@angular/http": "~2.2.3 ",
+    "@angular/forms": "~2.2.3 ",
+    "@angular/platform-browser": "~2.2.3 ",
+    "@angular/platform-browser-dynamic": "~2.2.3 ",
+    "@angular/platform-server": "~2.2.3 ",
+    "@angular/router": "3.2.3",
+    "angular-in-memory-web-api": "0.1.x",
 
     "@types/core-js": "^0.9.34",
     "core-js": "^2.4.1",
@@ -50,7 +47,6 @@
     "systemjs": "0.19.27",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "^0.6.23",
-    "es6-shim": "^0.35.0",
     "bootstrap": "^3.3.6",
     "jquery": "^3.1.1"
   },
