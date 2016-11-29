@@ -1,7 +1,8 @@
 (function (global) {
     System.config({
+            defaultJSExtensions: true,
             map: {
-                lib: 'lib',
+                'app': 'app',
                 // angular bundles
                 '@angular/core': 'node_modules/@angular/core/bundles/core.umd.js',
                 '@angular/common': 'node_modules/@angular/common/bundles/common.umd.js',
@@ -15,26 +16,13 @@
                 'rxjs': 'node_modules/rxjs',
                 'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
                 // ag libraries
-                'ag-grid-ng2' : 'node_modules/ag-grid-ng2',
-                'ag-grid' : 'node_modules/ag-grid',
-                'ag-grid-enterprise' : 'node_modules/ag-grid-enterprise'
+                'ag-grid-ng2': 'node_modules/ag-grid-ng2',
+                'ag-grid': 'node_modules/ag-grid',
+                'ag-grid-enterprise': 'node_modules/ag-grid-enterprise'
             },
             packages: {
-                lib: {
-                    main: './boot.js',
-                    defaultExtension: 'js'
-                },
-                rxjs: {
-                    defaultExtension: 'js'
-                },
-                'ag-grid-ng2': {
-                    defaultExtension: "js"
-                },
-                'ag-grid': {
-                    defaultExtension: "js"
-                },
-                'ag-grid-enterprise': {
-                    defaultExtension: "js"
+                app: {
+                    main: './boot.js'
                 }
             }
         }
