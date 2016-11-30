@@ -18,7 +18,7 @@ To Run:
 
 == AOT Build ==
 To build:
-- `npm run build:aot`
+- `npm run clean-build:aot`
 
 To Run:
 - `npm run lite:aot`

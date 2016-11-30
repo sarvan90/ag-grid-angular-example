@@ -23,6 +23,9 @@
             packages: {
                 app: {
                     main: './boot.js'
+                },
+                'ag-grid': {
+                    main: 'main.js'
                 }
             }
         }

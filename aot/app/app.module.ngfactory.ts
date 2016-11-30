@@ -380,7 +380,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     return this.__BaseComponentFactory_52;
   }
   get _Ng2FrameworkFactory_53():import30.Ng2FrameworkFactory {
-    if ((this.__Ng2FrameworkFactory_53 == null)) { (this.__Ng2FrameworkFactory_53 = new import30.Ng2FrameworkFactory(this._BaseComponentFactory_52)); }
+    if ((this.__Ng2FrameworkFactory_53 == null)) { (this.__Ng2FrameworkFactory_53 = new import30.Ng2FrameworkFactory(this._BaseComponentFactory_52,this.parent.get(import57.NgZone))); }
     return this.__Ng2FrameworkFactory_53;
   }
   createInternal():import1.AppModule {

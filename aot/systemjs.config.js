@@ -32,6 +32,9 @@
                 },
                 '@angular/router': {
                     main: 'index.js'
+                },
+                'ag-grid': {
+                    main: 'main.js'
                 }
             }
         }

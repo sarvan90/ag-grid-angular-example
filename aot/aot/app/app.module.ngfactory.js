@@ -530,7 +530,7 @@ var AppModuleInjector = (function (_super) {
     Object.defineProperty(AppModuleInjector.prototype, "_Ng2FrameworkFactory_53", {
         get: function () {
             if ((this.__Ng2FrameworkFactory_53 == null)) {
-                (this.__Ng2FrameworkFactory_53 = new import30.Ng2FrameworkFactory(this._BaseComponentFactory_52));
+                (this.__Ng2FrameworkFactory_53 = new import30.Ng2FrameworkFactory(this._BaseComponentFactory_52, this.parent.get(import57.NgZone)));
             }
             return this.__Ng2FrameworkFactory_53;
         },

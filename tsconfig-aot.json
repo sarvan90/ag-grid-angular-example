@@ -8,13 +8,10 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "outDir": "aot",
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "outDir": "aot"
   },
   "exclude": [
-    "node_modules",
+    "node_modules/",
     "docs"
   ],
   "angularCompilerOptions": {
