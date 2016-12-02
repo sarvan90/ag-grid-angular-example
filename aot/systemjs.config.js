@@ -9,6 +9,7 @@
                 '@angular/platform-browser': 'node_modules/@angular/platform-browser',
                 '@angular/forms': 'node_modules/@angular/forms',
                 '@angular/router': 'node_modules/@angular/router',
+                '@angular/http': 'node_modules/@angular/http',
                 // other libraries
                 'rxjs': 'node_modules/rxjs',
                 // 'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
@@ -31,6 +32,9 @@
                     main: 'index.js'
                 },
                 '@angular/router': {
+                    main: 'index.js'
+                },
+                '@angular/http': {
                     main: 'index.js'
                 },
                 'ag-grid': {
