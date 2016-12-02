@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import { URLSearchParams } from '@angular/http';
+import {Router, ActivatedRoute} from "@angular/router";
 import "rxjs/add/operator/map";
 
 @Component({
@@ -8,9 +8,7 @@ import "rxjs/add/operator/map";
     templateUrl: 'app.component.html'
 })
 export class AppComponent {
-    example : string = 'rich-grid';
-    constructor() {
-        let params = new URLSearchParams(window.location.search.replace("?",""));
-        this.example = params.get('example') ? params.get("example") : 'rich-grid';
+    constructor(public router: Router,
+                private route: ActivatedRoute) {
     }
 }

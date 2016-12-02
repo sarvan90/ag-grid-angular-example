@@ -9,30 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
+var http_1 = require('@angular/http');
 require("rxjs/add/operator/map");
 var AppComponent = (function () {
-    function AppComponent(router, route) {
-        this.router = router;
-        this.route = route;
-        this.showNav = true;
+    function AppComponent() {
+        this.example = 'rich-grid';
+        var params = new http_1.URLSearchParams(window.location.search.replace("?", ""));
+        this.example = params.get('example') ? params.get("example") : 'rich-grid';
     }
-    AppComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.route
-            .queryParams
-            .map(function (params) { return params['fromDocs'] !== undefined || false; })
-            .subscribe(function (fromDocs) {
-            _this.showNav = !fromDocs;
-        });
-    };
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'my-app',
             templateUrl: 'app.component.html'
         }), 
-        __metadata('design:paramtypes', [router_1.Router, router_1.ActivatedRoute])
+        __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());

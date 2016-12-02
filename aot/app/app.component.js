@@ -1,11 +1,10 @@
 import { Component } from "@angular/core";
-import { URLSearchParams } from '@angular/http';
+import { Router, ActivatedRoute } from "@angular/router";
 import "rxjs/add/operator/map";
 export var AppComponent = (function () {
-    function AppComponent() {
-        this.example = 'rich-grid';
-        var params = new URLSearchParams(window.location.search.replace("?", ""));
-        this.example = params.get('example') ? params.get("example") : 'rich-grid';
+    function AppComponent(router, route) {
+        this.router = router;
+        this.route = route;
     }
     AppComponent.decorators = [
         { type: Component, args: [{
@@ -15,7 +14,10 @@ export var AppComponent = (function () {
                 },] },
     ];
     /** @nocollapse */
-    AppComponent.ctorParameters = [];
+    AppComponent.ctorParameters = [
+        { type: Router, },
+        { type: ActivatedRoute, },
+    ];
     return AppComponent;
 }());
 //# sourceMappingURL=app.component.js.map

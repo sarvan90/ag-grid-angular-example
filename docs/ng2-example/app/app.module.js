@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
-var router_1 = require("@angular/router");
 // ag-grid
 var main_1 = require("ag-grid-ng2/main");
 // application
@@ -48,22 +47,22 @@ var group_row_renderer_component_1 = require("./group-row-renderer.component");
 // filter
 var filter_component_component_1 = require("./filter-component.component");
 var partial_match_filter_component_1 = require("./partial-match-filter.component");
-var appRoutes = [
-    { path: 'rich-grid', component: rich_grid_component_1.RichGridComponent, data: { title: "Rich Grid with Pure JavaScript" } },
-    {
-        path: 'rich-grid-declarative',
-        component: rich_grid_declarative_component_1.RichGridDeclarativeComponent,
-        data: { title: "Rich Grid with Declarative Markup" }
-    },
-    { path: 'from-component', component: from_component_component_1.FromComponentComponent, data: { title: "Using Dynamic Components" } },
-    { path: 'from-rich-component', component: from_rich_component_1.FromRichComponent, data: { title: "Using Dynamic Components - Richer Example" } },
-    { path: 'editor-component', component: editor_component_component_1.EditorComponent, data: { title: "Using Cell Editor Components" } },
-    { path: 'floating-row', component: floating_row_renderer_component_1.WithFloatingRowComponent, data: { title: "Using Floating Row Renderers" } },
-    { path: 'full-width', component: full_width_renderer_component_1.WithFullWidthComponent, data: { title: "Using Full Width Renderers" } },
-    { path: 'group-row', component: group_row_renderer_component_1.WithGroupRowComponent, data: { title: "Using Group Row Renderers" } },
-    { path: 'filter', component: filter_component_component_1.FilterComponentComponent, data: { title: "With Filters Components" } },
-    { path: '', redirectTo: 'rich-grid', pathMatch: 'full' }
-];
+// const appRoutes: Routes = [
+//     {path: 'rich-grid', component: RichGridComponent, data: {title: "Rich Grid with Pure JavaScript"}},
+//     {
+//         path: 'rich-grid-declarative',
+//         component: RichGridDeclarativeComponent,
+//         data: {title: "Rich Grid with Declarative Markup"}
+//     },
+//     {path: 'from-component', component: FromComponentComponent, data: {title: "Using Dynamic Components"}},
+//     {path: 'from-rich-component', component: FromRichComponent, data: {title: "Using Dynamic Components - Richer Example"}},
+//     {path: 'editor-component', component: EditorComponent, data: {title: "Using Cell Editor Components"}},
+//     {path: 'floating-row', component: WithFloatingRowComponent, data: {title: "Using Floating Row Renderers"}},
+//     {path: 'full-width', component: WithFullWidthComponent, data: {title: "Using Full Width Renderers"}},
+//     {path: 'group-row', component: WithGroupRowComponent, data: {title: "Using Group Row Renderers"}},
+//     {path: 'filter', component: FilterComponentComponent, data: {title: "With Filters Components"}},
+//     {path: '', redirectTo: 'rich-grid', pathMatch: 'full'}
+// ];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -72,7 +71,6 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
-                router_1.RouterModule.forRoot(appRoutes),
                 main_1.AgGridModule.withComponents([
                     square_component_1.SquareComponent,
                     cube_component_1.CubeComponent,
