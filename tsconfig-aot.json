@@ -8,6 +8,7 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
+    "lib": ["dom","es2015"],
     "outDir": "aot"
   },
   "exclude": [

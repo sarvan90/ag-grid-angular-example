@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-import "rxjs/add/operator/map";
 export var AppComponent = (function () {
     function AppComponent(router, route) {
         this.router = router;

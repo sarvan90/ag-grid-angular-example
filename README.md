@@ -1,24 +1,35 @@
 
-ag-Grid
-==============
+ag-Grid-ng2
+===========
 
 Example of using ag-Grid with Angular2 and TypeScript
 
 Building
-==============
+========
 
-== JIT Build ==
+Install Dependencies:
+
+- `npm install gulp -g`
+- `npm install`
+
+JIT Build
+=========
 
 To build:
-- `npm install`
+
 - `npm run tsc`
 
 To Run:
+
 - `npm run lite`
 
-== AOT Build ==
+AOT Build
+=========
+
 To build:
+
 - `npm run clean-build:aot`
 
 To Run:
+
 - `npm run lite:aot`
