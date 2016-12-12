@@ -45,6 +45,7 @@ export class FromComponentComponent {
                 headerName: "Row Params Component",
                 field: "row",
                 cellRendererFramework: ParamsComponent,
+                colId: "params",
                 width: 250
             }
         ];
