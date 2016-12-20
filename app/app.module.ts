@@ -15,6 +15,8 @@ import {FromComponentComponent} from "./from-component.component";
 import {SquareComponent} from "./square.component";
 import {ParamsComponent} from "./params.component";
 import {CubeComponent} from "./cube.component";
+import {CurrencyComponent} from "./currency.component";
+
 // from rich component
 import {FromRichComponent} from "./from-rich.component";
 import {ClickableModule} from "./clickable.module";
@@ -66,6 +68,7 @@ const appRoutes: Routes = [
                 SquareComponent,
                 CubeComponent,
                 ParamsComponent,
+                CurrencyComponent,
                 RatioParentComponent,
                 ClickableParentComponent,
                 NumericEditorComponent,
@@ -87,6 +90,7 @@ const appRoutes: Routes = [
         SquareComponent,
         CubeComponent,
         ParamsComponent,
+        CurrencyComponent,
         FromRichComponent,
         EditorComponent,
         NumericEditorComponent,

@@ -1,6 +1,13 @@
 <div style="width: 800px;">
-    <h1>Using Dynamic Components</h1>
+    <h1>Using Dynamic Components - Example 1</h1>
+    <button (click)="refreshRowData()">Refresh Data</button>
     <ag-grid-ng2 #agGrid style="width: 100%; height: 350px;" class="ag-fresh"
                  [gridOptions]="gridOptions">
+    </ag-grid-ng2>
+</div>
+<div style="width: 800px;">
+    <h1>Using Dynamic Components - Example 2</h1>
+    <ag-grid-ng2 #agGrid2 style="width: 100%; height: 350px;" class="ag-fresh"
+                 [gridOptions]="gridOptions2">
     </ag-grid-ng2>
 </div>
