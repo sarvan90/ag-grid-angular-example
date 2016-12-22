@@ -9,5 +9,24 @@ npm-debug.log
 # other
 update_from_source.sh
 .DS_Store
-app/*.js
-app/*.map
+_test-output
+
+# systemjs_aot
+systemjs_aot/app/*.js
+systemjs_aot/app/*.map
+systemjs_aot/e2e/*.js
+systemjs_aot/e2e/*.map
+systemjs_aot/aot/e2e
+systemjs_aot/aot/aot
+systemjs_aot/aot/app
+systemjs_aot/aot/dist
+systemjs_aot/aot/node_modules
+systemjs_aot/docs/ng2-example/app/*.js
+systemjs_aot/docs/ng2-example/app/*.map
+
+# webpack
+webpack/dist
+webpack/e2e/*.js
+webpack/e2e/*.map
+webpack/app/*.js
+webpack/app/*.map
