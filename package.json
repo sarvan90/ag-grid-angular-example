@@ -29,9 +29,9 @@
   },
   "homepage": "http://www.ag-grid.com/",
   "dependencies": {
-    "ag-grid": "file:../ag-grid",
+    "ag-grid": "7.0.x",
     "ag-grid-enterprise": "7.0.x",
-    "ag-grid-ng2": "file:../ag-grid-ng2",
+    "ag-grid-ng2": "7.0.x",
     "@angular/common": "^2.1.x",
     "@angular/compiler": "^2.1.x",
     "@angular/compiler-cli": "^2.1.x",
