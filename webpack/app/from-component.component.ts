@@ -12,7 +12,6 @@ import {CurrencyComponent} from "./currency.component";
 })
 export class FromComponentComponent {
     public gridOptions:GridOptions;
-    public gridOptions2:GridOptions;
 
     constructor() {
         this.gridOptions = <GridOptions>{};

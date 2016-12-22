@@ -1,7 +1,7 @@
 {
   "name": "ag-grid-ng2-example",
-  "version": "7.0.1",
-  "description": "ag-Grid Angular 2 Example",
+  "version": "7.1.0",
+  "description": "ag-Grid Angular 2 Example Using SystemJS",
   "scripts": {
     "postinstall": "./node_modules/protractor/bin/webdriver-manager update",
 

@@ -25,10 +25,10 @@ Building
 
 To build:
 
-- `npm run build`
+- `ng build`
 
 To do a prod build:
 
-- `npm run build --prod`
+- `ng build --prod`
 
 The build artifacts will be stored in the `dist/` directory.
