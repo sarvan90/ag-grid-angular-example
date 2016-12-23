@@ -1,16 +1,15 @@
-import {Component, ViewContainerRef, ViewChild, AfterViewInit} from '@angular/core';
-
-import {AgEditorComponent} from 'ag-grid-ng2/main';
+import {Component, ViewContainerRef, ViewChild, AfterViewInit} from "@angular/core";
+import {AgEditorComponent} from "ag-grid-ng2/main";
 
 @Component({
-    selector: 'editor-cell',
-    template: `
+  selector: 'editor-cell',
+  template: `
         <div #container class="mood" tabindex="0" (keydown)="onKeyDown($event)">
-            <img src="images/smiley.png" (click)="setHappy(true)" [ngClass]="{'selected' : happy, 'default' : !happy}">
-            <img src="images/smiley-sad.png" (click)="setHappy(false)" [ngClass]="{'selected' : !happy, 'default' : happy}">
+            <img src="images/smiley.png" (click)="onClick(true)" [ngClass]="{'selected' : happy, 'default' : !happy}">
+            <img src="images/smiley-sad.png" (click)="onClick(false)" [ngClass]="{'selected' : !happy, 'default' : happy}">
         </div>
     `,
-    styles: [`
+  styles: [`
         .mood {
             border-radius: 15px;
             border: 1px solid grey;
@@ -37,43 +36,48 @@ import {AgEditorComponent} from 'ag-grid-ng2/main';
     `]
 })
 export class MoodEditorComponent implements AgEditorComponent, AfterViewInit {
-    private params: any;
+  private params: any;
 
-    @ViewChild('container', {read: ViewContainerRef}) public container;
-    public happy: boolean = false;
+  @ViewChild('container', {read: ViewContainerRef}) public container;
+  public happy: boolean = false;
 
-    // dont use afterGuiAttached for post gui events - hook into ngAfterViewInit instead for this
-    ngAfterViewInit() {
-        this.container.element.nativeElement.focus();
+  // dont use afterGuiAttached for post gui events - hook into ngAfterViewInit instead for this
+  ngAfterViewInit() {
+    this.container.element.nativeElement.focus();
+  }
+
+  agInit(params: any): void {
+    this.params = params;
+    this.setHappy(params.value === "Happy");
+  }
+
+  getValue(): any {
+    return this.happy ? "Happy" : "Sad";
+  }
+
+  isPopup(): boolean {
+    return true;
+  }
+
+  setHappy(happy: boolean): void {
+    this.happy = happy;
+  }
+
+  toggleMood(): void {
+    this.setHappy(!this.happy);
+  }
+
+  onClick(happy: boolean) {
+    this.setHappy(happy);
+    this.params.api.stopEditing();
+  }
+
+  onKeyDown(event): void {
+    let key = event.which || event.keyCode;
+    if (key == 37 ||  // left
+      key == 39) {  // right
+      this.toggleMood();
+      event.stopPropagation();
     }
-
-    agInit(params: any): void {
-        this.params = params;
-        this.setHappy(params.value === "Happy");
-    }
-
-    getValue(): any {
-        return this.happy ? "Happy" : "Sad";
-    }
-
-    isPopup(): boolean {
-        return true;
-    }
-
-    setHappy(happy: boolean): void {
-        this.happy = happy;
-    }
-
-    toggleMood(): void {
-        this.setHappy(!this.happy);
-    }
-
-    onKeyDown(event): void {
-        let key = event.which || event.keyCode;
-        if (key == 37 ||  // left
-            key == 39) {  // right
-            this.toggleMood();
-            event.stopPropagation();
-        }
-    }
+  }
 }
