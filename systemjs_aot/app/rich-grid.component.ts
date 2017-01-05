@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 import {GridOptions} from 'ag-grid/main';
 
@@ -13,7 +13,8 @@ import 'ag-grid-enterprise/main';
     moduleId: module.id,
     selector: 'rich-grid',
     templateUrl: 'rich-grid.component.html',
-    styles: ['.toolbar button {margin: 2px; padding: 0px;}'],
+    styleUrls: ['rich-grid.css', 'proficiency-renderer.css'],
+    encapsulation: ViewEncapsulation.None
 })
 export class RichGridComponent {
 

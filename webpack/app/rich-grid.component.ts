@@ -1,26 +1,25 @@
-import {Component} from '@angular/core';
-
-import {GridOptions} from 'ag-grid/main';
-
-import ProficiencyFilter from './proficiencyFilter';
-import SkillFilter from './skillFilter';
-import RefData from './refData';
+import {Component, ViewEncapsulation} from "@angular/core";
+import {GridOptions} from "ag-grid/main";
+import ProficiencyFilter from "./proficiencyFilter";
+import SkillFilter from "./skillFilter";
+import RefData from "./refData";
+import "ag-grid-enterprise/main";
 
 // only import this if you are using the ag-Grid-Enterprise
-import 'ag-grid-enterprise/main';
 
 @Component({
     selector: 'rich-grid',
     templateUrl: 'rich-grid.component.html',
-    styles: ['.toolbar button {margin: 2px; padding: 0px;}'],
+    styleUrls: ['rich-grid.css', 'proficiency-renderer.css'],
+    encapsulation: ViewEncapsulation.None
 })
 export class RichGridComponent {
 
-    private gridOptions:GridOptions;
-    public showGrid:boolean;
-    public rowData:any[];
-    private columnDefs:any[];
-    public rowCount:string;
+    private gridOptions: GridOptions;
+    public showGrid: boolean;
+    public rowData: any[];
+    private columnDefs: any[];
+    public rowCount: string;
 
     constructor() {
         // we pass an empty gridOptions in, so we can grab the api out
@@ -31,7 +30,7 @@ export class RichGridComponent {
     }
 
     private createRowData() {
-        var rowData:any[] = [];
+        var rowData: any[] = [];
 
         for (var i = 0; i < 10000; i++) {
             var countryData = RefData.countries[i % RefData.countries.length];

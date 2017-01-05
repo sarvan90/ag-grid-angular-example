@@ -29,13 +29,16 @@ module.exports = {
                 loader: 'file?name=[path]/[name].[ext]'
             },
             {
+                // site wide css (excluding all css under the app dir)
                 test: /\.css$/,
-                exclude: helpers.root('src', 'app'),
+                exclude: helpers.root('app'),
                 loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
             },
             {
+                // included styles under the app directory - these are for styles included
+                // with styleUrls
                 test: /\.css$/,
-                include: helpers.root('src', 'app'),
+                include: helpers.root('app'),
                 loader: 'raw'
             }
         ]

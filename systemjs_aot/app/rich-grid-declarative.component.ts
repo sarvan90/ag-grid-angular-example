@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
+import {Component,ViewEncapsulation} from '@angular/core';
 
-import {GridOptions, IFilter} from 'ag-grid/main';
+import {GridOptions} from 'ag-grid/main';
 
 import ProficiencyFilter from './proficiencyFilter';
 import SkillFilter from './skillFilter';
@@ -13,7 +13,8 @@ import 'ag-grid-enterprise/main';
     moduleId: module.id,
     selector: 'ag-rich-grid-declarative',
     templateUrl: 'rich-grid-declarative.component.html',
-    styles: ['.toolbar button {margin: 2px; padding: 0;}'],
+    styleUrls: ['rich-grid.css', 'proficiency-renderer.css'],
+    encapsulation: ViewEncapsulation.None
 })
 export class RichGridDeclarativeComponent {
 
