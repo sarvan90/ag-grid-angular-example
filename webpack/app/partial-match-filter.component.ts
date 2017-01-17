@@ -1,6 +1,6 @@
 import {Component, ViewChild, ViewContainerRef} from '@angular/core';
 
-import {IFilterParams, IDoesFilterPassParams, RowNode, IAfterFilterGuiAttachedParams} from 'ag-grid/main';
+import {IFilterParams, IDoesFilterPassParams, RowNode, IAfterGuiAttachedParams} from 'ag-grid/main';
 import {AgFilterComponent} from 'ag-grid-ng2/main';
 
 @Component({
@@ -41,7 +41,7 @@ export class PartialMatchFilterComponent implements AgFilterComponent {
         this.text = model.value;
     }
 
-    afterGuiAttached(params: IAfterFilterGuiAttachedParams): void {
+    afterGuiAttached(params: IAfterGuiAttachedParams): void {
         this.input.element.nativeElement.focus();
     }
 
