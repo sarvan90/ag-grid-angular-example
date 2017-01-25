@@ -31,4 +31,8 @@ To do a prod build:
 
 - `ng build --prod`
 
+To do a AOT build:
+
+- `ng build --aot`
+
 The build artifacts will be stored in the `dist/` directory.
