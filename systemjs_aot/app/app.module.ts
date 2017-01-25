@@ -40,6 +40,9 @@ import {WithGroupRowComponent} from "./group-row-renderer.component";
 // filter
 import {FilterComponentComponent} from "./filter-component.component";
 import {PartialMatchFilterComponent} from "./partial-match-filter.component";
+// master detail
+import {MasterComponent} from "./masterdetail-master.component";
+import {DetailPanelComponent} from "./detail-panel.component";
 
 const appRoutes: Routes = [
     {path: 'rich-grid', component: RichGridComponent, data: {title: "Rich Grid with Pure JavaScript"}},
@@ -55,6 +58,7 @@ const appRoutes: Routes = [
     {path: 'full-width', component: WithFullWidthComponent, data: {title: "Using Full Width Renderers"}},
     {path: 'group-row', component: WithGroupRowComponent, data: {title: "Using Group Row Renderers"}},
     {path: 'filter', component: FilterComponentComponent, data: {title: "With Filters Components"}},
+    {path: 'master-detail', component: MasterComponent, data: {title: "Master Detail Example"}},
     {path: '', redirectTo: 'rich-grid', pathMatch: 'full'}
 ];
 
@@ -77,7 +81,8 @@ const appRoutes: Routes = [
                 StyledComponent,
                 NameAndAgeRendererComponent,
                 MedalRendererComponent,
-                PartialMatchFilterComponent
+                PartialMatchFilterComponent,
+                DetailPanelComponent
             ]),
         RatioModule,
         ClickableModule
@@ -103,7 +108,9 @@ const appRoutes: Routes = [
         WithGroupRowComponent,
         MedalRendererComponent,
         FilterComponentComponent,
-        PartialMatchFilterComponent
+        PartialMatchFilterComponent,
+        MasterComponent,
+        DetailPanelComponent
     ],
     bootstrap: [AppComponent]
 })
