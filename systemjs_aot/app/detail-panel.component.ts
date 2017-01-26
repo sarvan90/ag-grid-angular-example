@@ -3,6 +3,7 @@ import {GridOptions} from "ag-grid/main";
 import {AgRendererComponent} from "ag-grid-ng2/main";
 
 @Component({
+    moduleId: module.id,
     selector: 'ag-full-width-grid',
     templateUrl: 'detail-panel.component.html',
     styleUrls: ['detail-panel.component.css'],
