@@ -1,21 +1,10 @@
 const gulp = require('gulp');
 const del = require('del');
 const runSequence = require('run-sequence');
-const SystemBuilder = require('systemjs-builder');
 
-gulp.task('aot-bundle', function () {
-    const builder = new SystemBuilder();
-
-    builder.loadConfig('./aot/systemjs.config.js')
-        .then(function () {
-            return builder.buildStatic('aot/app/boot-aot.js', './aot/dist/bundle.js', {
-                encodeNames: false,
-                mangle: false,
-                minify: true,
-                rollup: true,
-                sourceMaps: true
-            });
-        })
+gulp.task('copy-from-ag-grid', () => {
+    return gulp.src(['../../ag-grid/*', '../ag-grid/dist/**/*'], {base: '../../ag-grid'})
+        .pipe(gulp.dest('./node_modules/ag-grid'));
 });
 
 gulp.task('copy-from-ag-grid', () => {
