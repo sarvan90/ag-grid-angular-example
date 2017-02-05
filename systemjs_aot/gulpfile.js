@@ -35,20 +35,25 @@ gulp.task('copy-from-ag-grid-ng2', () => {
 });
 
 gulp.task('clean-nm-ag-grid-enterprise', () => {
-    del(['node_modules/ag-grid-enterprise', '!node_modules']);
+    return del(['node_modules/ag-grid-enterprise', '!node_modules']);
 });
 
 gulp.task('clean-nm-ag-grid', () => {
-    del(['node_modules/ag-grid', '!node_modules']);
+    return del(['node_modules/ag-grid', '!node_modules']);
 });
 
 gulp.task('copy-nm-dirs', (callback) => {
-    runSequence('copy-from-ag-grid', 'copy-from-ag-grid-enterprise', callback);
+    return runSequence('copy-from-ag-grid', 'copy-from-ag-grid-enterprise', 'copy-from-ag-grid-ng2', callback);
 });
 
 gulp.task('watch', ['copy-nm-dirs'], () => {
-    gulp.watch(['../ag-grid/dist/**/*', '../ag-grid/src/**/*'], ['copy-from-ag-grid']);
-    gulp.watch(['../ag-grid-enterprise/dist/**/*', '../ag-grid-enterprise/src/**/*'], ['copy-from-ag-grid-enterprise']);
+    gulp.watch(['../../ag-grid/dist/**/*', '../../ag-grid/src/**/*'], ['copy-from-ag-grid']);
+    gulp.watch(['../../ag-grid-enterprise/dist/**/*', '../../ag-grid-enterprise/src/**/*'], ['copy-from-ag-grid-enterprise']);
+    gulp.watch(['../../ag-grid-ng2/dist/**/*', '../../ag-grid-ng2/src/**/*'], ['copy-from-ag-grid-ng2']);
+});
+
+gulp.task('watch-ng2', ['copy-from-ag-grid-ng2'], () => {
+    gulp.watch(['../../ag-grid-ng2/dist/**/*', '../../ag-grid-ng2/src/**/*'], ['copy-from-ag-grid-ng2']);
 });
 
 gulp.task('clean-aot', () => {
