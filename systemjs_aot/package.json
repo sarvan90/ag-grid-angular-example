@@ -4,19 +4,16 @@
   "description": "ag-Grid Angular 2 Example Using SystemJS",
   "scripts": {
     "postinstall": "webdriver-manager update",
-
     "tsc": "tsc -p tsconfig.json",
     "tsc:w": "tsc -p tsconfig.json -w",
     "lite": "lite-server",
     "clean": "npm run clean:jit && npm run clean:aot",
     "clean:jit": "rimraf app/*.js*",
     "start": "npm run tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
-
-    "clean:aot": "rimraf aot/aot/* && rimraf aot/app/* && rimraf aot/dist/* && rimraf aot/node_modules/* && rimraf app/*.js* aot/e2e",
-    "build:aot": "ngc -p tsconfig-aot.json && gulp aot-bundle",
+    "clean:aot": "gulp clean-aot",
+    "build:aot": "gulp ngc && gulp aot-bundle",
     "lite:aot": "lite-server -c aot/bs-config.json",
-    "clean-build:aot": "npm run clean:aot && npm run build:aot",
-
+    "clean-build:aot": "gulp clean-aot-build",
     "test": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
     "e2e": "tsc && concurrently \"http-server -s\" \"protractor protractor.config.js\" --kill-others --success first"
   },
@@ -34,7 +31,6 @@
     "ag-grid": "7.2.x",
     "ag-grid-enterprise": "7.2.x",
     "ag-grid-ng2": "7.2.x",
-
     "@angular/common": "2.4.x",
     "@angular/compiler": "2.4.x",
     "@angular/compiler-cli": "2.4.x",
@@ -54,18 +50,14 @@
   },
   "devDependencies": {
     "@types/node": "6.0.45",
-    "concurrently": "2.2.0",
-    "typescript": "2.0.3",
-    "rimraf": "2.5.x",
-    "gulp": "3.9.1",
-    "lite-server": "2.2.2",
-    "systemjs-builder": "0.15.33",
-    "copyfiles": "1.0.x",
-    "ncp": "2.0.x",
-
     "@types/selenium-webdriver": "2.53.33",
-    "http-server": "^0.9.0",
     "canonical-path": "0.0.2",
+    "concurrently": "2.2.0",
+    "copyfiles": "1.0.x",
+    "del": "^2.2.2",
+    "gulp": "3.9.1",
+    "gulp-ngc": "^0.1.2",
+    "http-server": "^0.9.0",
     "jasmine-core": "2.4.1",
     "karma": "1.3.0",
     "karma-chrome-launcher": "2.0.0",
@@ -73,7 +65,13 @@
     "karma-jasmine": "1.0.2",
     "karma-jasmine-html-reporter": "0.2.2",
     "karma-systemjs": "0.16.0",
+    "lite-server": "2.2.2",
+    "ncp": "2.0.x",
     "protractor": "4.0.13",
+    "rimraf": "2.5.x",
+    "run-sequence": "^1.2.2",
+    "systemjs-builder": "0.15.33",
+    "typescript": "2.0.3",
     "webdriver-manager": "10.2.5"
   }
 }
