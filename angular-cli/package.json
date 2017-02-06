@@ -31,7 +31,8 @@
     "core-js": "2.4.x",
     "bootstrap": "3.3.6",
     "jquery": "3.1.1",
-    "ts-helpers": "^1.1.1"
+    "ts-helpers": "^1.1.1",
+    "ng2-typeahead": "^1.2.0"
   },
   "devDependencies": {
     "@types/jasmine": "^2.2.30",
