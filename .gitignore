@@ -23,6 +23,7 @@ systemjs_aot/aot/dist
 systemjs_aot/aot/node_modules
 systemjs_aot/docs/ng2-example/app/*.js
 systemjs_aot/docs/ng2-example/app/*.map
+systemjs_rollup
 
 # webpack
 webpack/dist
