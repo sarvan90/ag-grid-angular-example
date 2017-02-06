@@ -42,6 +42,7 @@ import {PartialMatchFilterComponent} from "./partial-match-filter.component";
 // master detail
 import {MasterComponent} from "./masterdetail-master.component";
 import {DetailPanelComponent} from "./detail-panel.component";
+import {DateComponent} from "./date-component.component";
 
 @NgModule({
     imports: [
@@ -63,7 +64,8 @@ import {DetailPanelComponent} from "./detail-panel.component";
                 NameAndAgeRendererComponent,
                 MedalRendererComponent,
                 PartialMatchFilterComponent,
-                DetailPanelComponent
+                DetailPanelComponent,
+                DateComponent
             ]),
         RatioModule,
         ClickableModule
@@ -92,7 +94,8 @@ import {DetailPanelComponent} from "./detail-panel.component";
         FilterComponentComponent,
         PartialMatchFilterComponent,
         MasterComponent,
-        DetailPanelComponent
+        DetailPanelComponent,
+        DateComponent
     ],
     bootstrap: [AppComponent]
 })
