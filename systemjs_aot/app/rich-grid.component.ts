@@ -8,6 +8,7 @@ import RefData from './refData';
 
 // only import this if you are using the ag-Grid-Enterprise
 import 'ag-grid-enterprise/main';
+import {DateComponent} from "./date-component.component";
 
 @Component({
     moduleId: module.id,
@@ -23,6 +24,7 @@ export class RichGridComponent {
     public rowData:any[];
     private columnDefs:any[];
     public rowCount:string;
+    public dateComponentFramework:DateComponent;
 
     constructor() {
         // we pass an empty gridOptions in, so we can grab the api out
@@ -30,6 +32,7 @@ export class RichGridComponent {
         this.createRowData();
         this.createColumnDefs();
         this.showGrid = true;
+        this.gridOptions.dateComponentFramework = DateComponent;
     }
 
     private createRowData() {
@@ -46,6 +49,7 @@ export class RichGridComponent {
                     windows: Math.random() < 0.4,
                     css: Math.random() < 0.4
                 },
+                dob: RefData.DOBs[i % RefData.DOBs.length],
                 address: RefData.addresses[i % RefData.addresses.length],
                 years: Math.round(Math.random() * 100),
                 proficiency: Math.round(Math.random() * 100),
@@ -78,6 +82,13 @@ export class RichGridComponent {
                         cellRenderer: countryCellRenderer, pinned: true,
                         filterParams: {cellRenderer: countryCellRenderer, cellHeight: 20}
                     },
+                    {
+                        headerName: "DOB", field: "dob", width: 120, pinned: true, cellRenderer: function(params) {
+                        return  pad(params.value.getDate(), 2) + '/' +
+                            pad(params.value.getMonth() + 1, 2)+ '/' +
+                            params.value.getFullYear();
+                        }, filter: 'date'
+                    }
                 ]
             },
             {
@@ -252,3 +263,11 @@ function percentCellRenderer(params) {
 
     return eOuterDiv;
 }
+
+//Utility function used to pad the date formatting.
+function pad(num, totalStringSize) {
+    let asString = num + "";
+    while (asString.length < totalStringSize) asString = "0" + asString;
+    return asString;
+}
+
