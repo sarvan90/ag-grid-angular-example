@@ -1,7 +1,6 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
-import {RouterModule, Routes} from "@angular/router";
 // ag-grid
 import {AgGridModule} from "ag-grid-ng2/main";
 // application
@@ -16,7 +15,7 @@ import {SquareComponent} from "./square.component";
 import {ParamsComponent} from "./params.component";
 import {CubeComponent} from "./cube.component";
 import {CurrencyComponent} from "./currency.component";
-
+import {ChildMessageComponent} from "./child-message.component";
 // from rich component
 import {FromRichComponent} from "./from-rich.component";
 import {ClickableModule} from "./clickable.module";
@@ -43,36 +42,19 @@ import {PartialMatchFilterComponent} from "./partial-match-filter.component";
 // master detail
 import {MasterComponent} from "./masterdetail-master.component";
 import {DetailPanelComponent} from "./detail-panel.component";
-
-const appRoutes: Routes = [
-    {path: 'rich-grid', component: RichGridComponent, data: {title: "Rich Grid with Pure JavaScript"}},
-    {
-        path: 'rich-grid-declarative',
-        component: RichGridDeclarativeComponent,
-        data: {title: "Rich Grid with Declarative Markup"}
-    },
-    {path: 'from-component', component: FromComponentComponent, data: {title: "Using Dynamic Components"}},
-    {path: 'from-rich-component', component: FromRichComponent, data: {title: "Using Dynamic Components - Richer Example"}},
-    {path: 'editor-component', component: EditorComponent, data: {title: "Using Cell Editor Components"}},
-    {path: 'floating-row', component: WithFloatingRowComponent, data: {title: "Using Floating Row Renderers"}},
-    {path: 'full-width', component: WithFullWidthComponent, data: {title: "Using Full Width Renderers"}},
-    {path: 'group-row', component: WithGroupRowComponent, data: {title: "Using Group Row Renderers"}},
-    {path: 'filter', component: FilterComponentComponent, data: {title: "With Filters Components"}},
-    {path: 'master-detail', component: MasterComponent, data: {title: "Master Detail Example"}},
-    {path: '', redirectTo: 'rich-grid', pathMatch: 'full'}
-];
+import {DateComponent} from "./date-component.component";
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
-        RouterModule.forRoot(appRoutes),
         AgGridModule.withComponents(
             [
                 SquareComponent,
                 CubeComponent,
                 ParamsComponent,
                 CurrencyComponent,
+                ChildMessageComponent,
                 RatioParentComponent,
                 ClickableParentComponent,
                 NumericEditorComponent,
@@ -82,7 +64,8 @@ const appRoutes: Routes = [
                 NameAndAgeRendererComponent,
                 MedalRendererComponent,
                 PartialMatchFilterComponent,
-                DetailPanelComponent
+                DetailPanelComponent,
+                DateComponent
             ]),
         RatioModule,
         ClickableModule
@@ -96,6 +79,7 @@ const appRoutes: Routes = [
         CubeComponent,
         ParamsComponent,
         CurrencyComponent,
+        ChildMessageComponent,
         FromRichComponent,
         EditorComponent,
         NumericEditorComponent,
@@ -110,7 +94,8 @@ const appRoutes: Routes = [
         FilterComponentComponent,
         PartialMatchFilterComponent,
         MasterComponent,
-        DetailPanelComponent
+        DetailPanelComponent,
+        DateComponent
     ],
     bootstrap: [AppComponent]
 })

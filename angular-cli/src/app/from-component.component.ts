@@ -5,6 +5,7 @@ import {SquareComponent} from "./square.component";
 import {ParamsComponent} from "./params.component";
 import {CubeComponent} from "./cube.component";
 import {CurrencyComponent} from "./currency.component";
+import {ChildMessageComponent} from "./child-message.component";
 
 @Component({
     selector: 'ag-from-component',
@@ -14,7 +15,11 @@ export class FromComponentComponent {
     public gridOptions:GridOptions;
 
     constructor() {
-        this.gridOptions = <GridOptions>{};
+        this.gridOptions = <GridOptions>{
+            context: {
+                componentParent: this
+            }
+        };
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
     }
@@ -23,37 +28,48 @@ export class FromComponentComponent {
         this.gridOptions.api.refreshCells([$event.node],["cube"]);
     }
 
+    public methodFromParent(cell) {
+        alert(`"Parent Component Method from ${cell}!`);
+    }
+
     private createColumnDefs() {
         return [
-            {headerName: "Row", field: "row", width: 140},
+            {headerName: "Row", field: "row", width: 100},
             {
                 headerName: "Square",
                 field: "value",
                 cellRendererFramework: SquareComponent,
                 editable:true,
                 colId: "square",
-                width: 125
+                width: 100
             },
             {
                 headerName: "Cube",
                 field: "value",
                 cellRendererFramework: CubeComponent,
                 colId: "cube",
-                width: 125
+                width: 100
             },
             {
                 headerName: "Row Params",
                 field: "row",
                 cellRendererFramework: ParamsComponent,
                 colId: "params",
-                width: 245
+                width: 215
             },
             {
                 headerName: "Currency (Pipe)",
                 field: "currency",
                 cellRendererFramework: CurrencyComponent,
                 colId: "params",
-                width: 150
+                width: 135
+            },
+            {
+                headerName: "Child/Parent",
+                field: "value",
+                cellRendererFramework: ChildMessageComponent,
+                colId: "params",
+                width: 120
             }
         ];
     }

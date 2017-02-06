@@ -16,7 +16,6 @@
     "ag-grid": "7.2.x",
     "ag-grid-enterprise": "7.2.x",
     "ag-grid-ng2": "7.2.x",
-
     "@angular/common": "2.4.x",
     "@angular/compiler": "2.4.x",
     "@angular/compiler-cli": "2.4.x",
@@ -32,7 +31,6 @@
     "core-js": "2.4.x",
     "bootstrap": "3.3.6",
     "jquery": "3.1.1",
-
     "ts-helpers": "^1.1.1",
     "ng2-typeahead": "^1.2.0"
   },
@@ -41,6 +39,8 @@
     "@types/node": "^6.0.42",
     "angular-cli": "1.0.0-beta.19-3",
     "codelyzer": "1.0.0-beta.1",
+    "del": "^2.2.2",
+    "gulp": "3.9.1",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "1.2.0",
@@ -49,6 +49,7 @@
     "karma-jasmine": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
     "protractor": "4.0.9",
+    "run-sequence": "^1.2.2",
     "ts-node": "1.2.1",
     "tslint": "3.13.0",
     "typescript": "~2.0.3",
