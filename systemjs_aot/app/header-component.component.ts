@@ -1,4 +1,4 @@
-import {Component, Directive, ViewChild, ElementRef} from "@angular/core";
+import {Component, ElementRef} from "@angular/core";
 import {IHeader, IHeaderParams} from "ag-grid/main";
 
 @Component({
@@ -7,7 +7,7 @@ import {IHeader, IHeaderParams} from "ag-grid/main";
     styleUrls: ['header-component.component.css']
 })
 export class HeaderComponent implements IHeader{
-    private params:any;
+    private params:IHeaderParams;
     private elementRef: ElementRef;
     private sorted:string;
 

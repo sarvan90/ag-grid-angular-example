@@ -1,15 +1,12 @@
-import {Component, ViewEncapsulation} from '@angular/core';
-
-import {GridOptions} from 'ag-grid/main';
-
-import ProficiencyFilter from './proficiencyFilter';
-import SkillFilter from './skillFilter';
-import RefData from './refData';
-
-// only import this if you are using the ag-Grid-Enterprise
-import 'ag-grid-enterprise/main';
+import {Component, ViewEncapsulation} from "@angular/core";
+import {GridOptions} from "ag-grid/main";
+import ProficiencyFilter from "./proficiencyFilter";
+import SkillFilter from "./skillFilter";
+import RefData from "./refData";
+import "ag-grid-enterprise/main";
 import {DateComponent} from "./date-component.component";
 import {HeaderComponent} from "./header-component.component";
+import {HeaderGroupComponent} from "./header-group-component.component";
 
 @Component({
     moduleId: module.id,
@@ -35,7 +32,7 @@ export class RichGridComponent {
         this.showGrid = true;
         this.gridOptions.dateComponentFramework = DateComponent;
         this.gridOptions.defaultColDef = {
-            headerComponentFramework : HeaderComponent,
+            headerComponentFramework : <{new():HeaderComponent}>HeaderComponent,
             headerComponentParams : {
                 menuIcon: 'fa-bars'
             }
@@ -79,6 +76,7 @@ export class RichGridComponent {
             },
             {
                 headerName: 'Employee',
+                headerGroupComponentFramework: HeaderGroupComponent,
                 children: [
                     {
                         headerName: "Name", field: "name",
@@ -87,14 +85,14 @@ export class RichGridComponent {
                     {
                         headerName: "Country", field: "country", width: 150,
                         cellRenderer: countryCellRenderer, pinned: true,
-                        filterParams: {cellRenderer: countryCellRenderer, cellHeight: 20}
+                        filterParams: {cellRenderer: countryCellRenderer, cellHeight: 20}, columnGroupShow: 'open'
                     },
                     {
                         headerName: "DOB", field: "dob", width: 120, pinned: true, cellRenderer: function(params) {
                         return  pad(params.value.getDate(), 2) + '/' +
                             pad(params.value.getMonth() + 1, 2)+ '/' +
                             params.value.getFullYear();
-                        }, filter: 'date'
+                        }, filter: 'date', columnGroupShow: 'open'
                     }
                 ]
             },

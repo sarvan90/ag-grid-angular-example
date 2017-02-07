@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {IDate} from "ag-grid/main";
+import {IDate, IDateParams} from "ag-grid/main";
 
 
 @Component({
@@ -10,12 +10,12 @@ import {IDate} from "ag-grid/main";
 })
 export class DateComponent implements IDate{
     private date:Date;
-    private params:any;
+    private params:IDateParams;
     public dd:string = '';
     public mm:string = '';
     public yyyy:string = '';
 
-    agInit(params:any):void {
+    agInit(params:IDateParams):void {
         this.params = params;
     }
 

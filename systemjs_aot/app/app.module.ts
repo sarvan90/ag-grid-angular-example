@@ -44,6 +44,7 @@ import {MasterComponent} from "./masterdetail-master.component";
 import {DetailPanelComponent} from "./detail-panel.component";
 import {DateComponent} from "./date-component.component";
 import {HeaderComponent} from "./header-component.component";
+import {HeaderGroupComponent} from "./header-group-component.component";
 
 @NgModule({
     imports: [
@@ -66,7 +67,8 @@ import {HeaderComponent} from "./header-component.component";
                 PartialMatchFilterComponent,
                 DetailPanelComponent,
                 DateComponent,
-                HeaderComponent
+                HeaderComponent,
+                HeaderGroupComponent
             ]),
         RatioModule,
         ClickableModule
@@ -96,7 +98,8 @@ import {HeaderComponent} from "./header-component.component";
         MasterComponent,
         DetailPanelComponent,
         DateComponent,
-        HeaderComponent
+        HeaderComponent,
+        HeaderGroupComponent
     ],
     bootstrap: [AppComponent]
 })
