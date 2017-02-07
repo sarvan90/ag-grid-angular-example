@@ -43,10 +43,6 @@ import {PartialMatchFilterComponent} from "./partial-match-filter.component";
 // master detail
 import {MasterComponent} from "./masterdetail-master.component";
 import {DetailPanelComponent} from "./detail-panel.component";
-// typeahead
-import {TypeaheadComponent} from "./typeahead-master.component";
-import {TypeaheadEditorComponent} from "./typeahead-editor.component";
-import {Typeahead} from "ng2-typeahead";
 
 const appRoutes: Routes = [
     {path: 'rich-grid', component: RichGridComponent, data: {title: "Rich Grid with Pure JavaScript"}},
@@ -63,7 +59,6 @@ const appRoutes: Routes = [
     {path: 'group-row', component: WithGroupRowComponent, data: {title: "Using Group Row Renderers"}},
     {path: 'filter', component: FilterComponentComponent, data: {title: "With Filters Components"}},
     {path: 'master-detail', component: MasterComponent, data: {title: "Master Detail Example"}},
-    {path: 'typeahead-example', component: TypeaheadComponent, data: {title: "Typeahead Example"}},
     {path: '', redirectTo: 'rich-grid', pathMatch: 'full'}
 ];
 
@@ -88,8 +83,7 @@ const appRoutes: Routes = [
                 NameAndAgeRendererComponent,
                 MedalRendererComponent,
                 PartialMatchFilterComponent,
-                DetailPanelComponent,
-                TypeaheadEditorComponent
+                DetailPanelComponent
             ]),
         RatioModule,
         ClickableModule
@@ -118,10 +112,7 @@ const appRoutes: Routes = [
         FilterComponentComponent,
         PartialMatchFilterComponent,
         MasterComponent,
-        DetailPanelComponent,
-        Typeahead,
-        TypeaheadComponent,
-        TypeaheadEditorComponent
+        DetailPanelComponent
     ],
     bootstrap: [AppComponent]
 })
