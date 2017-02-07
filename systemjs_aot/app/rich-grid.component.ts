@@ -9,6 +9,7 @@ import RefData from './refData';
 // only import this if you are using the ag-Grid-Enterprise
 import 'ag-grid-enterprise/main';
 import {DateComponent} from "./date-component.component";
+import {HeaderComponent} from "./header-component.component";
 
 @Component({
     moduleId: module.id,
@@ -33,6 +34,12 @@ export class RichGridComponent {
         this.createColumnDefs();
         this.showGrid = true;
         this.gridOptions.dateComponentFramework = DateComponent;
+        this.gridOptions.defaultColDef = {
+            headerComponentFramework : HeaderComponent,
+            headerComponentParams : {
+                menuIcon: 'fa-bars'
+            }
+        }
     }
 
     private createRowData() {
