@@ -1,20 +1,25 @@
 import {Component, ElementRef} from "@angular/core";
-import {IHeader, IHeaderParams} from "ag-grid/main";
+import {IHeaderParams} from "ag-grid/main";
+import {IHeaderAngularComp} from "ag-grid-ng2/main";
+
+interface MyParams extends IHeaderParams{
+    menuIcon:string;
+}
 
 @Component({
     templateUrl: 'header-component.component.html',
     styleUrls: ['header-component.component.css']
 })
-export class HeaderComponent implements IHeader{
-    private params:IHeaderParams;
+export class HeaderComponent implements IHeaderAngularComp{
+    public params:MyParams;
+    public sorted:string;
     private elementRef: ElementRef;
-    private sorted:string;
 
     constructor (elementRef: ElementRef){
         this.elementRef= elementRef;
     }
 
-    agInit(params:IHeaderParams):void {
+    agInit(params:MyParams):void {
         this.params = params;
         this.params.column.addEventListener('sortChanged', this.onSortChanged.bind(this));
         this.onSortChanged();

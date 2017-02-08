@@ -1,6 +1,6 @@
 import {Component, AfterViewInit} from "@angular/core";
 import {GridOptions} from "ag-grid/main";
-import {AgRendererComponent} from "ag-grid-ng2/main";
+import {ICellRendererAngularComp} from "ag-grid-ng2/main";
 
 @Component({
     moduleId: module.id,
@@ -8,7 +8,7 @@ import {AgRendererComponent} from "ag-grid-ng2/main";
     templateUrl: 'detail-panel.component.html',
     styleUrls: ['detail-panel.component.css'],
 })
-export class DetailPanelComponent implements AgRendererComponent,AfterViewInit {
+export class DetailPanelComponent implements ICellRendererAngularComp,AfterViewInit {
     public gridOptions: GridOptions;
     public parentRecord: any;
 
