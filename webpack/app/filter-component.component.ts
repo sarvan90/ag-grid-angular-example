@@ -24,6 +24,7 @@ export class FilterComponentComponent {
         this.gridOptions.api.getFilterInstance("name").getFrameworkComponentInstance().componentMethod("Hello World!");
     }
 
+
     private createColumnDefs() {
         return [
             {headerName: "Row", field: "row", width: 400},

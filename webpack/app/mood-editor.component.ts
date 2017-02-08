@@ -1,6 +1,6 @@
 import {Component, ViewContainerRef, ViewChild, AfterViewInit} from '@angular/core';
 
-import {AgEditorComponent} from 'ag-grid-ng2/main';
+import {ICellEditorAngularComp} from 'ag-grid-ng2/main';
 
 @Component({
     selector: 'editor-cell',
@@ -36,7 +36,7 @@ import {AgEditorComponent} from 'ag-grid-ng2/main';
         }
     `]
 })
-export class MoodEditorComponent implements AgEditorComponent, AfterViewInit {
+export class MoodEditorComponent implements ICellEditorAngularComp, AfterViewInit {
     private params: any;
 
     @ViewChild('container', {read: ViewContainerRef}) public container;

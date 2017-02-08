@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
-import {IDate, IDateParams} from "ag-grid/main";
+import {IDateParams} from "ag-grid/main";
+import {IDateAngularComp} from "ag-grid-ng2/main";
 
 
 @Component({
@@ -8,7 +9,7 @@ import {IDate, IDateParams} from "ag-grid/main";
     templateUrl: 'date-component.component.html',
     styleUrls: ['date-component.component.css'],
 })
-export class DateComponent implements IDate{
+export class DateComponent implements IDateAngularComp{
     private date:Date;
     private params:IDateParams;
     public dd:string = '';

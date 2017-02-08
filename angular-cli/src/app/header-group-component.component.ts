@@ -1,13 +1,13 @@
 import {Component} from "@angular/core";
-import {IHeaderGroup, IHeaderGroupParams} from "ag-grid/main";
+import {IHeaderGroupParams} from "ag-grid/main";
+import {IHeaderGroupAngularComp} from "ag-grid-ng2/main";
 
 @Component({
     templateUrl: 'header-group-component.component.html',
     styleUrls: ['header-group-component.component.css']
 })
-export class HeaderGroupComponent implements IHeaderGroup{
-    private params:IHeaderGroupParams;
-
+export class HeaderGroupComponent implements IHeaderGroupAngularComp{
+    public params:IHeaderGroupParams;
     public expanded:boolean;
 
     agInit(params:IHeaderGroupParams):void {
