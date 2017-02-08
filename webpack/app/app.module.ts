@@ -43,6 +43,9 @@ import {PartialMatchFilterComponent} from "./partial-match-filter.component";
 // master detail
 import {MasterComponent} from "./masterdetail-master.component";
 import {DetailPanelComponent} from "./detail-panel.component";
+import {DateComponent} from "./date-component.component";
+import {HeaderComponent} from "./header-component.component";
+import {HeaderGroupComponent} from "./header-group-component.component";
 
 const appRoutes: Routes = [
     {path: 'rich-grid', component: RichGridComponent, data: {title: "Rich Grid with Pure JavaScript"}},
@@ -83,7 +86,10 @@ const appRoutes: Routes = [
                 NameAndAgeRendererComponent,
                 MedalRendererComponent,
                 PartialMatchFilterComponent,
-                DetailPanelComponent
+                DetailPanelComponent,
+                DateComponent,
+                HeaderComponent,
+                HeaderGroupComponent
             ]),
         RatioModule,
         ClickableModule
@@ -112,7 +118,10 @@ const appRoutes: Routes = [
         FilterComponentComponent,
         PartialMatchFilterComponent,
         MasterComponent,
-        DetailPanelComponent
+        DetailPanelComponent,
+        DateComponent,
+        HeaderComponent,
+        HeaderGroupComponent
     ],
     bootstrap: [AppComponent]
 })

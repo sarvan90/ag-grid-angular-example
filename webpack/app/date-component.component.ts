@@ -3,7 +3,6 @@ import {IDate, IDateParams} from "ag-grid/main";
 
 
 @Component({
-    moduleId: module.id,
     selector: 'ag-full-width-grid',
     templateUrl: 'date-component.component.html',
     styleUrls: ['date-component.component.css'],
