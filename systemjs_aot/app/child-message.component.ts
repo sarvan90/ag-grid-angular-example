@@ -1,11 +1,11 @@
 import {Component} from "@angular/core";
-import {AgRendererComponent} from "ag-grid-ng2/main";
+import {ICellRendererAngularComp} from "ag-grid-ng2/main";
 
 @Component({
     selector: 'child-cell',
     template: `<span><button style="height: 20px" (click)="invokeParentMethod()">Invoke Parent</button></span>`
 })
-export class ChildMessageComponent implements AgRendererComponent {
+export class ChildMessageComponent implements ICellRendererAngularComp {
     public params: any;
 
     agInit(params: any): void {

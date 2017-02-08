@@ -57,7 +57,7 @@ gulp.task('watch-ng2', ['copy-from-ag-grid-ng2'], () => {
 });
 
 gulp.task('clean-aot', () => {
-    return del.sync([
+    return del([
             'aot/aot/**', 'aot/app/**',
             'aot/images/**', 'aot/dist/**',
             'aot/node_modules/**', 'aot/e2e/**', 'aot/*.js',
