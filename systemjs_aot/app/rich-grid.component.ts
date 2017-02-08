@@ -23,6 +23,8 @@ export class RichGridComponent {
     private columnDefs:any[];
     public rowCount:string;
     public dateComponentFramework:DateComponent;
+    public HeaderGroupComponent = HeaderGroupComponent;
+
 
     constructor() {
         // we pass an empty gridOptions in, so we can grab the api out
