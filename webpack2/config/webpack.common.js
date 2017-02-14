@@ -59,9 +59,3 @@ module.exports = {
         })
     ]
 };
-
-// Example: if your old code looked like this:
-// ExtractTextPlugin.extract('style-loader', 'css-loader')
-//
-// You would change it to:
-//     ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
