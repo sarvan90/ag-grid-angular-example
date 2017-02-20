@@ -10,10 +10,10 @@
     "clean": "npm run clean:jit && npm run clean:aot",
     "clean:jit": "rimraf app/*.js*",
     "start": "npm run tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "clean:aot": "gulp clean-aot",
-    "build:aot": "gulp ngc && gulp aot-bundle",
+    "clean:aot": "rimraf aot/aot/* && rimraf aot/app/* && rimraf aot/dist/* && rimraf aot/node_modules/* && rimraf app/*.js* aot/e2e",
+    "build:aot": "ngc -p tsconfig-aot.json && gulp aot-bundle",
     "lite:aot": "lite-server -c aot/bs-config.json",
-    "clean-build:aot": "gulp clean-aot-build",
+    "clean-build:aot": "npm run clean:aot && npm run build:aot",
     "test": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
     "e2e": "tsc && concurrently \"http-server -s\" \"protractor protractor.config.js\" --kill-others --success first"
   },
