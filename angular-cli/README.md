@@ -1,5 +1,5 @@
 
-ag-Grid-ng2-examples - angular-cli
+ag-Grid-angular-examples - angular-cli
 ==================================
 
 Example of using ag-Grid with Angular2 and TypeScript

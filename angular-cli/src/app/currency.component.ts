@@ -1,6 +1,6 @@
 import {Component,OnDestroy} from '@angular/core';
 
-import {AgRendererComponent} from 'ag-grid-ng2/main';
+import {AgRendererComponent} from 'ag-grid-angular/main';
 
 @Component({
     selector: 'currency-cell',

@@ -64,7 +64,7 @@ module.exports = function (config) {
             'karma-test-shim.js', // optionally extend SystemJS mapping e.g., with barrels
 
             'node_modules/ag-grid/dist/ag-grid.js',
-            'node_modules/ag-grid-ng2/dist/agGridNg2.js',
+            'node_modules/ag-grid-angular/dist/agGridNg2.js',
 
             // transpiled application & spec code paths loaded via module imports
             {pattern: appBase + '**/*.js', included: false, watched: true},

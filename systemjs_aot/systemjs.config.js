@@ -16,7 +16,7 @@
                 'rxjs': 'node_modules/rxjs',
                 'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
                 // ag libraries
-                'ag-grid-ng2': 'node_modules/ag-grid-ng2',
+                'ag-grid-angular': 'node_modules/ag-grid-angular',
                 'ag-grid': 'node_modules/ag-grid',
                 'ag-grid-enterprise': 'node_modules/ag-grid-enterprise'
             },

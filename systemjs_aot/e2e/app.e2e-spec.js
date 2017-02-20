@@ -1,6 +1,6 @@
 "use strict";
 var protractor_1 = require("protractor");
-describe('ag-grid-ng2-examples E2E Tests', function () {
+describe('ag-grid-angular-examples E2E Tests', function () {
     var expectedTabTitles = [
         'Rich Grid with Pure JavaScript',
         'Rich Grid with Declarative Markup',

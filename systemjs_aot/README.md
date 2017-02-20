@@ -1,5 +1,5 @@
 
-ag-Grid-ng2-examples - systemjs & systemjs-builder
+ag-grid-angular-examples - systemjs & systemjs-builder
 ==================================================
 
 Example of using ag-Grid with Angular2 and TypeScript

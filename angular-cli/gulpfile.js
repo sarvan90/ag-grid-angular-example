@@ -12,9 +12,9 @@ gulp.task('copy-from-ag-grid-enterprise', () => {
         .pipe(gulp.dest('./node_modules/ag-grid-enterprise'));
 });
 
-gulp.task('copy-from-ag-grid-ng2', () => {
-    return gulp.src(['../../ag-grid-ng2/*', '../../ag-grid-ng2/dist/**/*'], {base: '../../ag-grid-ng2'})
-        .pipe(gulp.dest('./node_modules/ag-grid-ng2'));
+gulp.task('copy-from-ag-grid-angular', () => {
+    return gulp.src(['../../ag-grid-angular/*', '../../ag-grid-angular/dist/**/*'], {base: '../../ag-grid-angular'})
+        .pipe(gulp.dest('./node_modules/ag-grid-angular'));
 });
 
 gulp.task('clean-nm-ag-grid-enterprise', () => {

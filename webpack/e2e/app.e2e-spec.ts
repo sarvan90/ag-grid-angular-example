@@ -1,6 +1,6 @@
 import {browser, element, by, protractor} from "protractor";
 
-describe('ag-grid-ng2-examples E2E Tests', function () {
+describe('ag-grid-angular-examples E2E Tests', function () {
 
     let expectedTabTitles = [
         'Rich Grid with Pure JavaScript',

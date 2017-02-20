@@ -1,6 +1,6 @@
 import {Component, AfterViewInit} from "@angular/core";
 import {GridOptions} from "ag-grid/main";
-import {AgRendererComponent} from "ag-grid-ng2/main";
+import {AgRendererComponent} from "ag-grid-angular/main";
 
 @Component({
     selector: 'ag-full-width-grid',

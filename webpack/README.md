@@ -1,8 +1,8 @@
 
-ag-Grid-ng2-examples - webpack
+ag-grid-angular-examples - webpack
 ==============================
 
-Example of using ag-Grid with Angular2 and TypeScript
+Example of using ag-Grid with Angular, Webpack and TypeScript
 
 Building
 ========

@@ -1,5 +1,5 @@
 {
-  "name": "ag-grid-ng2-example",
+  "name": "ag-grid-angular-example",
   "version": "8.0.0",
   "description": "ag-Grid Angular 2 Example Using Angular CLI",
   "license": "MIT",
@@ -15,7 +15,7 @@
   "dependencies": {
     "ag-grid": "8.0.x",
     "ag-grid-enterprise": "8.0.x",
-    "ag-grid-ng2": "8.0.x",
+    "ag-grid-angular": "8.0.x",
     "@angular/common": "2.4.x",
     "@angular/compiler": "2.4.x",
     "@angular/compiler-cli": "2.4.x",
