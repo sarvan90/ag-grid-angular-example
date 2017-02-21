@@ -1,7 +1,7 @@
 {
   "name": "ag-grid-angular-example",
   "version": "8.1.0",
-  "description": "ag-Grid Angular 2 Example Using SystemJS",
+  "description": "ag-Grid Angular Example Using SystemJS",
   "scripts": {
     "postinstall": "webdriver-manager update",
     "tsc": "tsc -p tsconfig.json",

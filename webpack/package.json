@@ -1,7 +1,7 @@
 {
   "name": "ag-grid-angular-example",
   "version": "8.1.0",
-  "description": "ag-Grid Angular 2 Example Using Webpack",
+  "description": "ag-Grid Angular Example Using Webpack",
   "scripts": {
     "postinstall": "webdriver-manager update",
     "clean": "rimraf dist && rimraf app/*.js* && rimraf app/*.map",

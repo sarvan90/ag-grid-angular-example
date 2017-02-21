@@ -1,7 +1,7 @@
 {
   "name": "ag-grid-angular-example",
   "version": "8.1.0",
-  "description": "ag-Grid Angular 2 Example Using Angular CLI",
+  "description": "ag-Grid Angular Example Using Angular CLI",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
