@@ -79,14 +79,21 @@ gulp.task('ngc', () => {
     return ngc('./tsconfig-aot.json');
 });
 
+gulp.task('copy-aot-dist-to-docs', () => {
+    return gulp.src(['./aot/dist/**/*', './aot/images/**/*'], {base: './aot'}).pipe(gulp.dest('./docs/ng2-example/'));
+});
+
+gulp.task('copy-config-to-docs', () => {
+    return gulp.src(['./docs/config/index.html']).pipe(gulp.dest('./docs/ng2-example/'));
+});
+
+gulp.task('copy-source-to-docs', () => {
+    return gulp.src(['./app/**/*.ts', './app/**/*.html','./app/**/*.css'], {base: './'}).pipe(gulp.dest('./docs/ng2-example/'));
+});
+
 gulp.task('copy-to-docs', () => {
     require("./copy-dist-files").copyFiles('./docs/ng2-example/');
-
-    gulp.src(['./aot/dist/**/*', './aot/images/**/*'], {base: './aot'})
-        .pipe(gulp.dest('./docs/ng2-example/'));
-    gulp.src(['./docs/config/index.html']).pipe(gulp.dest('./docs/ng2-example/'));
-    gulp.src(['./app/**/*.ts', './app/**/*.html'], {base: './'})
-        .pipe(gulp.dest('./docs/ng2-example/'));
+    return runSequence(['copy-aot-dist-to-docs', 'copy-config-to-docs', 'copy-source-to-docs']);
 });
 
 gulp.task('clean-aot-build', (callback) => {
