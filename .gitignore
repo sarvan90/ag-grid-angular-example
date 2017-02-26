@@ -31,3 +31,10 @@ webpack/e2e/*.js
 webpack/e2e/*.map
 webpack/app/*.js
 webpack/app/*.map
+
+# webpack 2
+webpack2/dist
+webpack2/e2e/*.js
+webpack2/e2e/*.map
+webpack/app/*.js
+webpack2/app/*.map

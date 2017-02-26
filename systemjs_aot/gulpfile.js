@@ -57,7 +57,7 @@ gulp.task('watch-ng2', ['copy-from-ag-grid-angular'], () => {
 });
 
 gulp.task('clean-aot', () => {
-    return del([
+        return del([
             'aot/aot/**', 'aot/app/**',
             'aot/images/**', 'aot/dist/**',
             'aot/node_modules/**', 'aot/e2e/**', 'aot/*.js',
@@ -88,23 +88,34 @@ gulp.task('copy-config-to-docs', () => {
 });
 
 gulp.task('copy-source-to-docs', () => {
-    return gulp.src(['./app/**/*.ts', './app/**/*.html','./app/**/*.css'], {base: './'}).pipe(gulp.dest('./docs/ng2-example/'));
+    return gulp.src(['./app/**/*.ts', './app/**/*.html', './app/**/*.css'], {base: './'}).pipe(gulp.dest('./docs/ng2-example/'));
 });
 
-gulp.task('copy-to-docs', () => {
+gulp.task('clean-docs', (callback) => {
+    return del(['./docs/ng2-example/app/*', '!./docs/ng2-example/app'], callback)
+});
+
+gulp.task('clean-ag-docs', (callback) => {
+    return del(['../../ag-grid-docs/src/ng2-example/app/*', '!../../ag-grid-docs/src/ng2-example/app'], {force: true}, callback)
+});
+
+gulp.task('copy-to-docs', (callback) => {
     require("./copy-dist-files").copyFiles('./docs/ng2-example/');
-    return runSequence(['copy-aot-dist-to-docs', 'copy-config-to-docs', 'copy-source-to-docs']);
+    return runSequence('clean-docs', 'copy-aot-dist-to-docs', 'copy-config-to-docs', 'copy-source-to-docs', callback);
 });
 
 gulp.task('clean-aot-build', (callback) => {
-    runSequence('clean-ngc', 'aot-bundle', callback)
-});
-
-gulp.task('build-and-copy-to-ag-docs', ['build-and-copy-to-docs'], (callback) => {
-    return gulp.src(['./docs/ng2-example/**/*'], {base: './docs'})
-        .pipe(gulp.dest('../../ag-grid-docs/src/'));
+    return runSequence('clean-ngc', 'aot-bundle', callback);
 });
 
 gulp.task('build-and-copy-to-docs', (callback) => {
-    runSequence('clean-aot-build', 'copy-to-docs', callback)
+    return runSequence('clean-ag-docs', 'clean-aot-build', 'copy-to-docs', callback)
+});
+
+gulp.task('copy-to-ag-docs', () => {
+    return gulp.src(['./docs/ng2-example/**/*'], {base: './docs'}).pipe(gulp.dest('../../ag-grid-docs/src/'))
+});
+
+gulp.task('build-and-copy-to-ag-docs', (callback) => {
+    return runSequence('build-and-copy-to-docs', 'copy-to-ag-docs', callback);
 });
