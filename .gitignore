@@ -17,6 +17,8 @@ systemjs_aot/app/*.js.map
 systemjs_aot/e2e/*.js
 systemjs_aot/e2e/*.js.map
 systemjs_aot/aot/e2e
+systemjs_aot/e2e/app.e2e-spec.js
+systemjs_aot/e2e/app.e2e-spec.js.map
 systemjs_aot/aot/aot
 systemjs_aot/aot/app
 systemjs_aot/aot/dist
