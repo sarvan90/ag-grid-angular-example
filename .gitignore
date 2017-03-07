@@ -12,10 +12,10 @@ update_from_source.sh
 _test-output
 
 # systemjs_aot
-systemjs_aot/app/*.js
-systemjs_aot/app/*.js.map
-systemjs_aot/e2e/*.js
-systemjs_aot/e2e/*.js.map
+systemjs_aot/app/*/*.js
+systemjs_aot/app/**/*.js.map
+systemjs_aot/e2e/**/*.js
+systemjs_aot/e2e/**/*.js.map
 systemjs_aot/aot/e2e
 systemjs_aot/e2e/app.e2e-spec.js
 systemjs_aot/e2e/app.e2e-spec.js.map
