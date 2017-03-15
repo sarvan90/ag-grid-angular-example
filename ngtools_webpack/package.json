@@ -47,7 +47,7 @@
     "@ngtools/webpack": "1.2.8",
     "@types/node": "6.0.45",
     "angular2-template-loader": "0.6.x",
-    "awesome-typescript-loader": "3.0.x",
+    "awesome-typescript-loader": "3.1.x",
     "html-loader": "0.4.x",
     "canonical-path": "0.0.2",
     "ts-helpers": "^1.1.2",
