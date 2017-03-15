@@ -1,7 +1,9 @@
 var webpack = require('webpack');
+var path = require('path');
+var helpers = require('./helpers');
+
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var helpers = require('./helpers');
 
 module.exports = {
     entry: {
@@ -18,6 +20,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.ts$/,
+                exclude: path.resolve(__dirname, "node_modules"),
                 loaders: ['awesome-typescript-loader', 'angular2-template-loader']
             },
             {
