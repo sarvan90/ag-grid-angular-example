@@ -1,6 +1,6 @@
 {
   "name": "ag-grid-angular-example",
-  "version": "8.2.0",
+  "version": "9.0.0",
   "description": "ag-Grid Angular Example Using SystemJS",
   "scripts": {
     "postinstall": "webdriver-manager update",
@@ -28,9 +28,9 @@
   },
   "homepage": "http://www.ag-grid.com/",
   "dependencies": {
-    "ag-grid": "8.2.x",
-    "ag-grid-enterprise": "8.2.x",
-    "ag-grid-angular": "8.2.x",
+    "ag-grid": "9.0.x",
+    "ag-grid-enterprise": "9.0.x",
+    "ag-grid-angular": "9.0.x",
     "@angular/common": "2.4.x",
     "@angular/compiler": "2.4.x",
     "@angular/compiler-cli": "2.4.x",
