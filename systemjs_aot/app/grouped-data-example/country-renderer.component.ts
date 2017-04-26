@@ -10,7 +10,7 @@ import {ICellRendererAngularComp} from "ag-grid-angular/main";
 })
 export class CountryRendererComponent implements ICellRendererAngularComp {
     private params: any;
-    private flag: string;
+    public flag: string;
 
     agInit(params: any): void {
         this.params = params;
