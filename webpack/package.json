@@ -1,6 +1,6 @@
 {
   "name": "ag-grid-angular-example",
-  "version": "9.0.0",
+  "version": "9.1.0",
   "description": "ag-Grid Angular Example Using Webpack",
   "scripts": {
     "postinstall": "webdriver-manager update",
@@ -22,9 +22,9 @@
   },
   "homepage": "http://www.ag-grid.com/",
   "dependencies": {
-    "ag-grid": "9.0.x",
-    "ag-grid-enterprise": "9.0.x",
-    "ag-grid-angular": "9.0.x",
+    "ag-grid": "9.1.x",
+    "ag-grid-enterprise": "9.1.x",
+    "ag-grid-angular": "9.1.x",
     "@angular/common": "2.4.x",
     "@angular/compiler": "2.4.x",
     "@angular/compiler-cli": "2.4.x",
