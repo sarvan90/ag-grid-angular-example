@@ -38,7 +38,7 @@ export class SliderFloatingFilter implements IFloatingFilter <SerializedNumberFi
         this.eSlider.slider({
             min: 0,
             max: this.params.maxValue,
-            change: function (e, ui) {
+            change: (e, ui) => {
                 //Every time the value of the slider changes
                 if (!e.originalEvent) {
                     //If this event its triggered from outside. ie setModel() on the parent Filter we
