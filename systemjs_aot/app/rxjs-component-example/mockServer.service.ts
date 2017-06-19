@@ -7,7 +7,7 @@ import {cloneDeep} from "lodash";
 
 @Injectable()
 export class MockServerService {
-    stocksUrl: string = 'app/stocks.json';
+    stocksUrl: string = 'stocks.json';
     rowData: any[];
 
     constructor(private http:Http) {

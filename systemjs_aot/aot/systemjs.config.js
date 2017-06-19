@@ -12,13 +12,13 @@
                 '@angular/http': 'node_modules/@angular/http',
                 // other libraries
                 'rxjs': 'node_modules/rxjs',
-                // 'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
-                // ag libraries
-                'ag-grid-angular' : 'node_modules/ag-grid-angular',
-                'ag-grid' : 'node_modules/ag-grid',
-                'ag-grid-enterprise' : 'node_modules/ag-grid-enterprise',
                 'jquery': 'node_modules/jquery/dist',
-                'jquery-ui': 'node_modules/jquery-ui/ui/widgets'
+                'jquery-ui': 'node_modules/jquery-ui/ui/widgets',
+                'lodash': 'node_modules/lodash',
+                // ag libraries
+                'ag-grid-angular': 'node_modules/ag-grid-angular',
+                'ag-grid': 'node_modules/ag-grid',
+                'ag-grid-enterprise': 'node_modules/ag-grid-enterprise'
             },
             packages: {
                 '@angular/core': {
@@ -47,7 +47,12 @@
                 },
                 'jquery-ui': {
                     main: 'slider.js'
+                },
+                'lodash': {
+                    main: 'index.js',
+                    defaultExtension: 'js'
                 }
+
             }
         }
     );

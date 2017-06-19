@@ -4,7 +4,8 @@ var resources = [
     'node_modules/zone.js/dist/zone.min.js',
     'node_modules/ag-grid/dist/styles/ag-grid.css',
     'node_modules/ag-grid/dist/styles/theme-fresh.css',
-    'node_modules/bootstrap/dist/css/bootstrap.css'
+    'node_modules/bootstrap/dist/css/bootstrap.css',
+    'stocks.json'
 ];
 
 // to run manually from cmd line, node -e 'require("./copy-dist-files").copyFiles()' -  will by default
