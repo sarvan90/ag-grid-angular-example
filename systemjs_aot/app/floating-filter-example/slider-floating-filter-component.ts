@@ -1,14 +1,10 @@
-import {Component} from "@angular/core";
-import {ViewChild} from "@angular/core";
-import {IFloatingFilter} from "ag-grid/main";
-import {SerializedNumberFilter} from "ag-grid/main";
-import {IFloatingFilterParams} from "ag-grid/main";
+import {Component, ViewChild} from "@angular/core";
+import {IFloatingFilter, IFloatingFilterParams, SerializedNumberFilter} from "ag-grid/main";
 import {AgFrameworkComponent} from "ag-grid-angular/main";
 declare var $;
 
-
 export interface SliderFloatingFilterChange {
-    model:SerializedNumberFilter
+    model: SerializedNumberFilter
 }
 
 export interface SliderFloatingFilterParams extends IFloatingFilterParams<SerializedNumberFilter, SliderFloatingFilterChange> {
@@ -33,7 +29,7 @@ export class SliderFloatingFilter implements IFloatingFilter <SerializedNumberFi
     }
 
     afterGuiAttached(): void {
-        var that:SliderFloatingFilter = this;
+        var that: SliderFloatingFilter = this;
         this.eSlider = $(this.eSlider.nativeElement);
         this.eSlider.slider({
             min: 0,
@@ -47,7 +43,7 @@ export class SliderFloatingFilter implements IFloatingFilter <SerializedNumberFi
                     return;
                 }
                 that.currentValue = ui.value;
-                let change:SliderFloatingFilterChange = {
+                let change: SliderFloatingFilterChange = {
                     model: that.buildModel()
                 }
                 that.params.onFloatingFilterChanged(change)
@@ -71,7 +67,7 @@ export class SliderFloatingFilter implements IFloatingFilter <SerializedNumberFi
         this.eSlider.children(".ui-slider-handle").html(this.currentValue ? '>' + this.currentValue : '');
     }
 
-    buildModel():SerializedNumberFilter {
+    buildModel(): SerializedNumberFilter {
         if (this.currentValue === 0) return null;
         return {
             filterType: 'number',

@@ -14,7 +14,8 @@
                 '@angular/forms': 'node_modules/@angular/forms/bundles/forms.umd.js',
                 // other libraries
                 'rxjs': 'node_modules/rxjs',
-                'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+                'angular-in-memory-web-api': 'node_modules/angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+                'lodash': 'node_modules/lodash',
                 // ag libraries
                 'ag-grid-angular': 'node_modules/ag-grid-angular',
                 'ag-grid': 'node_modules/ag-grid',
@@ -26,6 +27,10 @@
                 },
                 'ag-grid': {
                     main: 'main.js'
+                },
+                'lodash': {
+                    main: 'index.js',
+                    defaultExtension: 'js'
                 }
             }
         }
