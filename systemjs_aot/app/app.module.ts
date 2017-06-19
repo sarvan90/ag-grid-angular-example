@@ -1,7 +1,6 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
-import {HttpModule} from '@angular/http';
 // ag-grid
 import {AgGridModule} from "ag-grid-angular/main";
 // application
@@ -50,15 +49,14 @@ import {DetailPanelComponent} from "./master-detail-example/detail-panel.compone
 import {GroupedDataComponent} from "./grouped-data-example/grouped-data.component";
 import {CountryRendererComponent} from "./grouped-data-example/country-renderer.component";
 import {FloatingFilterComponent} from "./floating-filter-example/floating-filter.component";
-import {SliderFloatingFilter} from "./floating-filter-example/slider-floating-filter-component";
-import {RxJsComponentByRow} from "./rxjs-component-example/rxjs-by-row.component";
-import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.component";
+import {SliderFloatingFilter} from "./floating-filter-example/slider-floating-filter.component";
+// grouped data
+
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule,
         AgGridModule.withComponents(
             [
                 SquareComponent,
@@ -117,9 +115,7 @@ import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.comp
         GroupedDataComponent,
         CountryRendererComponent,
         FloatingFilterComponent,
-        SliderFloatingFilter,
-        RxJsComponentByRow,
-        RxJsComponentByFullSet
+        SliderFloatingFilter
     ],
     bootstrap: [AppComponent]
 })

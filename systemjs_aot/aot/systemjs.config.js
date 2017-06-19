@@ -16,7 +16,9 @@
                 // ag libraries
                 'ag-grid-angular' : 'node_modules/ag-grid-angular',
                 'ag-grid' : 'node_modules/ag-grid',
-                'ag-grid-enterprise' : 'node_modules/ag-grid-enterprise'
+                'ag-grid-enterprise' : 'node_modules/ag-grid-enterprise',
+                'jquery': 'node_modules/jquery/dist',
+                'jquery-ui': 'node_modules/jquery-ui/ui/widgets'
             },
             packages: {
                 '@angular/core': {
@@ -39,6 +41,12 @@
                 },
                 'ag-grid': {
                     main: 'main.js'
+                },
+                'jquery': {
+                    main: 'jquery.js'
+                },
+                'jquery-ui': {
+                    main: 'slider.js'
                 }
             }
         }
