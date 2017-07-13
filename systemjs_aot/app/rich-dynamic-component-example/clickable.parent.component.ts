@@ -21,5 +21,9 @@ export class ClickableParentComponent implements ICellRendererAngularComp {
     public clicked(cell: any): void {
         console.log("Child Cell Clicked: " + JSON.stringify(cell));
     }
+
+    refresh():boolean{
+        return false;
+    }
 }
 

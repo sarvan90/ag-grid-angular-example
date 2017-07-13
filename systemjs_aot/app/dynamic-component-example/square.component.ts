@@ -20,4 +20,8 @@ export class SquareComponent implements ICellRendererAngularComp, OnDestroy {
     ngOnDestroy() {
         console.log(`Destroying SquareComponent`);
     }
+
+    refresh():boolean{
+        return false;
+    }
 }

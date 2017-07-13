@@ -14,4 +14,8 @@ export class NameAndAgeRendererComponent implements ICellRendererAngularComp {
         this.params = params;
         this.values = `Name: ${params.data.name}, Age: ${params.data.age}`
     }
+
+    refresh():boolean{
+        return false;
+    }
 }

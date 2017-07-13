@@ -39,4 +39,8 @@ export class CountryRendererComponent implements ICellRendererAngularComp {
         Venezuela: "ve",
         Uruguay: "uy"
     };
+
+    refresh():boolean{
+        return false;
+    }
 }

@@ -14,10 +14,10 @@ export class FloatingRowComponent {
         this.gridOptions = <GridOptions>{};
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
-        this.gridOptions.floatingTopRowData = [
+        this.gridOptions.pinnedTopRowData = [
             {row: "Top Row", number: "Top Number"}
         ];
-        this.gridOptions.floatingBottomRowData = [
+        this.gridOptions.pinnedBottomRowData = [
             {row: "Bottom Row", number: "Bottom Number"}
         ];
     }

@@ -20,4 +20,8 @@ export class MedalRendererComponent implements ICellRendererAngularComp {
         this.silver = params.node.aggData.silver;
         this.bronze = params.node.aggData.bronze;
     }
+
+    refresh():boolean{
+        return false;
+    }
 }

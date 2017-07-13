@@ -63,4 +63,8 @@ export class DetailPanelComponent implements ICellRendererAngularComp,AfterViewI
     onButtonClick() {
         window.alert('Sample button pressed!!');
     }
+
+    refresh():boolean{
+        return false;
+    }
 }

@@ -16,9 +16,10 @@ export class MoodRendererComponent implements ICellRendererAngularComp {
         this.setMood(params);
     }
 
-    refresh(params: any): void {
+    refresh(params: any): boolean {
         this.params = params;
         this.setMood(params);
+        return true;
     }
 
     private setMood(params) {

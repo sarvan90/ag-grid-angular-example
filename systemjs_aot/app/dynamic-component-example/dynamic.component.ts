@@ -26,7 +26,10 @@ export class DynamicComponent {
     }
 
     private onCellValueChanged($event) {
-        this.gridOptions.api.refreshCells([$event.node],["cube"]);
+        this.gridOptions.api.refreshCells({
+            rowNodes:[$event.node],
+            columns:["cube"]
+        });
     }
 
     public methodFromParent(cell) {
