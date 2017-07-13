@@ -9,7 +9,7 @@
     "build": "npm run clean && webpack --config config/webpack.prod.js --progress --profile --bail",
     "test": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
     "e2e": "protractor protractor.config.js --kill-others --success first",
-    "server": "http-server -s dist"
+    "server": "http-server ./dist/"
   },
   "repository": {
     "type": "git",
