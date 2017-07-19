@@ -14,7 +14,6 @@ var fs = require('fs');
 var path = require('canonical-path');
 var _ = require('lodash');
 
-
 exports.config = {
     directConnect: true,
 
@@ -22,6 +21,8 @@ exports.config = {
     capabilities: {
         'browserName': 'chrome'
     },
+
+    chromeDriver: './node_modules/webdriver-manager/selenium/chromedriver_2.24',
 
     // Framework to use. Jasmine is recommended.
     framework: 'jasmine',
