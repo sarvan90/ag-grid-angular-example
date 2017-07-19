@@ -46,7 +46,6 @@ System.config({
     '@angular/platform-browser/testing': 'node_modules/@angular/platform-browser/bundles/platform-browser-testing.umd.js',
     '@angular/platform-browser-dynamic/testing': 'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
     '@angular/http/testing': 'node_modules/@angular/http/bundles/http-testing.umd.js',
-    '@angular/router/testing': 'node_modules/@angular/router/bundles/router-testing.umd.js',
     '@angular/forms/testing': 'node_modules/@angular/forms/bundles/forms-testing.umd.js',
   },
 });

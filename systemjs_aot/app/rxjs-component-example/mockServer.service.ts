@@ -1,6 +1,5 @@
 import {Injectable} from "@angular/core";
-import {Http} from "@angular/http";
-import {Response} from "@angular/http";
+import {Http, Response} from "@angular/http";
 import {Observable} from "rxjs/Rx";
 
 import {cloneDeep} from "lodash";
@@ -10,7 +9,7 @@ export class MockServerService {
     stocksUrl: string = 'stocks.json';
     rowData: any[];
 
-    constructor(private http:Http) {
+    constructor(private http: Http) {
     }
 
     // provides the initial (or current state) of the data

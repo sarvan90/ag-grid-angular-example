@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
+import {Component} from "@angular/core";
 
-import {ICellRendererAngularComp} from 'ag-grid-angular/main';
+import {ICellRendererAngularComp} from "ag-grid-angular/main";
 
 @Component({
     selector: 'full-width-cell',
@@ -15,7 +15,7 @@ export class NameAndAgeRendererComponent implements ICellRendererAngularComp {
         this.values = `Name: ${params.data.name}, Age: ${params.data.age}`
     }
 
-    refresh():boolean{
+    refresh(): boolean {
         return false;
     }
 }

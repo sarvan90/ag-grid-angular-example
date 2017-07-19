@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
+import {Component} from "@angular/core";
 
-import {ICellRendererAngularComp} from 'ag-grid-angular/main';
+import {ICellRendererAngularComp} from "ag-grid-angular/main";
 
 @Component({
     selector: 'cube-cell',

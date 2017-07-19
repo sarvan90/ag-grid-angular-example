@@ -6,16 +6,16 @@ import {ICellRendererAngularComp} from "ag-grid-angular/main";
 @Component({
     selector: 'ratio-cell',
     template: `
-    <ag-ratio style="height:20px" [topRatio]="params?.value?.top" [bottomRatio]="params?.value?.bottom">
-    </ag-ratio>
+        <ag-ratio style="height:20px" [topRatio]="params?.value?.top" [bottomRatio]="params?.value?.bottom">
+        </ag-ratio>
     `,
     styles: [`
         ag-ratio {
-          display: block;
-          overflow:hidden;
-          border:1px solid #ccc;
-          border-radius:6px;
-          background: #fff;
+            display: block;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background: #fff;
         }
     `]
 })
@@ -28,7 +28,7 @@ export class RatioParentComponent implements ICellRendererAngularComp {
         this.params = params;
     }
 
-    refresh():boolean{
+    refresh(): boolean {
         return false;
     }
 }

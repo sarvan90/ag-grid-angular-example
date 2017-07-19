@@ -1,19 +1,19 @@
-import {Component,OnDestroy} from '@angular/core';
+import {Component, OnDestroy} from "@angular/core";
 
-import {ICellRendererAngularComp} from 'ag-grid-angular/main';
+import {ICellRendererAngularComp} from "ag-grid-angular/main";
 
 @Component({
     selector: 'square-cell',
     template: `{{valueSquared()}}`
 })
 export class SquareComponent implements ICellRendererAngularComp, OnDestroy {
-    private params:any;
+    private params: any;
 
-    agInit(params:any):void {
+    agInit(params: any): void {
         this.params = params;
     }
 
-    public valueSquared():number {
+    public valueSquared(): number {
         return this.params.value * this.params.value;
     }
 
@@ -21,7 +21,7 @@ export class SquareComponent implements ICellRendererAngularComp, OnDestroy {
         console.log(`Destroying SquareComponent`);
     }
 
-    refresh():boolean{
+    refresh(): boolean {
         return false;
     }
 }

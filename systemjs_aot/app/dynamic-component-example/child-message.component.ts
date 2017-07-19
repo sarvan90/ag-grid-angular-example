@@ -16,7 +16,7 @@ export class ChildMessageComponent implements ICellRendererAngularComp {
         this.params.context.componentParent.methodFromParent(`Row: ${this.params.node.rowIndex}, Col: ${this.params.colDef.headerName}`)
     }
 
-    refresh():boolean{
+    refresh(): boolean {
         return false;
     }
 }

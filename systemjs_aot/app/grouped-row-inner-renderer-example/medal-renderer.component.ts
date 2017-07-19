@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
+import {Component} from "@angular/core";
 
-import {ICellRendererAngularComp} from 'ag-grid-angular/main';
+import {ICellRendererAngularComp} from "ag-grid-angular/main";
 
 @Component({
     selector: 'group-row-cell',
@@ -21,7 +21,7 @@ export class MedalRendererComponent implements ICellRendererAngularComp {
         this.bronze = params.node.aggData.bronze;
     }
 
-    refresh():boolean{
+    refresh(): boolean {
         return false;
     }
 }
