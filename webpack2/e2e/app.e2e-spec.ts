@@ -8,7 +8,7 @@ describe('ag-grid-angular-examples E2E Tests', function () {
         'Using Dynamic Components',
         'Using Dynamic Components - Richer Example',
         'Using Cell Editor Components',
-        'Using Floating Row Renderers',
+        'Using Pinned Row Renderers',
         'Using Full Width Renderers',
         'Using Group Row Renderers',
         'With Filters Components'

@@ -7,6 +7,9 @@ ag-grid-ng2 {
 ag-grid {
   display: block;
 }
+ag-grid-polymer {
+  display: block;
+}
 .ag-rtl {
   direction: rtl;
 }
@@ -1341,7 +1344,6 @@ ag-grid {
 }
 .ag-fresh .ag-column-drop {
   background-color: #f6f6f6;
-  overflow: auto;
 }
 .ag-fresh .ag-column-drop-horizontal {
   padding: 2px;
@@ -1352,6 +1354,7 @@ ag-grid {
 .ag-fresh .ag-column-drop-vertical {
   padding: 4px 4px 10px 4px;
   border-bottom: 1px solid #808080;
+  overflow: auto;
 }
 .ag-fresh .ag-column-drop-vertical .ag-column-drop-cell {
   margin-top: 2px;
@@ -1384,4 +1387,4 @@ ag-grid {
   background-color: #bde2e5;
 }
 
-/*# sourceMappingURL=vendor.7fdedcf1819b0b37df97.css.map*/
+/*# sourceMappingURL=vendor.1f3e215d1a394d556dd2.css.map*/
