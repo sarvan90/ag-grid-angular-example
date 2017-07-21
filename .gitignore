@@ -42,4 +42,4 @@ webpack/app/*.js
 webpack2/app/*.js.map
 
 # ngtools/webpack
-ngtools_webpack/dist/**/*
+ag-grid-angular-example/ngtools_webpack/dist/**/*
