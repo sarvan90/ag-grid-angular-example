@@ -15,7 +15,7 @@ describe('ag-grid-angular-examples E2E Tests', function () {
         'Master Detail Example',
         'Floating Filters',
         'RxJs - Single Row Update Example',
-        'RxJs - Full DataSet Update Example'
+        // 'RxJs - Full DataSet Update Example'
     ];
 
     beforeEach(function () {
