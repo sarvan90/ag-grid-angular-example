@@ -24,13 +24,8 @@ export class DateComponent implements IDateAngularComp {
         console.log(`Destroying DateComponent`);
     }
 
-    // when the date filter X is clicked on the date fields clear as expected, but the filter doesn't update
-    // how should this work? todo alboert
     onResetDate() {
-        this.dd = '';
-        this.mm = '';
-        this.yyyy = '';
-        this.date = null;
+        this.setDate(null);
         this.params.onDateChanged();
     }
 
@@ -49,16 +44,15 @@ export class DateComponent implements IDateAngularComp {
 
     setDate(date: Date): void {
         if (date == null) {
-            // this doesn't work - the associated date filter will throw an error as the date will be null
-            // test case: expand employee then click refresh data
-            // what do we do here? todo alberto
-            // this.onResetDate();
+            this.dd = '';
+            this.mm = '';
+            this.yyyy = '';
+            this.date = null;
         } else {
             this.dd = date.getDate() + '';
             this.mm = (date.getMonth() + 1) + '';
             this.yyyy = date.getFullYear() + '';
             this.date = date;
-            this.params.onDateChanged();
         }
     }
 
