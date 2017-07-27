@@ -8,9 +8,8 @@ import {CurrencyComponent} from "./currency.component";
 import {ChildMessageComponent} from "./child-message.component";
 
 @Component({
-    moduleId: module.id,
     selector: 'ag-from-component',
-    templateUrl: 'dynamic.component.html'
+    templateUrl: './dynamic.component.html'
 })
 export class DynamicComponent {
     public gridOptions: GridOptions;

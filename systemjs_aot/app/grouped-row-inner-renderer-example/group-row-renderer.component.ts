@@ -5,9 +5,8 @@ import {GridOptions} from "ag-grid/main";
 import {MedalRendererComponent} from "./medal-renderer.component";
 
 @Component({
-    moduleId: module.id,
     selector: 'ag-group-row-renderer-component',
-    templateUrl: 'group-row-renderer.component.html'
+    templateUrl: './group-row-renderer.component.html'
 })
 export class GroupRowComponent {
     public gridOptions: GridOptions;

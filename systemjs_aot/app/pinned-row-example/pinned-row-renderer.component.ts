@@ -3,9 +3,8 @@ import {GridOptions} from "ag-grid/main";
 import {StyledComponent} from "./styled-renderer.component";
 
 @Component({
-    moduleId: module.id,
     selector: 'ag-pinned-row-renderer-component',
-    templateUrl: 'pinned-row-renderer.component.html'
+    templateUrl: './pinned-row-renderer.component.html'
 })
 export class PinnedRowComponent {
     public gridOptions: GridOptions;

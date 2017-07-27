@@ -23,7 +23,13 @@
             },
             packages: {
                 app: {
-                    main: './boot.js'
+                    main: './boot.js',
+                    defaultExtension: 'js',
+                    meta: {
+                        './*.js': {
+                            loader: 'systemjs-angular-loader.js'
+                        },
+                    }
                 },
                 'ag-grid': {
                     main: 'main.js'
@@ -38,7 +44,6 @@
                     main: 'index.js',
                     defaultExtension: 'js'
                 }
-
             }
         }
     );

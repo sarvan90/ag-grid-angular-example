@@ -3,10 +3,9 @@ import {GridOptions} from "ag-grid/main";
 import {ICellRendererAngularComp} from "ag-grid-angular/main";
 
 @Component({
-    moduleId: module.id,
     selector: 'ag-full-width-grid',
-    templateUrl: 'detail-panel.component.html',
-    styleUrls: ['detail-panel.component.css'],
+    templateUrl: './detail-panel.component.html',
+    styleUrls: ['./detail-panel.component.css'],
 })
 export class DetailPanelComponent implements ICellRendererAngularComp, AfterViewInit {
     public gridOptions: GridOptions;

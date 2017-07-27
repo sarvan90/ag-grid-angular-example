@@ -12,10 +12,9 @@ import {DateComponent} from "../date-component/date.component";
 import {HeaderComponent} from "../header-component/header.component";
 
 @Component({
-    moduleId: module.id,
     selector: 'ag-rich-grid-declarative',
-    templateUrl: 'rich-grid-declarative.component.html',
-    styleUrls: ['rich-grid.css', 'proficiency-renderer.css'],
+    templateUrl: './rich-grid-declarative.component.html',
+    styleUrls: ['./rich-grid.css', './proficiency-renderer.css'],
     encapsulation: ViewEncapsulation.None
 })
 export class RichGridDeclarativeComponent {

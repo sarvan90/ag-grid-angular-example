@@ -3,9 +3,8 @@ import {IHeaderGroupParams} from "ag-grid/main";
 import {IHeaderGroupAngularComp} from "ag-grid-angular/main";
 
 @Component({
-    moduleId: module.id,
-    templateUrl: 'header-group.component.html',
-    styleUrls: ['header-group.component.css']
+    templateUrl: './header-group.component.html',
+    styleUrls: ['./header-group.component.css']
 })
 export class HeaderGroupComponent implements IHeaderGroupAngularComp {
     public params: IHeaderGroupParams;

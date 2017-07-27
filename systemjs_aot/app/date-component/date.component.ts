@@ -4,10 +4,9 @@ import {IDateAngularComp} from "ag-grid-angular/main";
 
 
 @Component({
-    moduleId: module.id,
     selector: 'ag-date-component',
-    templateUrl: 'date.component.html',
-    styleUrls: ['date.component.css'],
+    templateUrl: './date.component.html',
+    styleUrls: ['./date.component.css'],
 })
 export class DateComponent implements IDateAngularComp {
     private date: Date;
