@@ -15,7 +15,8 @@
     "lite:aot": "lite-server -c aot/bs-config.json",
     "clean-build:aot": "npm run clean:aot && npm run build:aot",
     "test": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
-    "e2e": "tsc && concurrently \"http-server -s\" \"protractor protractor.config.js\" --kill-others --success first"
+    "e2e": "tsc && concurrently \"http-server -s\" \"protractor protractor.config.js\" --kill-others --success first",
+    "e2e-win": "tsc && concurrently \"http-server -s\" \"protractor protractor.config.win.js\" --kill-others --success first"
   },
   "repository": {
     "type": "git",
