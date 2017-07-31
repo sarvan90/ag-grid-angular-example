@@ -25,9 +25,10 @@ describe('ag-grid-angular-examples E2E Tests', function () {
     it(`should have ${expectedTabTitles.length} Tab Titles`, function () {
         let count: number = undefined;
         element.all(by.css('li[role=presentation] a')).count().then(function (val) {
-            console.log('1', val);
             count = val;
         }).then(() => {
+            console.log('title length', count, expectedTabTitles.length);
+            console.log('title length', count == expectedTabTitles.length);
             expect(count).toEqual(expectedTabTitles.length)
         });
     });
@@ -36,16 +37,16 @@ describe('ag-grid-angular-examples E2E Tests', function () {
         let tabTitles = expectedTabTitles.slice(0);
         let anchors = element.all(by.css('li[role=presentation] a'));
         anchors.each((anchor) => {
-            console.log('2', anchor);
             anchor.getText().then((text) => {
-                console.log('3', text);
                 let index = tabTitles.indexOf(text);
                 if (index === -1) {
+                    console.log('titles - not in array', text);
                     fail(`${text} not in the list of expected titles`);
                 }
                 tabTitles.splice(index, 1);
             })
         }).then(() => {
+            console.log('titles', tabTitles);
             expect(tabTitles).toEqual([], `The following Tab Titles were not found: ${tabTitles}`);
         });
     });
