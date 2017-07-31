@@ -25,6 +25,7 @@ describe('ag-grid-angular-examples E2E Tests', function () {
     it(`should have ${expectedTabTitles.length} Tab Titles`, function () {
         let count: number = undefined;
         element.all(by.css('li[role=presentation] a')).count().then(function (val) {
+            console.log('1', val);
             count = val;
         }).then(() => {
             expect(count).toEqual(expectedTabTitles.length)
@@ -35,7 +36,9 @@ describe('ag-grid-angular-examples E2E Tests', function () {
         let tabTitles = expectedTabTitles.slice(0);
         let anchors = element.all(by.css('li[role=presentation] a'));
         anchors.each((anchor) => {
+            console.log('2', anchor);
             anchor.getText().then((text) => {
+                console.log('3', text);
                 let index = tabTitles.indexOf(text);
                 if (index === -1) {
                     fail(`${text} not in the list of expected titles`);
@@ -52,7 +55,9 @@ describe('ag-grid-angular-examples E2E Tests', function () {
             .click()
             // first row
             .then(() => {
+            console.log('4 here');
                 element(by.css('div[row="0"] div[colid="row')).getText().then((text) => {
+                    console.log('5', text);
                     expect(text).toEqual("Row 0");
                 });
             })
