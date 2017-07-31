@@ -44,7 +44,8 @@ describe('ag-grid-angular-examples E2E Tests', function () {
                 tabTitles.splice(index, 1);
             })
         }).then(() => {
-            expect(tabTitles.length === 0).toBeTruthy(`The following Tab Titles were not found: ${tabTitles}`);
+            console.log('title length', (tabTitles.length === 0));
+            expect(tabTitles.length === 0).toBeTruthy();
         });
     });
 
