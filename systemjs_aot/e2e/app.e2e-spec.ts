@@ -38,14 +38,13 @@ describe('ag-grid-angular-examples E2E Tests', function () {
             anchor.getText().then((text) => {
                 let index = tabTitles.indexOf(text);
                 if (index === -1) {
-                    console.log('titles - not in array', text);
+                    console.error('titles - not in array', text);
                     fail(`${text} not in the list of expected titles`);
                 }
                 tabTitles.splice(index, 1);
             })
         }).then(() => {
-            console.log('titles', tabTitles);
-            expect(tabTitles).toEqual([], `The following Tab Titles were not found: ${tabTitles}`);
+            expect(tabTitles.length === 0).toBeTruthy(`The following Tab Titles were not found: ${tabTitles}`);
         });
     });
 
