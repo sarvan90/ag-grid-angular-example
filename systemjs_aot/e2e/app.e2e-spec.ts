@@ -41,7 +41,11 @@ describe('ag-grid-angular-examples E2E Tests', function () {
                     fail(`${text} not in the list of expected titles`);
                 }
             })
+        }).then(() => {
+            console.log("here");
         });
+        console.log("and here");
+        return true;
     });
 
     it('Dynamic Components Example should have first two rows expected results', function () {
