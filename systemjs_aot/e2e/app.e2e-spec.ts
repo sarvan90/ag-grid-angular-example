@@ -43,10 +43,7 @@ describe('ag-grid-angular-examples E2E Tests', function () {
                 }
             })
         }).then(() => {
-            console.log("here");
         });
-        console.log("and here");
-        return true;
     });
 
     it('Dynamic Components Example should have first two rows expected results', function () {
