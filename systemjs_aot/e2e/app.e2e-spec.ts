@@ -1,4 +1,4 @@
-import {browser, element, by, protractor} from "protractor";
+import {browser, by, element, protractor} from "protractor";
 
 describe('ag-grid-angular-examples E2E Tests', function () {
 
@@ -42,10 +42,10 @@ describe('ag-grid-angular-examples E2E Tests', function () {
                     fail(`${text} not in the list of expected titles`);
                 }
                 tabTitles.splice(index, 1);
+            }).then(() => {
+                console.log('title length', (tabTitles.length === 0));
+                expect(tabTitles.length === 0).toBeTruthy();
             })
-        }).then(() => {
-            console.log('title length', (tabTitles.length === 0));
-            expect(tabTitles.length === 0).toBeTruthy();
         });
     });
 
