@@ -37,6 +37,7 @@ describe('ag-grid-angular-examples E2E Tests', function () {
         anchors.each((anchor) => {
             anchor.getText().then((text) => {
                 let index = tabTitles.indexOf(text);
+                console.log(text);
                 if (index === -1) {
                     fail(`${text} not in the list of expected titles`);
                 }
