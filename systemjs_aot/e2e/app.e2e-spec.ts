@@ -53,9 +53,7 @@ describe('ag-grid-angular-examples E2E Tests', function () {
             .click()
             // first row
             .then(() => {
-            console.log('4 here');
                 element(by.css('div[row="0"] div[colid="row')).getText().then((text) => {
-                    console.log('5', text);
                     expect(text).toEqual("Row 0");
                 });
             })
