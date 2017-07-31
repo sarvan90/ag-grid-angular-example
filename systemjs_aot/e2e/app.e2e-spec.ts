@@ -27,9 +27,7 @@ describe('ag-grid-angular-examples E2E Tests', function () {
         element.all(by.css('li[role=presentation] a')).count().then(function (val) {
             count = val;
         }).then(() => {
-            console.log('title length', count, expectedTabTitles.length);
-            console.log('title length', count == expectedTabTitles.length);
-            expect(count).toEqual(expectedTabTitles.length)
+            expect(count === expectedTabTitles.length).toBeTruthy()
         });
     });
 
