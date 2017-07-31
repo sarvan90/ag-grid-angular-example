@@ -38,13 +38,8 @@ describe('ag-grid-angular-examples E2E Tests', function () {
             anchor.getText().then((text) => {
                 let index = tabTitles.indexOf(text);
                 if (index === -1) {
-                    console.error('titles - not in array', text);
                     fail(`${text} not in the list of expected titles`);
                 }
-                tabTitles.splice(index, 1);
-            }).then(() => {
-                console.log('title length', (tabTitles.length === 0));
-                expect(tabTitles.length === 0).toBeTruthy();
             })
         });
     });
