@@ -13,12 +13,12 @@
   "compileOnSave": true,
   "exclude": [
     "node_modules/*",
-    "aot/",
     "app/boot-aot.ts"
   ],
   "angularCompilerOptions": {
     "genDir": "aot/",
-    "skipMetadataEmit": true
+    "skipMetadataEmit": true,
+    "entryModule": "./app/app#AppModule"
   },
   "atom": {
     "rewriteTsconfig": false
