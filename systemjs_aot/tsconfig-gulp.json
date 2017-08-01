@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "declaration": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": ["dom","es2015"],
+    "noStrictGenericChecks":true
+  },
+  "include": ["app/boot.ts"],
+  "exclude":[
+    "node_modules",
+    "typings",
+    "aot"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "aot"
+  }
+}

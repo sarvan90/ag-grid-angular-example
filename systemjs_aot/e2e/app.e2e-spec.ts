@@ -1,17 +1,21 @@
-import {browser, element, by, protractor} from "protractor";
+import {browser, by, element, protractor} from "protractor";
 
 describe('ag-grid-angular-examples E2E Tests', function () {
 
     let expectedTabTitles = [
-        'Rich Grid with Pure JavaScript',
+        'Rich Grid Example',
         'Rich Grid with Declarative Markup',
-        'Using Dynamic Components',
-        'Using Dynamic Components - Richer Example',
-        'Using Cell Editor Components',
-        'Using Floating Row Renderers',
-        'Using Full Width Renderers',
-        'Using Group Row Renderers',
-        'With Filters Components'
+        'Dynamic Angular Component Example',
+        'Dynamic Angular Components - Richer Example',
+        'Cell Editor Component Example',
+        'Pinned Row Renderer Example',
+        'Full Width Renderer Example',
+        'Grouped Row Inner Renderer Example',
+        'Filters Component Example',
+        'Master Detail Example',
+        'Floating Filters',
+        'RxJs - Single Row Update Example',
+        'RxJs - Full DataSet Update Example'
     ];
 
     beforeEach(function () {
@@ -19,32 +23,26 @@ describe('ag-grid-angular-examples E2E Tests', function () {
     });
 
     it(`should have ${expectedTabTitles.length} Tab Titles`, function () {
-        let count: number = undefined;
-        element.all(by.css('a[ng-reflect-router-link]')).count().then(function (val) {
-            count = val;
-        }).then(() => {
-            expect(count).toEqual(expectedTabTitles.length)
+        element.all(by.css('li[role=presentation] a')).count().then(function (val) {
+            expect(val === expectedTabTitles.length).toBeTruthy()
         });
     });
 
     it(`should display all expected ${expectedTabTitles.length} Tab Titles`, function () {
-        let tabTitles = expectedTabTitles.slice(0);
-        let anchors = element.all(by.css('a[ng-reflect-router-link]'));
-        anchors.each((anchor) => {
-            anchor.getText().then((text) => {
-                let index = tabTitles.indexOf(text);
+        element.all(by.css('li[role=presentation] a')).map((anchor) => {
+            return anchor.getText()
+        }).then((linkTexts) => {
+            linkTexts.forEach((linkText) => {
+                let index = expectedTabTitles.indexOf(linkText);
                 if (index === -1) {
-                    fail(`${text} not in the list of expected titles`);
+                    fail(`${linkText} not in the list of expected titles`);
                 }
-                tabTitles.splice(index, 1);
             })
-        }).then(() => {
-            expect(tabTitles).toEqual([], `The following Tab Titles were not found: ${tabTitles}`);
-        });
+        })
     });
 
     it('Dynamic Components Example should have first two rows expected results', function () {
-        element(by.css('a[ng-reflect-router-link="/from-component"]'))
+        element(by.linkText('Dynamic Angular Component Example'))
             .click()
             // first row
             .then(() => {
@@ -112,7 +110,7 @@ describe('ag-grid-angular-examples E2E Tests', function () {
     });
 
     it('Basic Editor Component Example Tests', function () {
-        element(by.css('a[ng-reflect-router-link="/editor-component"]'))
+        element(by.linkText('Cell Editor Component Example'))
             .click()
             // first row
             .then(() => {
@@ -142,4 +140,5 @@ describe('ag-grid-angular-examples E2E Tests', function () {
                     });
             });
     });
-});
+})
+;

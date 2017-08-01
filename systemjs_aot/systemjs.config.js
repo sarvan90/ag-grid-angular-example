@@ -10,11 +10,9 @@
                 '@angular/platform-browser': 'node_modules/@angular/platform-browser/bundles/platform-browser.umd.js',
                 '@angular/platform-browser-dynamic': 'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
                 '@angular/http': 'node_modules/@angular/http/bundles/http.umd.js',
-                '@angular/router': 'node_modules/@angular/router/bundles/router.umd.js',
                 '@angular/forms': 'node_modules/@angular/forms/bundles/forms.umd.js',
                 // other libraries
                 'rxjs': 'node_modules/rxjs',
-                'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
                 'jquery': 'node_modules/jquery/dist',
                 'jquery-ui': 'node_modules/jquery-ui/ui/widgets',
                 'lodash': 'node_modules/lodash',
