@@ -39,7 +39,8 @@ import {StyledComponent} from "./pinned-row-example/styled-renderer.component";
 import {FullWidthComponent} from "./full-width-example/full-width-renderer.component";
 import {NameAndAgeRendererComponent} from "./full-width-example/name-age-renderer.component";
 // grouped inner
-import {MedalRendererComponent} from "./grouped-row-inner-renderer-example/medal-renderer.component";
+import {TotalRendererComponent} from "./grouped-row-inner-renderer-example/total-renderer.component";
+import {customGroupRendererComponent} from "./grouped-row-inner-renderer-example/custom-group-renderer.component";
 import {GroupRowComponent} from "./grouped-row-inner-renderer-example/group-row-renderer.component";
 // filter
 import {FilterComponentComponent} from "./filter-component-example/filter.component";
@@ -74,7 +75,8 @@ import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.comp
                 MoodRendererComponent,
                 StyledComponent,
                 NameAndAgeRendererComponent,
-                MedalRendererComponent,
+                TotalRendererComponent,                
+                customGroupRendererComponent,
                 PartialMatchFilterComponent,
                 DetailPanelComponent,
                 DateComponent,
@@ -109,7 +111,8 @@ import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.comp
         FullWidthComponent,
         NameAndAgeRendererComponent,
         GroupRowComponent,
-        MedalRendererComponent,
+        TotalRendererComponent,
+        customGroupRendererComponent,
         FilterComponentComponent,
         PartialMatchFilterComponent,
         MasterComponent,

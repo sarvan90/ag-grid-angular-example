@@ -2,7 +2,8 @@ import {Component} from "@angular/core";
 
 import {GridOptions} from "ag-grid/main";
 
-import {MedalRendererComponent} from "./medal-renderer.component";
+import {TotalRendererComponent} from "./total-renderer.component";
+import {customGroupRendererComponent} from "./custom-group-renderer.component";
 
 @Component({
     moduleId: module.id,
@@ -16,87 +17,122 @@ export class GroupRowComponent {
         this.gridOptions = <GridOptions>{};
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
+        //add this for showing the footer 
+        this.gridOptions.groupIncludeFooter = true;        
+        // we are defining the group columns, so tell the grid we don't want it to auto-generate group columns for us
+        this.gridOptions.groupSuppressAutoColumn = true;
+        
+        // want it to auto-generate group columns for us
+        // this.gridOptions.groupMultiAutoColumn = true;        
+        
+        // configure the auto group column generated already
+        /* this.gridOptions.autoGroupColumnDef = {
+            headerName : "Currency",
+            // cellRendererFramework: TotalRendererComponent
+            cellRendererParams : {
+                suppressCount : true,
+                innerRenderer: function(params){                    
+                    if(params.node.group && params.node.footer){
+                        //remove total text from the footer header
+                        return "";
+                    }else{
+                        return params.value;
+                    }
+                }
+            }            
+        } */
+        
+        /*  Using this will override the Total Count row as well
         this.gridOptions.groupUseEntireRow = true;
-        this.gridOptions.groupRowInnerRendererFramework = MedalRendererComponent;
+        this.gridOptions.groupRowInnerRendererFramework = customGroupRendererComponent; 
+        */
+
         this.gridOptions.onGridReady = () => {
             this.gridOptions.api.sizeColumnsToFit();
         };
+
+        
     }
 
     private createColumnDefs() {
-        return [
+        return [            
+            { 
+                headerName: "Currency", 
+                cellRenderer: 'group', 
+                cellRendererParams: {
+                    suppressCount : true, //supress the count value near header text
+                    innerRenderer: function(params){                    
+                        if(params.node.group && params.node.footer){
+                            //remove total text from the footer header
+                            return "";
+                        }else{
+                            return params.value;
+                        }
+                    }
+                },
+                showRowGroup: true
+            },
+            {
+                headerName: "Currency",
+                field: "currency",
+                width: 100,
+                rowGroup: true,                                
+                hide: true
+            },
             {
                 headerName: "Country",
                 field: "country",
                 width: 100,
-                rowGroupIndex: 0
             },
             {
                 headerName: "Name",
                 field: "name",
-                width: 100
+                width: 100,
+                cellRendererFramework: TotalRendererComponent                
             },
             {
                 headerName: "Gold",
+                suppressMenu: true,
                 field: "gold",
                 width: 100,
                 aggFunc: 'sum'
-            },
+                // cellRendererFramework: customGroupRendererComponent                
+            }/* ,
             {
                 headerName: "Silver",
                 field: "silver",
                 width: 100,
-                aggFunc: 'sum'
+                aggFunc: 'sum',                
+                
             },
             {
                 headerName: "Bronze",
                 field: "bronze",
                 width: 100,
                 aggFunc: 'sum'
-            },
+            }, */
         ];
     }
 
     private createRowData() {
         return [
-            {country: "United States", name: "Bob", gold: 1, silver: 0, bronze: 0},
-            {country: "United States", name: "Jack", gold: 0, silver: 1, bronze: 1},
-            {country: "United States", name: "Sue", gold: 1, silver: 0, bronze: 1},
-            {country: "United Kingdom", name: "Mary", gold: 1, silver: 1, bronze: 0},
-            {country: "United Kingdom", name: "Tess", gold: 0, silver: 1, bronze: 1},
-            {country: "United Kingdom", name: "John", gold: 0, silver: 2, bronze: 1},
-            {country: "Jamaica", name: "Bob", gold: 1, silver: 1, bronze: 0},
-            {country: "Jamaica", name: "Jack", gold: 1, silver: 1, bronze: 0},
-            {country: "Jamaica", name: "Mary", gold: 1, silver: 1, bronze: 0},
-            {country: "South Africa", name: "Bob", gold: 1, silver: 0, bronze: 1},
-            {country: "South Africa", name: "Jack", gold: 1, silver: 0, bronze: 1},
-            {country: "South Africa", name: "Mary", gold: 1, silver: 0, bronze: 1},
-            {country: "South Africa", name: "John", gold: 1, silver: 0, bronze: 1},
-            {country: "New Zealand", name: "Bob", gold: 1, silver: 0, bronze: 0},
-            {country: "New Zealand", name: "Jack", gold: 0, silver: 1, bronze: 1},
-            {country: "New Zealand", name: "Sue", gold: 1, silver: 0, bronze: 1},
-            {country: "Australia", name: "Mary", gold: 1, silver: 1, bronze: 0},
-            {country: "Australia", name: "Tess", gold: 0, silver: 1, bronze: 1},
-            {country: "Australia", name: "John", gold: 0, silver: 2, bronze: 1},
-            {country: "Canada", name: "Bob", gold: 1, silver: 1, bronze: 0},
-            {country: "Canada", name: "Jack", gold: 1, silver: 1, bronze: 0},
-            {country: "Canada", name: "Mary", gold: 1, silver: 1, bronze: 0},
-            {country: "Switzerland", name: "Bob", gold: 1, silver: 0, bronze: 1},
-            {country: "Switzerland", name: "Jack", gold: 1, silver: 0, bronze: 1},
-            {country: "Switzerland", name: "Mary", gold: 1, silver: 0, bronze: 1},
-            {country: "Switzerland", name: "John", gold: 1, silver: 0, bronze: 1},
-            {country: "Spain", name: "Bob", gold: 1, silver: 0, bronze: 0},
-            {country: "Spain", name: "Jack", gold: 0, silver: 1, bronze: 1},
-            {country: "Spain", name: "Sue", gold: 1, silver: 0, bronze: 1},
-            {country: "Portugal", name: "Mary", gold: 1, silver: 1, bronze: 0},
-            {country: "Portugal", name: "Tess", gold: 0, silver: 1, bronze: 1},
-            {country: "Portugal", name: "John", gold: 0, silver: 2, bronze: 1},
-            {country: "Zimbabwe", name: "Bob", gold: 1, silver: 1, bronze: 0},
-            {country: "Zimbabwe", name: "Jack", gold: 1, silver: 1, bronze: 0},
-            {country: "Zimbabwe", name: "Mary", gold: 1, silver: 1, bronze: 0},
-            {country: "Brazil", name: "Bob", gold: 1, silver: 0, bronze: 1},
-            {country: "Brazil", name: "Jack", gold: 1, silver: 0, bronze: 1},
-            {country: "Brazil", name: "Mary", gold: 1, silver: 0, bronze: 1},
-            {country: "Brazil", name: "John", gold: 1, silver: 0, bronze: 1}];
+            {currency: "USD", country: "United States", name: "Bob", gold: 1, silver: 0, bronze: 0},
+            {currency: "EUR", country: "United States", name: "Jack", gold: 0, silver: 1, bronze: 1},            
+            {currency: "GBP", country: "United Kingdom", name: "Mary", gold: 1, silver: 1, bronze: 0},
+            {currency: "EUR", country: "United Kingdom", name: "Tess", gold: 0, silver: 1, bronze: 1},
+            {currency: "INR", country: "United Kingdom", name: "John", gold: 0, silver: 2, bronze: 1},                                    
+            {currency: "EUR", country: "New Zealand", name: "Jack", gold: 0, silver: 1, bronze: 1},                        
+            {currency: "EUR", country: "Australia", name: "Tess", gold: 0, silver: 1, bronze: 1},
+            {currency: "INR", country: "Australia", name: "John", gold: 0, silver: 2, bronze: 1},                                                                                    
+            {currency: "EUR", country: "Spain", name: "Jack", gold: 0, silver: 1, bronze: 1},            
+            {currency: "GBP", country: "Portugal", name: "Mary", gold: 1, silver: 1, bronze: 0},
+            {currency: "EUR", country: "Portugal", name: "Tess", gold: 0, silver: 1, bronze: 1},
+            {currency: "INR", country: "Portugal", name: "John", gold: 0, silver: 2, bronze: 1},
+            {currency: "GBP", country: "Zimbabwe", name: "Bob", gold: 1, silver: 1, bronze: 0},
+            {currency: "GBP", country: "Zimbabwe", name: "Jack", gold: 1, silver: 1, bronze: 0},
+            {currency: "GBP", country: "Zimbabwe", name: "Mary", gold: 1, silver: 1, bronze: 0},            
+            {currency: "USD", country: "Brazil", name: "Jack", gold: 1, silver: 0, bronze: 1},
+            {currency: "USD", country: "Brazil", name: "Mary", gold: 1, silver: 0, bronze: 1},
+            {currency: "USD", country: "Brazil", name: "John", gold: 1, silver: 0, bronze: 1}];
     }
 }

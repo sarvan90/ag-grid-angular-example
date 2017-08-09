@@ -28,7 +28,8 @@ export class AppComponent {
 
     constructor() {
         let params = new URLSearchParams(window.location.search.replace("?", ""));
-        this.currentExample = params.has('example') ? params.get("example") : 'rich-grid';
+        //this.currentExample = params.has('example') ? params.get("example") : 'rich-grid';
+        this.currentExample = 'group-row';
         this.fromDocs = params.has('fromDocs') ? params.get("fromDocs") === 'true' : false;
     }
 
