@@ -21,6 +21,7 @@ export class AppComponent {
         {key: 'filter', title: "Filters Component Example"},
         {key: 'master-detail', title: "Master Detail Example"},
         {key: 'floating-filter', title: "Floating Filters"},
+        {key: 'infinite-pagination', title: "Infinite Pagination"},
         {key: 'rxjs-by-row', title: "RxJs - Single Row Update Example"},
         {key: 'rxjs-by-dataset', title: "RxJs - Full DataSet Update Example"}
     ];
