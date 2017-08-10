@@ -18,6 +18,10 @@ export class DetailPanelComponent implements ICellRendererAngularComp, AfterView
         this.gridOptions.enableFilter = true;
         this.gridOptions.enableColResize = true;
         this.gridOptions.columnDefs = this.createColumnDefs();
+        console.log('inside constructor');
+         /* setTimeout(()=>{            
+            this.gridOptions.api.setPinnedBottomRowData([{direction: "Total", number: 123}]);
+        },3000); */
     }
 
     agInit(params: any): void {

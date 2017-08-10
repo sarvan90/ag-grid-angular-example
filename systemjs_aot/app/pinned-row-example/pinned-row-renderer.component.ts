@@ -14,12 +14,20 @@ export class PinnedRowComponent {
         this.gridOptions = <GridOptions>{};
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
-        this.gridOptions.pinnedTopRowData = [
+        /* this.gridOptions.pinnedTopRowData = [
             {row: "Top Row", number: "Top Number"}
-        ];
+        ]; */
         this.gridOptions.pinnedBottomRowData = [
-            {row: "Bottom Row", number: "Bottom Number"}
+            {row: "Total", number: "Bottom Number"}
         ];
+
+        setTimeout(()=>{
+            let total = 0;
+            this.gridOptions.rowData.forEach((item)=>{
+                total += item.number;
+            })
+            this.gridOptions.api.setPinnedBottomRowData([{row: "Total", number: total}]);
+        },1);
     }
 
     private createColumnDefs() {
@@ -28,7 +36,7 @@ export class PinnedRowComponent {
                 headerName: "Row",
                 field: "row",
                 width: 400,
-                pinnedRowCellRendererFramework: StyledComponent,
+                //pinnedRowCellRendererFramework: StyledComponent,
                 pinnedRowCellRendererParams: {
                     style: {'font-weight': 'bold'}
                 }

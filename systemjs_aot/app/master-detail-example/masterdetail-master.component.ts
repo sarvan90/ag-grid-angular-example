@@ -14,6 +14,9 @@ export class MasterComponent implements AfterViewInit {
         this.gridOptions = <GridOptions>{};
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
+        //set header height to 0, to remove the visibility
+        this.gridOptions.headerHeight = 0;
+
     }
 
     private createColumnDefs() {
