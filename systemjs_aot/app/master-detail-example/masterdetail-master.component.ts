@@ -14,6 +14,7 @@ export class MasterComponent implements AfterViewInit {
         this.gridOptions = <GridOptions>{};
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
+        console.log(this.gridOptions.rowData);
         //set header height to 0, to remove the visibility
         this.gridOptions.headerHeight = 0;
 
@@ -29,9 +30,9 @@ export class MasterComponent implements AfterViewInit {
                 // not has exactly one child node
                 cellRendererParams: {suppressCount: true}
             },
-            {headerName: 'Account', field: 'account'},
-            {headerName: 'Calls', field: 'totalCalls'},
-            {headerName: 'Minutes', field: 'totalMinutes', valuelFormatter: this.minuteCellFormatter}
+            {headerName: 'dummy1', field: 'dummy1'},
+            {headerName: 'Total', field: 'totalCalls', valueFormatter : this.totalCellFormatter }
+            // {headerName: 'Minutes', field: 'totalMinutes', valuelFormatter: this.minuteCellFormatter}
         ];
     }
 
@@ -120,6 +121,10 @@ export class MasterComponent implements AfterViewInit {
 
     private minuteCellFormatter(params) {
         return params.value.toLocaleString() + 'm';
+    };
+
+    private totalCellFormatter(params) {
+        return 'Total: '+ params.value;
     };
 
 

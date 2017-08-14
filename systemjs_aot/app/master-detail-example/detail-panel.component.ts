@@ -18,10 +18,7 @@ export class DetailPanelComponent implements ICellRendererAngularComp, AfterView
         this.gridOptions.enableFilter = true;
         this.gridOptions.enableColResize = true;
         this.gridOptions.columnDefs = this.createColumnDefs();
-        console.log('inside constructor');
-         /* setTimeout(()=>{            
-            this.gridOptions.api.setPinnedBottomRowData([{direction: "Total", number: 123}]);
-        },3000); */
+        this.gridOptions.pinnedBottomRowData = [{number: "Total", duration: 123}];
     }
 
     agInit(params: any): void {
@@ -33,6 +30,18 @@ export class DetailPanelComponent implements ICellRendererAngularComp, AfterView
     ngAfterViewInit() {
         this.gridOptions.api.setRowData(this.parentRecord.callRecords);
         this.gridOptions.api.sizeColumnsToFit();
+
+        setTimeout(()=>{
+            let total = 0;
+
+            this.gridOptions.api.forEachNode( function(node) {
+                total += +(node.data.duration);
+            });
+            /* this.gridOptions.rowData.forEach((item)=>{
+                total += +(item.duration);
+            }) */
+            this.gridOptions.api.setPinnedBottomRowData([{number: "Total", duration: total}]);
+        },500);
     }
 
     onSearchTextChange(newData: string) {
@@ -40,7 +49,7 @@ export class DetailPanelComponent implements ICellRendererAngularComp, AfterView
     }
 
     private createColumnDefs() {
-        return [{headerName: 'Call ID', field: 'callId', cellClass: 'call-record-cell'},
+        return [{headerName: 'Call ID '+ (new Date().getMilliseconds()), field: 'callId', cellClass: 'call-record-cell'},
             {headerName: 'Direction', field: 'direction', cellClass: 'call-record-cell'},
             {headerName: 'Number', field: 'number', cellClass: 'call-record-cell'},
             {
@@ -50,11 +59,10 @@ export class DetailPanelComponent implements ICellRendererAngularComp, AfterView
                 valueFormatter: this.secondCellFormatter
             },
             {headerName: 'Switch', field: 'switchCode', cellClass: 'call-record-cell'}];
-
     }
 
     private secondCellFormatter(params) {
-        return params.value.toLocaleString() + 's';
+        return params.value ? params.value.toLocaleString() + 's' : params.value;
     };
 
     // if we don't do this, then the mouse wheel will be picked up by the main
