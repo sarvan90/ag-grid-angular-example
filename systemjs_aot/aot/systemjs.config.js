@@ -24,6 +24,9 @@
                 'ag-grid': {
                     main: 'main.js'
                 },
+                'ag-grid-enterprise': {
+                    main: 'main.js'
+                },
                 'jquery': {
                     main: 'jquery.js'
                 },
