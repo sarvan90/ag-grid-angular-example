@@ -17,8 +17,7 @@ import {HeaderComponent} from "../header-component/header.component";
     styleUrls: ['./rich-grid.css', './proficiency-renderer.css'],
     encapsulation: ViewEncapsulation.None
 })
-export class RichGridC
-omponent {
+export class RichGridC omponent {
 
     private gridOptions: GridOptions;
     public showGrid: boolean;
