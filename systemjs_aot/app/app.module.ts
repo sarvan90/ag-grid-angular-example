@@ -56,6 +56,7 @@ import {RxJsComponentByRow} from "./rxjs-component-example/rxjs-by-row.component
 import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.component";
 // infinite pagination
 import {InfinitePaginationComponent} from "./infinite-pagination/infinite-pagination.component";
+import {GroupedDataGrid, MyRenderer} from "./grouped-data-example/grouped.data.grid";
 
 @NgModule({
     imports: [
@@ -83,7 +84,9 @@ import {InfinitePaginationComponent} from "./infinite-pagination/infinite-pagina
                 HeaderComponent,
                 HeaderGroupComponent,
                 FloatingFilterComponent,
-                SliderFloatingFilter
+                SliderFloatingFilter,
+                GroupedDataGrid,
+                MyRenderer
             ]),
         RatioModule,
         ClickableModule
@@ -120,7 +123,9 @@ import {InfinitePaginationComponent} from "./infinite-pagination/infinite-pagina
         SliderFloatingFilter,
         InfinitePaginationComponent,
         RxJsComponentByRow,
-        RxJsComponentByFullSet
+        RxJsComponentByFullSet,
+        GroupedDataGrid,
+        MyRenderer
     ],
     bootstrap: [AppComponent]
 })

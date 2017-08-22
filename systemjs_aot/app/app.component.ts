@@ -17,6 +17,7 @@ export class AppComponent {
         {key: 'editor-component', title: "Cell Editor Component Example"},
         {key: 'pinned-row', title: "Pinned Row Renderer Example"},
         {key: 'full-width', title: "Full Width Renderer Example"},
+        {key: 'simple-group-row', title: "Simple grouping example"},
         {key: 'group-row', title: "Grouped Row Inner Renderer Example"},
         {key: 'filter', title: "Filters Component Example"},
         {key: 'master-detail', title: "Master Detail Example"},
