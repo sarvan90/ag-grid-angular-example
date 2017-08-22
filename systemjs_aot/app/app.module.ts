@@ -56,7 +56,8 @@ import {RxJsComponentByRow} from "./rxjs-component-example/rxjs-by-row.component
 import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.component";
 // infinite pagination
 import {InfinitePaginationComponent} from "./infinite-pagination/infinite-pagination.component";
-import {GroupedDataGrid, MyRenderer} from "./grouped-data-example/grouped.data.grid";
+// grouped rows: inner renderer
+import {GroupedDataGrid, CustomGroupRenderer} from "./grouped-data-example/grouped.data.grid";
 
 @NgModule({
     imports: [
@@ -86,7 +87,7 @@ import {GroupedDataGrid, MyRenderer} from "./grouped-data-example/grouped.data.g
                 FloatingFilterComponent,
                 SliderFloatingFilter,
                 GroupedDataGrid,
-                MyRenderer
+                CustomGroupRenderer
             ]),
         RatioModule,
         ClickableModule
@@ -125,7 +126,7 @@ import {GroupedDataGrid, MyRenderer} from "./grouped-data-example/grouped.data.g
         RxJsComponentByRow,
         RxJsComponentByFullSet,
         GroupedDataGrid,
-        MyRenderer
+        CustomGroupRenderer
     ],
     bootstrap: [AppComponent]
 })

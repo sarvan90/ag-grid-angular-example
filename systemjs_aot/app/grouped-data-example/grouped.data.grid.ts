@@ -11,7 +11,7 @@ import {ICellRendererAngularComp} from "ag-grid-angular/main";
     selector: 'my-renderer',
     template: `Custom: {{params.value}}`
 })
-export class MyRenderer implements ICellRendererAngularComp {
+export class CustomGroupRenderer implements ICellRendererAngularComp {
     public params:ICellRendererParams;
 
     refresh(params: any): boolean {
@@ -36,7 +36,7 @@ export class GroupedDataGrid {
     constructor() {
         this.gridOptions = <GridOptions>{};
         this.gridOptions.frameworkComponents = {
-            myRenderer:MyRenderer
+            myRenderer:CustomGroupRenderer
         };
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
@@ -45,7 +45,7 @@ export class GroupedDataGrid {
         };
         this.gridOptions.autoGroupColumnDef = {
             cellRendererParams: {
-                innerRendererFramework: MyRenderer
+                innerRendererFramework: CustomGroupRenderer
             }
         }
     }
