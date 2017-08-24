@@ -4,9 +4,8 @@ import {GridOptions} from "ag-grid/main";
 import {MockServerService} from "./mockServer.service";
 
 @Component({
-    moduleId: module.id,
     selector: 'ag-rxjs-by-row-component',
-    templateUrl: 'rxjs-by-row.component.html',
+    templateUrl: './rxjs-by-row.component.html',
     providers: [MockServerService]
 })
 export class RxJsComponentByRow {

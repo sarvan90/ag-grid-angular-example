@@ -1,25 +1,53 @@
 import {Component} from "@angular/core";
 
-import {GridOptions} from "ag-grid/main";
-
-import {MedalRendererComponent} from "./medal-renderer.component";
+import {
+    GridOptions,
+    ICellRendererParams,
+    IAfterGuiAttachedParams
+} from "ag-grid/main";
+import {ICellRendererAngularComp} from "ag-grid-angular/main";
 
 @Component({
-    selector: 'ag-group-row-renderer-component',
-    templateUrl: './group-row-renderer.component.html'
+    selector: 'my-renderer',
+    template: `Custom: {{params.value}}`
 })
-export class GroupRowComponent {
+export class CustomGroupRenderer implements ICellRendererAngularComp {
+    public params:ICellRendererParams;
+
+    refresh(params: any): boolean {
+        return false;
+    }
+
+    agInit(params: ICellRendererParams): void {
+        this.params = params;
+    }
+
+    afterGuiAttached(params?: IAfterGuiAttachedParams): void {}
+
+}
+
+@Component({
+    selector: 'ag-grouped-data-grid',
+    templateUrl: './grouped.data.grid.html'
+})
+export class GroupedDataGrid {
     public gridOptions: GridOptions;
 
     constructor() {
         this.gridOptions = <GridOptions>{};
+        this.gridOptions.frameworkComponents = {
+            myRenderer:CustomGroupRenderer
+        };
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
-        this.gridOptions.groupUseEntireRow = true;
-        this.gridOptions.groupRowInnerRendererFramework = MedalRendererComponent;
         this.gridOptions.onGridReady = () => {
             this.gridOptions.api.sizeColumnsToFit();
         };
+        this.gridOptions.autoGroupColumnDef = {
+            cellRendererParams: {
+                innerRendererFramework: CustomGroupRenderer
+            }
+        }
     }
 
     private createColumnDefs() {
@@ -28,7 +56,8 @@ export class GroupRowComponent {
                 headerName: "Country",
                 field: "country",
                 width: 100,
-                rowGroupIndex: 0
+                rowGroup: true,
+                hide:true
             },
             {
                 headerName: "Name",
@@ -55,6 +84,7 @@ export class GroupRowComponent {
             },
         ];
     }
+
 
     private createRowData() {
         return [
@@ -98,4 +128,5 @@ export class GroupRowComponent {
             {country: "Brazil", name: "Mary", gold: 1, silver: 0, bronze: 1},
             {country: "Brazil", name: "John", gold: 1, silver: 0, bronze: 1}];
     }
+
 }

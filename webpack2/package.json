@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ceolter/ag-grid-angular-example.git"
+    "url": "https://github.com/ag-grid/ag-grid-angular-example.git"
   },
   "author": "Niall Crosby <niall.crosby@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ceolter/ag-grid-angular-example/issues"
+    "url": "https://github.com/ag-grid/ag-grid-angular-example/issues"
   },
   "homepage": "http://www.ag-grid.com/",
   "dependencies": {

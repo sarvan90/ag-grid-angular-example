@@ -38,6 +38,7 @@
     "@types/jasmine": "2.5.38",
     "@types/node": "6.0.x",
     "codelyzer": "2.0.x",
+    "enhanced-resolve": "3.3.0",
     "jasmine-core": "2.5.x",
     "jasmine-spec-reporter": "3.2.x",
     "karma": "1.4.x",

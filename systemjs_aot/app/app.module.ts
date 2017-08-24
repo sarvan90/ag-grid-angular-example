@@ -1,7 +1,8 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
-import {HttpModule} from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
+
 // ag-grid
 import {AgGridModule} from "ag-grid-angular/main";
 // application
@@ -53,13 +54,16 @@ import {SliderFloatingFilter} from "./floating-filter-example/slider-floating-fi
 // rxjs
 import {RxJsComponentByRow} from "./rxjs-component-example/rxjs-by-row.component";
 import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.component";
-
+// infinite pagination
+import {InfinitePaginationComponent} from "./infinite-pagination/infinite-pagination.component";
+// grouped rows: inner renderer
+import {GroupedDataGrid, CustomGroupRenderer} from "./grouped-data-example/grouped.data.grid";
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule,
+        HttpClientModule,
         AgGridModule.withComponents(
             [
                 SquareComponent,
@@ -81,7 +85,9 @@ import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.comp
                 HeaderComponent,
                 HeaderGroupComponent,
                 FloatingFilterComponent,
-                SliderFloatingFilter
+                SliderFloatingFilter,
+                GroupedDataGrid,
+                CustomGroupRenderer
             ]),
         RatioModule,
         ClickableModule
@@ -116,8 +122,11 @@ import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.comp
         DetailPanelComponent,
         FloatingFilterComponent,
         SliderFloatingFilter,
+        InfinitePaginationComponent,
         RxJsComponentByRow,
-        RxJsComponentByFullSet
+        RxJsComponentByFullSet,
+        GroupedDataGrid,
+        CustomGroupRenderer
     ],
     bootstrap: [AppComponent]
 })

@@ -17,8 +17,7 @@ export interface SliderFloatingFilterParams extends IFloatingFilterParams<Serial
 }
 
 @Component({
-    moduleId: module.id,
-    templateUrl: 'slider-floating-filter.component.html'
+    templateUrl: './slider-floating-filter.component.html'
 })
 export class SliderFloatingFilter implements IFloatingFilter <SerializedNumberFilter, SliderFloatingFilterChange, SliderFloatingFilterParams>, AgFrameworkComponent<SliderFloatingFilterParams> {
     private params: SliderFloatingFilterParams;

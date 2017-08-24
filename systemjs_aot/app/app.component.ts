@@ -2,9 +2,8 @@ import {Component} from "@angular/core";
 import {URLSearchParams} from "@angular/http";
 
 @Component({
-    moduleId: module.id,
     selector: 'my-app',
-    templateUrl: 'app.component.html'
+    templateUrl: './app.component.html'
 })
 export class AppComponent {
     fromDocs: boolean = false;
@@ -18,10 +17,12 @@ export class AppComponent {
         {key: 'editor-component', title: "Cell Editor Component Example"},
         {key: 'pinned-row', title: "Pinned Row Renderer Example"},
         {key: 'full-width', title: "Full Width Renderer Example"},
+        {key: 'simple-group-row', title: "Simple grouping example"},
         {key: 'group-row', title: "Grouped Row Inner Renderer Example"},
         {key: 'filter', title: "Filters Component Example"},
         {key: 'master-detail', title: "Master Detail Example"},
         {key: 'floating-filter', title: "Floating Filters"},
+        {key: 'infinite-pagination', title: "Infinite Pagination"},
         {key: 'rxjs-by-row', title: "RxJs - Single Row Update Example"},
         {key: 'rxjs-by-dataset', title: "RxJs - Full DataSet Update Example"}
     ];

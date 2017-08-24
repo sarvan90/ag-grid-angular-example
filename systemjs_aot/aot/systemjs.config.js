@@ -7,6 +7,8 @@
                 '@angular/common': 'node_modules/@angular/common/bundles/common.umd.min.js',
                 '@angular/platform-browser': 'node_modules/@angular/platform-browser/bundles/platform-browser.umd.js',
                 '@angular/forms': 'node_modules/@angular/forms/bundles/forms.umd.min.js',
+                '@angular/common/http': 'node_modules/@angular/common/bundles/common-http.umd.js',
+                'tslib': 'node_modules/tslib/tslib.js',
                 '@angular/http': 'node_modules/@angular/http/bundles/http.umd.min.js',
                 // other libraries
                 'rxjs': 'node_modules/rxjs',
@@ -20,6 +22,9 @@
             },
             packages: {
                 'ag-grid': {
+                    main: 'main.js'
+                },
+                'ag-grid-enterprise': {
                     main: 'main.js'
                 },
                 'jquery': {

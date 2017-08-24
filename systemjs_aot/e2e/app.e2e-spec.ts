@@ -24,6 +24,7 @@ describe('ag-grid-angular-examples E2E Tests', function () {
 
     it(`should have ${expectedTabTitles.length} Tab Titles`, function () {
         element.all(by.css('li[role=presentation] a')).count().then(function (val) {
+            console.log('title length', (val === expectedTabTitles.length));
             expect(val === expectedTabTitles.length).toBeTruthy()
         });
     });
