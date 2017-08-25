@@ -5,17 +5,18 @@ import {GridOptions} from "ag-grid/main";
 import ProficiencyFilter from "../filters/proficiencyFilter";
 import SkillFilter from "../filters/skillFilter";
 import RefData from "../data/refData";
+
 // only import this if you are using the ag-Grid-Enterprise
-import "ag-grid-enterprise/main";
+import "ag-grid-enterprise";
+
 import {HeaderGroupComponent} from "../header-group-component/header-group.component";
 import {DateComponent} from "../date-component/date.component";
 import {HeaderComponent} from "../header-component/header.component";
 
 @Component({
-    moduleId: module.id,
     selector: 'ag-rich-grid-declarative',
-    templateUrl: 'rich-grid-declarative.component.html',
-    styleUrls: ['rich-grid.css', 'proficiency-renderer.css'],
+    templateUrl: './rich-grid-declarative.component.html',
+    styleUrls: ['./rich-grid.css', './proficiency-renderer.css'],
     encapsulation: ViewEncapsulation.None
 })
 export class RichGridDeclarativeComponent {

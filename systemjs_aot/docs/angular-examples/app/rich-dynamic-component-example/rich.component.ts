@@ -4,9 +4,8 @@ import {RatioParentComponent} from "./ratio.parent.component";
 import {ClickableParentComponent} from "./clickable.parent.component";
 
 @Component({
-    moduleId: module.id,
     selector: 'ag-from-rich-component',
-    templateUrl: 'rich.component.html'
+    templateUrl: './rich.component.html'
 })
 export class RichComponent {
     public gridOptions: GridOptions;

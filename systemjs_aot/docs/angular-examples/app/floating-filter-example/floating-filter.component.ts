@@ -4,9 +4,8 @@ import {GridOptions} from "ag-grid/main";
 import {SliderFloatingFilter} from "./slider-floating-filter.component";
 
 @Component({
-    moduleId: module.id,
     selector: 'ag-floating-filter-component',
-    templateUrl: 'floating-filter.component.html'
+    templateUrl: './floating-filter.component.html'
 })
 export class FloatingFilterComponent {
     public gridOptions: GridOptions;

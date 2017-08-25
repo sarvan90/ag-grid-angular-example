@@ -1,19 +1,19 @@
 import {Injectable} from "@angular/core";
-import {Http, Response} from "@angular/http";
+import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs/Rx";
 
-import {cloneDeep} from "lodash";
+import {cloneDeep} from "lodash/";
 
 @Injectable()
 export class MockServerService {
     stocksUrl: string = 'stocks.json';
     rowData: any[];
 
-    constructor(private http: Http) {
+    constructor(private http: HttpClient) {
     }
 
     // provides the initial (or current state) of the data
-    initialLoad() : any {
+    initialLoad(): any {
         return this.http.get(this.stocksUrl)
             .map(this.extractData.bind(this))
             .catch(this.handleError);
@@ -21,7 +21,7 @@ export class MockServerService {
 
     // provides randomised data updates to some of the rows
     // only returns the changed data rows
-    byRowupdates() : any {
+    byRowupdates(): any {
         return Observable.create((observer) => {
             const interval = setInterval(() => {
                 let changes = [];
@@ -38,7 +38,7 @@ export class MockServerService {
 
     // provides randomised data updates to some of the rows
     // only all the row data (with some rows changed)
-    allDataUpdates()  : any{
+    allDataUpdates(): any {
         return Observable.create((observer) => {
             const interval = setInterval(() => {
                 let changes = [];
@@ -56,9 +56,7 @@ export class MockServerService {
         });
     }
 
-    extractData(res: Response)  : any{
-        let body = res.json();
-
+    extractData(body: any): any {
         let reducedDataSet = body.slice(0, 200);
 
         // the sample data has just name and code, we need to add in dummy figures
@@ -67,7 +65,7 @@ export class MockServerService {
         return cloneDeep(this.rowData);
     }
 
-    handleError(error: any) : any {
+    handleError(error: any): any {
         let errMsg = (error.message) ? error.message :
             error.status ? `${error.status} - ${error.statusText}` : 'Server error';
         console.error(errMsg); // log to console instead
@@ -78,7 +76,7 @@ export class MockServerService {
      * The rest of the code exists to create or modify mock data
      * it is not important to understand the rest of the example (i.e. the rxjs part of it)
      */
-    backfillData(rowData) : any {
+    backfillData(rowData): any {
         // the sample data has just name and code, we need to add in dummy figures
         rowData.forEach((dataItem) => {
 
@@ -93,7 +91,7 @@ export class MockServerService {
         return rowData;
     }
 
-    makeSomeVolumeChanges(changes)  : any{
+    makeSomeVolumeChanges(changes): any {
         for (let i = 0; i < 10; i++) {
             // pick a data item at random
             const index = Math.floor(this.rowData.length * Math.random());
@@ -109,7 +107,7 @@ export class MockServerService {
         }
     }
 
-    makeSomePriceChanges(changes)  : any{
+    makeSomePriceChanges(changes): any {
         // randomly update data for some rows
         for (let i = 0; i < 10; i++) {
             const index = Math.floor(this.rowData.length * Math.random());
@@ -127,7 +125,7 @@ export class MockServerService {
         }
     }
 
-    setBidAndAsk(dataItem) : any {
+    setBidAndAsk(dataItem): any {
         dataItem.bid = dataItem.mid * 0.98;
         dataItem.ask = dataItem.mid * 1.02;
     }

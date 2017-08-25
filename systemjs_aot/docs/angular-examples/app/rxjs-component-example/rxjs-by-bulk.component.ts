@@ -4,9 +4,8 @@ import {GridOptions} from "ag-grid/main";
 import {MockServerService} from "./mockServer.service";
 
 @Component({
-    moduleId: module.id,
     selector: 'ag-rxjs-by-dataset-component',
-    templateUrl: 'rxjs-by-bulk.component.html',
+    templateUrl: './rxjs-by-bulk.component.html',
     providers: [MockServerService]
 })
 export class RxJsComponentByFullSet {

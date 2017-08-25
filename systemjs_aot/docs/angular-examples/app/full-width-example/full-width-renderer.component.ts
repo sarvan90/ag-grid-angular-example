@@ -5,9 +5,8 @@ import {GridOptions, RowNode} from "ag-grid/main";
 import {NameAndAgeRendererComponent} from "./name-age-renderer.component";
 
 @Component({
-    moduleId: module.id,
     selector: 'ag-full-width-renderer-component',
-    templateUrl: 'full-width-renderer.component.html'
+    templateUrl: './full-width-renderer.component.html'
 })
 export class FullWidthComponent {
     public gridOptions: GridOptions;
