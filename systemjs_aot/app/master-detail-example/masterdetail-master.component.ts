@@ -56,7 +56,7 @@ export class MasterComponent implements AfterViewInit {
         console.log(params.data.name);
         var rowIsDetailRow = params.node.level === 1;                
         // return 100 when detail row, otherwise return 25
-        return rowIsDetailRow ? 500 : 40;
+        return rowIsDetailRow ? 500 : 30;
     }
 
     public getNodeChildDetails(record) {

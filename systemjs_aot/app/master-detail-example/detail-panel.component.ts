@@ -14,6 +14,8 @@ export class DetailPanelComponent implements ICellRendererAngularComp, AfterView
     public parentRecord: any;
     columnDefs:any;
 
+    dynamicHeight = 500;
+
     constructor() {
         this.gridOptions = <GridOptions>{};
         this.gridOptions.enableSorting = true;
@@ -30,7 +32,7 @@ export class DetailPanelComponent implements ICellRendererAngularComp, AfterView
     public getRowHeight(params) {
         var rowIsDetailRow = params.node.level === 1;        
         // return 100 when detail row, otherwise return 25
-        return rowIsDetailRow ? 400 : 25;
+        return rowIsDetailRow ? 400 : 30;
     }
 
     // Sometimes the gridReady event can fire before the angular component is ready to receive it, so in an angular
@@ -41,7 +43,7 @@ export class DetailPanelComponent implements ICellRendererAngularComp, AfterView
         if(this.parentRecord.children.length && !this.parentRecord.children[0].children){
             this.gridOptions.api.setPinnedBottomRowData([{period: "Total", commodity: 123}]);
             this.columnDefs = this.createColumnDefs(1);
-        } else {
+        } else {            
             this.columnDefs = this.createColumnDefs(0);
         }
         this.gridOptions.api.setRowData(this.parentRecord.children);
