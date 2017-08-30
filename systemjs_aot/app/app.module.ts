@@ -58,6 +58,8 @@ import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.comp
 import {InfinitePaginationComponent} from "./infinite-pagination/infinite-pagination.component";
 // grouped rows: inner renderer
 import {GroupedDataGrid, CustomGroupRenderer} from "./grouped-data-example/grouped.data.grid";
+// aligned grid
+import {AlignedGridComponent} from "./aligned-grid-example/aligned-grid.component";
 
 @NgModule({
     imports: [
@@ -126,7 +128,8 @@ import {GroupedDataGrid, CustomGroupRenderer} from "./grouped-data-example/group
         RxJsComponentByRow,
         RxJsComponentByFullSet,
         GroupedDataGrid,
-        CustomGroupRenderer
+        CustomGroupRenderer,
+        AlignedGridComponent
     ],
     bootstrap: [AppComponent]
 })
