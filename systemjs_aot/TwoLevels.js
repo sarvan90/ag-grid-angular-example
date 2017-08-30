@@ -1,0 +1,3 @@
+"use strict";
+exports.spotData = [{ "name": "Appropriated", "EU": 100, "Local": -100, "children": [{ "name": "Purchase", "EU": 50, "children": [{ "quantity": "2011", "from": "Cm" }] }, { "name": "Sale", "EU": -50, "children": [{ "quantity": "2012", "from": "Cm2" }] }] }, { "name": "Internal Trade", "EU": 120, "Local": -120, "children": [{ "period": "2013", "commodity": "Arg Cm" }] }, { "name": "Spot Position", "EU": 500, "local": 10, "children": [] }];
+//# sourceMappingURL=TwoLevels.js.map

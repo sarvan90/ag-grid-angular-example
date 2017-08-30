@@ -1,3 +1,4 @@
+import { spotData } from './spotData';
 import {AfterViewInit, Component} from "@angular/core";
 import {GridOptions} from "ag-grid/main";
 import {DetailPanelComponent} from "./detail-panel.component";
@@ -14,9 +15,8 @@ export class MasterComponent implements AfterViewInit {
         this.gridOptions = <GridOptions>{};
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
-        console.log(this.gridOptions.rowData);
         //set header height to 0, to remove the visibility
-        this.gridOptions.headerHeight = 0;
+        // this.gridOptions.headerHeight = 0;
 
     }
 
@@ -30,8 +30,9 @@ export class MasterComponent implements AfterViewInit {
                 // not has exactly one child node
                 cellRendererParams: {suppressCount: true}
             },
-            {headerName: 'dummy1', field: 'dummy1'},
-            {headerName: 'Total', field: 'totalCalls', valueFormatter : this.totalCellFormatter }
+            {headerName: 'EU', field: 'eu'},
+            {headerName: 'LOCAL', field: 'local' }
+            // {headerName: 'LOCAL', field: 'Local', valueFormatter : this.totalCellFormatter }
             // {headerName: 'Minutes', field: 'totalMinutes', valuelFormatter: this.minuteCellFormatter}
         ];
     }
@@ -52,21 +53,24 @@ export class MasterComponent implements AfterViewInit {
     }
 
     public getRowHeight(params) {
-        var rowIsDetailRow = params.node.level === 1;
+        console.log(params.data.name);
+        var rowIsDetailRow = params.node.level === 1;                
         // return 100 when detail row, otherwise return 25
-        return rowIsDetailRow ? 200 : 25;
+        return rowIsDetailRow ? 500 : 40;
     }
 
     public getNodeChildDetails(record) {
-        if (record.callRecords) {
+        if (record.children) {
+            console.log('has first level children '+record.name);
+            console.log(record.children);
             return {
                 group: true,
                 // the key is used by the default group cellRenderer
-                key: record.name,
+                // key: record.name,
                 // provide ag-Grid with the children of this group
-                children: [record.callRecords],
+                children: [record.children],
                 // for demo, expand the third row by default
-                expanded: record.account === 177002
+                // expanded: record.account === 177002
             };
         } else {
             return null;
@@ -116,7 +120,8 @@ export class MasterComponent implements AfterViewInit {
             rowData.push(record);
         }
 
-        return rowData;
+        // return rowData;
+        return spotData;
     }
 
     private minuteCellFormatter(params) {

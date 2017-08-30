@@ -1,3 +1,4 @@
+import { SubDetailPanelComponent } from './master-detail-example/sub-detail-panel.component';
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
@@ -79,6 +80,7 @@ import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.comp
                 customGroupRendererComponent,
                 PartialMatchFilterComponent,
                 DetailPanelComponent,
+                SubDetailPanelComponent,
                 DateComponent,
                 HeaderComponent,
                 HeaderGroupComponent,
@@ -117,6 +119,7 @@ import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.comp
         PartialMatchFilterComponent,
         MasterComponent,
         DetailPanelComponent,
+        SubDetailPanelComponent,
         FloatingFilterComponent,
         SliderFloatingFilter,
         RxJsComponentByRow,

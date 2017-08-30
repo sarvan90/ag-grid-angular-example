@@ -1,6 +1,6 @@
-<div class="full-width-panel" style="width: 1500px; height:500px; padding:20px 48px;">    
+<div class="full-width-panel" style="width: 1400px; height:400px; padding:20px 48px;">    
     <ag-grid-angular
-            style="width: 100%; height:100%"
+            style="width: 100%; height: 100%;"
             class="full-width-grid"
             [gridOptions]="gridOptions"
             [columnDefs]="columnDefs"
@@ -9,8 +9,7 @@
             enableFilter
             enableColResize
             [getNodeChildDetails]="getNodeChildDetails1"
-            [fullWidthCellRendererFramework]="getFullWidthCellRenderer1()"
-            [getRowHeight]="getRowHeight"
+            [fullWidthCellRendererFramework]="getFullWidthCellRenderer1()"            
             (mousewheel)="consumeMouseWheelOnDetailGrid($event)"
             (DOMMouseScroll)="consumeMouseWheelOnDetailGrid($event)">
     </ag-grid-angular>
