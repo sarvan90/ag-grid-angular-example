@@ -1,44 +1,29 @@
-import { DynamicHeightService } from './dynamicHeight.service';
-import { SubDetailPanelComponent } from './sub-detail-panel.component';
 import {AfterViewInit, Component} from "@angular/core";
 import {GridOptions} from "ag-grid/main";
 import {ICellRendererAngularComp} from "ag-grid-angular/main";
 
 @Component({
     moduleId: module.id,
-    selector: 'ag-full-width-grid',
-    templateUrl: 'detail-panel.component.html',
-    styleUrls: ['detail-panel.component.css'],
+    selector: 'nested-full-width-grid',
+    templateUrl: 'nested-detail2-panel.component.html'
 })
-export class DetailPanelComponent implements ICellRendererAngularComp, AfterViewInit {
+export class NestedDetail2PanelComponent implements ICellRendererAngularComp, AfterViewInit {
     public gridOptions: GridOptions;
     public parentRecord: any;
     columnDefs:any;
 
-    detailHeight = 500 || 200;
-
-    constructor(private dymacicHeightService: DynamicHeightService) {
+    constructor() {
         this.gridOptions = <GridOptions>{};
         this.gridOptions.enableSorting = true;
         this.gridOptions.enableFilter = true;
         this.gridOptions.enableColResize = true;    
-        this.gridOptions.getRowHeight = this.getRowHeight.bind(this);
-        console.log('detail level constructor');     
+        // this.gridOptions.rowHeight = 50;
+        console.log('nested detail level constructor');     
         // this.gridOptions.columnDefs = this.createColumnDefs(0);    
     }
 
     agInit(params: any): void {
         this.parentRecord = params.node.parent.data;
-    }
-
-    public getRowHeight(params) {
-        var rowIsDetailRow = params.node.level === 1;        
-        if(rowIsDetailRow){
-            // this.dymacicHeightService.updateHeight(800);
-            this.detailHeight = 550;
-        }
-        // return 100 when detail row, otherwise return 25
-        return rowIsDetailRow ? 400 : 30;
     }
 
     // Sometimes the gridReady event can fire before the angular component is ready to receive it, so in an angular
@@ -49,12 +34,12 @@ export class DetailPanelComponent implements ICellRendererAngularComp, AfterView
         if(this.parentRecord.children.length && !this.parentRecord.children[0].children){
             this.gridOptions.api.setPinnedBottomRowData([{period: "Total", commodity: 123}]);
             this.columnDefs = this.createColumnDefs(1);
-        } else {            
+        } else {
             this.columnDefs = this.createColumnDefs(0);
         }
         this.gridOptions.api.setRowData(this.parentRecord.children);
         // this.gridOptions.api.refreshHeader();
-        this.gridOptions.api.hideOverlay()
+        this.gridOptions.api.hideOverlay()        
 
 
         /* setTimeout(()=>{
@@ -71,7 +56,7 @@ export class DetailPanelComponent implements ICellRendererAngularComp, AfterView
     }
 
     public getFullWidthCellRenderer1() {
-        return SubDetailPanelComponent;
+        return '';//SubDetailPanelComponent;
     }    
 
     public getRenderer() {
@@ -84,7 +69,7 @@ export class DetailPanelComponent implements ICellRendererAngularComp, AfterView
 
     public getNodeChildDetails1(record) {
         if (record.children) {
-            console.log('has second level children ');
+            console.log('has third level children ');
             console.log(record.children);
             return {
                 group: true,

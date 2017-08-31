@@ -1,3 +1,7 @@
+import { NestedDetail2PanelComponent } from './master-detail-example/nested-detail2-panel.component';
+import { NestedDetailPanelComponent } from './master-detail-example/nested-detail-panel.component';
+import { DynamicHeightService } from './master-detail-example/dynamicHeight.service';
+
 import { SubDetailPanelComponent } from './master-detail-example/sub-detail-panel.component';
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
@@ -56,7 +60,6 @@ import {SliderFloatingFilter} from "./floating-filter-example/slider-floating-fi
 import {RxJsComponentByRow} from "./rxjs-component-example/rxjs-by-row.component";
 import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.component";
 
-
 @NgModule({
     imports: [
         BrowserModule,
@@ -81,6 +84,8 @@ import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.comp
                 PartialMatchFilterComponent,
                 DetailPanelComponent,
                 SubDetailPanelComponent,
+                NestedDetailPanelComponent,
+                NestedDetail2PanelComponent,
                 DateComponent,
                 HeaderComponent,
                 HeaderGroupComponent,
@@ -120,11 +125,14 @@ import {RxJsComponentByFullSet} from "./rxjs-component-example/rxjs-by-bulk.comp
         MasterComponent,
         DetailPanelComponent,
         SubDetailPanelComponent,
+        NestedDetailPanelComponent,
+        NestedDetail2PanelComponent,
         FloatingFilterComponent,
         SliderFloatingFilter,
         RxJsComponentByRow,
         RxJsComponentByFullSet
     ],
+    providers: [DynamicHeightService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

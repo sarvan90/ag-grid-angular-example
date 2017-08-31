@@ -1,6 +1,7 @@
 import {AfterViewInit, Component} from "@angular/core";
 import {GridOptions} from "ag-grid/main";
 import {ICellRendererAngularComp} from "ag-grid-angular/main";
+import { NestedDetailPanelComponent } from "./nested-detail-panel.component";
 
 @Component({
     moduleId: module.id,
@@ -17,7 +18,8 @@ export class SubDetailPanelComponent implements ICellRendererAngularComp, AfterV
         this.gridOptions = <GridOptions>{};
         this.gridOptions.enableSorting = true;
         this.gridOptions.enableFilter = true;
-        this.gridOptions.enableColResize = true;    
+        this.gridOptions.enableColResize = true;
+        this.gridOptions.getRowHeight = this.getRowHeight.bind(this);
         // this.gridOptions.rowHeight = 50;
         console.log('sub detail level constructor');     
         // this.gridOptions.columnDefs = this.createColumnDefs(0);    
@@ -25,6 +27,11 @@ export class SubDetailPanelComponent implements ICellRendererAngularComp, AfterV
 
     agInit(params: any): void {
         this.parentRecord = params.node.parent.data;
+    }
+
+    public getRowHeight(params) {
+        var rowIsDetailRow = params.node.level === 1;        
+        return rowIsDetailRow ? 450 : 30;
     }
 
     // Sometimes the gridReady event can fire before the angular component is ready to receive it, so in an angular
@@ -57,7 +64,7 @@ export class SubDetailPanelComponent implements ICellRendererAngularComp, AfterV
     }
 
     public getFullWidthCellRenderer1() {
-        return SubDetailPanelComponent;
+        return NestedDetailPanelComponent;
     }    
 
     public getRenderer() {

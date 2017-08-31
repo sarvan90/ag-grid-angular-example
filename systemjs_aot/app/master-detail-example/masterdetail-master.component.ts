@@ -1,3 +1,5 @@
+import { Subject } from 'rxjs/Subject';
+import { DynamicHeightService } from './dynamicHeight.service';
 import { spotData } from './spotData';
 import {AfterViewInit, Component} from "@angular/core";
 import {GridOptions} from "ag-grid/main";
@@ -10,11 +12,12 @@ import {DetailPanelComponent} from "./detail-panel.component";
 })
 export class MasterComponent implements AfterViewInit {
     public gridOptions: GridOptions;
-
-    constructor() {
+    masterHeight = 600 || 200;
+    constructor(private dymacicHeightService: DynamicHeightService) {
         this.gridOptions = <GridOptions>{};
         this.gridOptions.rowData = this.createRowData();
         this.gridOptions.columnDefs = this.createColumnDefs();
+        this.gridOptions.getRowHeight = this.getRowHeight.bind(this);
         //set header height to 0, to remove the visibility
         // this.gridOptions.headerHeight = 0;
 
@@ -46,15 +49,23 @@ export class MasterComponent implements AfterViewInit {
     // environment its safer to on you cannot safely rely on AfterViewInit instead before using the API
     ngAfterViewInit() {
         this.gridOptions.api.sizeColumnsToFit();
+        
+        this.dymacicHeightService.getHeight().subscribe((height)=>{
+            this.masterHeight = height;
+        })
     }
 
     public getFullWidthCellRenderer() {
         return DetailPanelComponent;
     }
 
-    public getRowHeight(params) {
-        console.log(params.data.name);
+    private getRowHeight(params) {
+        console.log(params.node.level);
         var rowIsDetailRow = params.node.level === 1;                
+        if(rowIsDetailRow){
+            this.masterHeight=600;
+            this.gridOptions.api.doLayout();
+        }
         // return 100 when detail row, otherwise return 25
         return rowIsDetailRow ? 500 : 30;
     }
@@ -141,7 +152,6 @@ export class MasterComponent implements AfterViewInit {
 
     // each call gets a unique id, nothing to do with the grid, just help make the sample
     // data more realistic
-    private callIdSequence: number = 555;
-
+    private callIdSequence: number = 555;    
 
 }
